@@ -6,6 +6,7 @@ import Logo from '@/components/logo';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import React from 'react';
+import UserAuth from './auth/user-auth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -33,6 +34,9 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
+           <div className="hidden sm:flex">
+             <UserAuth />
+           </div>
            <Button asChild className="hidden sm:flex">
             <Link href="/apply">Apply Now</Link>
           </Button>
@@ -46,6 +50,9 @@ export default function Header() {
             <SheetContent side="left" className="w-3/4">
               <div className="flex flex-col gap-8 mt-8">
                 <Logo />
+                 <div className="sm:hidden">
+                  <UserAuth />
+                </div>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
                     <Link
