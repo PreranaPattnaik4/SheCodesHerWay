@@ -15,7 +15,6 @@ import { Linkedin, Info, CheckCircle2 } from 'lucide-react';
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
@@ -24,13 +23,39 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { ScrollArea } from '@/components/ui/scroll-area';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
-const mentorTopics = [
-    { id: 'tech', label: 'Tech Journeys (Coding, digital tools, AI basics)' },
-    { id: 'startup', label: 'Startup & Business (Business modeling, entrepreneurship)' },
-    { id: 'creative', label: 'Creative & Content (Blogging, design, content creation)' },
-    { id: 'soft-skills', label: 'Soft Skills (Confidence, leadership, communication)' },
+const techTopics = [
+    { id: 'coding', label: 'Coding' },
+    { id: 'digital-tools', label: 'Digital Tools' },
+    { id: 'ai-basics', label: 'AI Basics' },
+    { id: 'web-dev', label: 'Web Development' },
+    { id: 'basic-computer', label: 'Basic Computer Skills' },
+    { id: 'full-stack', label: 'Full Stack Development' },
 ];
+
+const startupTopics = [
+    { id: 'business-modeling', label: 'Business Modeling' },
+    { id: 'entrepreneurship', label: 'Entrepreneurship' },
+];
+
+const creativeTopics = [
+    { id: 'blogging', label: 'Blogging & Writing' },
+    { id: 'design', label: 'Graphic Design (Canva, etc.)' },
+    { id: 'content-creation', label: 'Content Creation' },
+];
+
+const softSkillsTopics = [
+    { id: 'confidence', label: 'Confidence Building' },
+    { id: 'leadership', label: 'Leadership' },
+    { id: 'communication', label: 'Communication Skills' },
+];
+
 
 export default function PartnerPage() {
   const { toast } = useToast();
@@ -67,7 +92,6 @@ export default function PartnerPage() {
                             <CardTitle>Become a Mentor</CardTitle>
                             <CardDescription>
                                 Are you a student or professional passionate about giving back? Join us as a mentor to guide and inspire the next generation.
-                                After you apply, our team will review your profile. Selected mentors will be added to our community WhatsApp group.
                             </CardDescription>
                           </div>
                            <AlertDialog>
@@ -146,7 +170,7 @@ export default function PartnerPage() {
                             </AlertDialog>
                         </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent className="space-y-6">
                         <div className="space-y-2">
                             <Label htmlFor="mentor-name">Full Name</Label>
                             <Input id="mentor-name" placeholder="Your Name" required/>
@@ -164,16 +188,52 @@ export default function PartnerPage() {
                         </div>
                         <div className="space-y-4">
                           <Label>Which topics can you teach?</Label>
-                          <div className="space-y-2">
-                            {mentorTopics.map((topic) => (
-                              <div key={topic.id} className="flex items-center space-x-2">
-                                <Checkbox id={`topic-${topic.id}`} />
-                                <Label htmlFor={`topic-${topic.id}`} className="font-normal">
-                                  {topic.label}
-                                </Label>
-                              </div>
-                            ))}
-                          </div>
+                          <Accordion type="multiple" className="w-full">
+                            <AccordionItem value="tech">
+                                <AccordionTrigger>Tech Journeys</AccordionTrigger>
+                                <AccordionContent className="p-4 space-y-2 bg-muted/50 rounded-md">
+                                {techTopics.map((topic) => (
+                                    <div key={topic.id} className="flex items-center space-x-2">
+                                        <Checkbox id={`topic-${topic.id}`} />
+                                        <Label htmlFor={`topic-${topic.id}`} className="font-normal">{topic.label}</Label>
+                                    </div>
+                                ))}
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="startup">
+                                <AccordionTrigger>Startup & Business</AccordionTrigger>
+                                <AccordionContent className="p-4 space-y-2 bg-muted/50 rounded-md">
+                                {startupTopics.map((topic) => (
+                                    <div key={topic.id} className="flex items-center space-x-2">
+                                        <Checkbox id={`topic-${topic.id}`} />
+                                        <Label htmlFor={`topic-${topic.id}`} className="font-normal">{topic.label}</Label>
+                                    </div>
+                                ))}
+                                </AccordionContent>
+                            </AccordionItem>
+                            <AccordionItem value="creative">
+                                <AccordionTrigger>Creative & Content</AccordionTrigger>
+                                <AccordionContent className="p-4 space-y-2 bg-muted/50 rounded-md">
+                                {creativeTopics.map((topic) => (
+                                    <div key={topic.id} className="flex items-center space-x-2">
+                                        <Checkbox id={`topic-${topic.id}`} />
+                                        <Label htmlFor={`topic-${topic.id}`} className="font-normal">{topic.label}</Label>
+                                    </div>
+                                ))}
+                                </AccordionContent>
+                            </AccordionItem>
+                             <AccordionItem value="soft-skills">
+                                <AccordionTrigger>Soft Skills</AccordionTrigger>
+                                <AccordionContent className="p-4 space-y-2 bg-muted/50 rounded-md">
+                                {softSkillsTopics.map((topic) => (
+                                    <div key={topic.id} className="flex items-center space-x-2">
+                                        <Checkbox id={`topic-${topic.id}`} />
+                                        <Label htmlFor={`topic-${topic.id}`} className="font-normal">{topic.label}</Label>
+                                    </div>
+                                ))}
+                                </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="mentor-contribution">How would you like to contribute?</Label>
@@ -181,7 +241,7 @@ export default function PartnerPage() {
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button type="submit">Apply to be a Mentor</Button>
+                        <Button type="submit">Apply Now</Button>
                     </CardFooter>
                 </form>
             </Card>
@@ -191,3 +251,5 @@ export default function PartnerPage() {
     </div>
   );
 }
+
+    
