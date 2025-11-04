@@ -1,0 +1,330 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user of the SheCodesHerWay platform.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user."
+        },
+        "firstName": {
+          "type": "string",
+          "description": "The first name of the user."
+        },
+        "lastName": {
+          "type": "string",
+          "description": "The last name of the user."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the user.",
+          "format": "email"
+        },
+        "dateJoined": {
+          "type": "string",
+          "description": "The date and time the user joined the platform.",
+          "format": "date-time"
+        },
+        "profilePicture": {
+          "type": "string",
+          "description": "URL to the user's profile picture.  Can be null if user has not uploaded a profile picture.",
+          "format": "uri"
+        },
+        "bio": {
+          "type": "string",
+          "description": "A short biography or description of the user."
+        },
+        "isMentor": {
+          "type": "boolean",
+          "description": "Indicates whether the user is a mentor."
+        },
+        "location": {
+          "type": "string",
+          "description": "The general location of the user."
+        }
+      },
+      "required": [
+        "id",
+        "firstName",
+        "lastName",
+        "email",
+        "dateJoined"
+      ]
+    },
+    "MentorApplication": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "MentorApplication",
+      "type": "object",
+      "description": "Represents an application to become a mentor.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the mentor application."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N MentorApplication)"
+        },
+        "applicationDate": {
+          "type": "string",
+          "description": "The date the application was submitted.",
+          "format": "date-time"
+        },
+        "experience": {
+          "type": "string",
+          "description": "Description of the applicant's experience."
+        },
+        "motivation": {
+          "type": "string",
+          "description": "Description of the applicant's motivation for becoming a mentor."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the application (e.g., 'pending', 'approved', 'rejected')."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "applicationDate",
+        "experience",
+        "motivation",
+        "status"
+      ]
+    },
+    "SanginiUdaanEnrollment": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SanginiUdaanEnrollment",
+      "type": "object",
+      "description": "Represents an enrollment in the Sangini Udaan program.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the enrollment."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N SanginiUdaanEnrollment)"
+        },
+        "enrollmentDate": {
+          "type": "string",
+          "description": "The date the user enrolled in the program.",
+          "format": "date-time"
+        },
+        "programStartDate": {
+          "type": "string",
+          "description": "The anticipated start date of the program for the enrollee."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the enrollment (e.g., 'pending', 'active', 'completed')."
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "enrollmentDate",
+        "programStartDate",
+        "status"
+      ]
+    },
+    "ForumPost": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ForumPost",
+      "type": "object",
+      "description": "Represents a post in the community forum.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the forum post."
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N ForumPost)"
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the forum post."
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the forum post."
+        },
+        "postDate": {
+          "type": "string",
+          "description": "The date and time the post was created.",
+          "format": "date-time"
+        },
+        "lastEditDate": {
+          "type": "string",
+          "description": "The date and time the post was last edited.",
+          "format": "date-time"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Tags associated with the forum post.",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "userId",
+        "title",
+        "content",
+        "postDate"
+      ]
+    },
+    "ForumComment": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ForumComment",
+      "type": "object",
+      "description": "Represents a comment on a forum post.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the forum comment."
+        },
+        "postId": {
+          "type": "string",
+          "description": "Reference to ForumPost. (Relationship: ForumPost 1:N ForumComment)"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Reference to User. (Relationship: User 1:N ForumComment)"
+        },
+        "content": {
+          "type": "string",
+          "description": "The content of the forum comment."
+        },
+        "commentDate": {
+          "type": "string",
+          "description": "The date and time the comment was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "postId",
+        "userId",
+        "content",
+        "commentDate"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Stores user profile information. Path-based ownership is used, ensuring only the user can access their profile data. The userId parameter is the Firebase Authentication UID.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/mentorApplications/{mentorApplicationId}",
+        "definition": {
+          "entityName": "MentorApplication",
+          "schema": {
+            "$ref": "#/backend/entities/MentorApplication"
+          },
+          "description": "Stores applications to become a mentor. Applications are accessible to the submitting user and administrators.",
+          "params": [
+            {
+              "name": "mentorApplicationId",
+              "description": "The unique identifier for the mentor application."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/sanginiUdaanEnrollments/{sanginiUdaanEnrollmentId}",
+        "definition": {
+          "entityName": "SanginiUdaanEnrollment",
+          "schema": {
+            "$ref": "#/backend/entities/SanginiUdaanEnrollment"
+          },
+          "description": "Stores enrollments in the Sangini Udaan program. Enrollments are accessible to the enrolled user and administrators.",
+          "params": [
+            {
+              "name": "sanginiUdaanEnrollmentId",
+              "description": "The unique identifier for the Sangini Udaan enrollment."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/forumPosts/{forumPostId}",
+        "definition": {
+          "entityName": "ForumPost",
+          "schema": {
+            "$ref": "#/backend/entities/ForumPost"
+          },
+          "description": "Stores forum posts. Accessible to all users, but only the author can edit/delete their post.",
+          "params": [
+            {
+              "name": "forumPostId",
+              "description": "The unique identifier for the forum post."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/forumPosts/{forumPostId}/forumComments/{forumCommentId}",
+        "definition": {
+          "entityName": "ForumComment",
+          "schema": {
+            "$ref": "#/backend/entities/ForumComment"
+          },
+          "description": "Stores comments for a given forum post. Includes denormalized 'postId' and 'userId' for authorization independence.",
+          "params": [
+            {
+              "name": "forumPostId",
+              "description": "The unique identifier for the parent forum post."
+            },
+            {
+              "name": "forumCommentId",
+              "description": "The unique identifier for the forum comment."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/roles_admin/{userId}",
+        "definition": {
+          "entityName": "roles_admin",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Documents in this collection signify that a user is an admin. Existence is used for role checking.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier for the user, corresponding to their Firebase Authentication UID."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to support the SheCodesHerWay platform, focusing on user empowerment and community building. The design prioritizes authorization independence, clarity, and scalability.\n\nAuthorization Independence is achieved by denormalizing authorization data where necessary. For instance, the `ForumComment` subcollection denormalizes the `userId` from the `User` collection and the `postId` from the `ForumPost` collection. This allows security rules to validate access without needing to perform expensive `get()` operations. Additionally, roles and memberships are managed using dedicated collections or membership maps within documents, avoiding hierarchical authorization.\n\nStructural Segregation is applied by using separate collections for different data types. User profiles are stored under `/users/{userId}`, mentor applications under `/mentorApplications/{mentorApplicationId}`, Sangini Udaan enrollments under `/sanginiUdaanEnrollments/{sanginiUdaanEnrollmentId}`, and forum posts under `/forumPosts/{forumPostId}`. This segregation simplifies security rules by ensuring that all documents within a collection share the same access requirements. The `ForumComment` are stored as subcollection of `ForumPost` under path `/forumPosts/{forumPostId}/forumComments/{forumCommentId}`. This way we can enable efficient querying of comments for a specific post and still segregate data based on access requirements.\n\nAccess Modeling follows consistent patterns. User-owned data is stored under hierarchical paths like `/users/{userId}`, granting straightforward ownership-based access. Collaborative data (if any) can be managed using membership maps within the documents themselves, storing user roles directly within the data. Global roles (e.g., admin) are managed using dedicated collections like `/roles_admin/{uid}`, enabling simple existence checks in security rules. This way it will be simple to create more roles in the future.\n\nQAPs (Rules are not Filters) are supported by the structural design. Segregation into separate collections with homogeneous security postures avoids the need for complex filtering logic in the rules. Furthermore, the Membership Map approach facilitates secure `list` operations where users can only access resources for which they have appropriate membership.\n\nData Clarity and Predictability are ensured by using explicit state modeling with dedicated `status` fields and enforcing strict naming conventions. All paths and parameters are named semantically, and the schema avoids dynamic keys.\n"
+  }
+}

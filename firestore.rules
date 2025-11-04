@@ -1,0 +1,199 @@
+/**
+ * @fileoverview Firestore Security Rules for SheCodesHerWay Platform
+ *
+ * Core Philosophy:
+ * This ruleset enforces a user-ownership model for personal data (profiles, applications, enrollments) while allowing public read access to forum posts.
+ * Administrative roles are managed using a dedicated collection. Authorization independence is prioritized by denormalizing key data.
+ *
+ * Data Structure:
+ * - /users/{userId}: User profile information; owner-only access.
+ * - /mentorApplications/{mentorApplicationId}: Mentor applications; owner-only access with potential admin overrides (TODO).
+ * - /sanginiUdaanEnrollments/{sanginiUdaanEnrollmentId}: Program enrollments; owner-only access with potential admin overrides (TODO).
+ * - /forumPosts/{forumPostId}: Forum posts; public read access, owner-only writes.
+ * - /forumPosts/{forumPostId}/forumComments/{forumCommentId}: Comments on forum posts; accessible to all, but only the author can edit/delete their comment.
+ * - /roles_admin/{userId}: Documents signifying admin role; existence check for authorization.
+ *
+ * Key Security Decisions:
+ * - User listing is implicitly disallowed (no `allow list: if true;` on `/users`).
+ * - The `roles_admin` collection is used for role-based access control, enabling admin overrides where needed.
+ * - Data validation is relaxed in this prototyping phase, focusing on authorization and relational integrity only.
+ *
+ * Denormalization for Authorization:
+ * - Forum comments denormalize `userId` and `postId` to enable independent authorization checks without extra reads.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * @description Allows users to manage their own profile data.
+     * @path /users/{userId}
+     * @allow (create) User with ID 'user123' can create their profile if request.auth.uid == 'user123'.
+     * @allow (get, update, delete) User with ID 'user123' can read, update, or delete their profile if request.auth.uid == 'user123'.
+     * @deny (create) User with ID 'user456' cannot create a profile with ID 'user123'.
+     * @deny (get, update, delete) User with ID 'user456' cannot read, update, or delete the profile of user 'user123'.
+     * @principle Enforces document ownership for writes.
+     */
+    match /users/{userId} {
+
+
+      function isOwner(userId) {
+        return request.auth.uid == userId;
+      }
+
+      function isExistingOwner(userId) {
+        return isOwner(userId) && resource != null;
+      }
+
+      allow get: if isOwner(userId);
+      allow list: if false; // Listing users is not permitted
+
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == userId;
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Allows users to create and manage their own mentor applications.
+     * @path /mentorApplications/{mentorApplicationId}
+     * @allow (create) User with ID 'user123' can create an application with userId == 'user123'.
+     * @allow (get, update, delete) User with ID 'user123' can read, update, or delete their application (where userId == 'user123').
+     * @deny (create) User with ID 'user456' cannot create an application with userId == 'user123'.
+     * @deny (get, update, delete) User with ID 'user456' cannot read, update, or delete an application belonging to user 'user123'.
+     * @principle Enforces document ownership for writes.
+     */
+    match /mentorApplications/{mentorApplicationId} {
+
+
+
+       function isApplicationOwner() {
+        return request.auth.uid == resource.data.userId;
+      }
+
+
+      function isExistingOwner() {
+        return isApplicationOwner() && resource != null;
+      }
+
+      allow get: if isApplicationOwner();
+      allow list: if false; // Listing applications is not permitted in the prototype
+
+      allow create: if request.resource.data.userId == request.auth.uid;
+      allow update: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+    }
+
+    /**
+     * @description Allows users to create and manage their own Sangini Udaan enrollments.
+     * @path /sanginiUdaanEnrollments/{sanginiUdaanEnrollmentId}
+     * @allow (create) User with ID 'user123' can create an enrollment with userId == 'user123'.
+     * @allow (get, update, delete) User with ID 'user123' can read, update, or delete their enrollment (where userId == 'user123').
+     * @deny (create) User with ID 'user456' cannot create an enrollment with userId == 'user123'.
+     * @deny (get, update, delete) User with ID 'user456' cannot read, update, or delete an enrollment belonging to user 'user123'.
+     * @principle Enforces document ownership for writes.
+     */
+    match /sanginiUdaanEnrollments/{sanginiUdaanEnrollmentId} {
+
+
+
+      function isEnrollmentOwner() {
+        return request.auth.uid == resource.data.userId;
+      }
+
+
+
+      function isExistingOwner() {
+        return isEnrollmentOwner() && resource != null;
+      }
+
+      allow get: if isEnrollmentOwner();
+      allow list: if false; // Listing enrollments is not permitted
+
+      allow create: if request.resource.data.userId == request.auth.uid;
+      allow update: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+    }
+
+    /**
+     * @description Allows public read access to forum posts, but restricts writes to the post author.
+     * @path /forumPosts/{forumPostId}
+     * @allow (get, list) Any user can read or list forum posts.
+     * @allow (create) User with ID 'user123' can create a post where post.userId == request.auth.uid.
+     * @allow (update, delete) User with ID 'user123' can update/delete their own post (where post.userId == 'user123').
+     * @deny (create) User with ID 'user456' cannot create a post with userId == 'user123'.
+     * @deny (update, delete) User with ID 'user456' cannot update/delete a post belonging to user 'user123'.
+     * @principle Allows public read access with owner-only writes, enforces document ownership for writes.
+     */
+    match /forumPosts/{forumPostId} {
+
+
+
+      function isPostOwner() {
+        return request.auth.uid == resource.data.userId;
+      }
+
+      function isExistingOwner() {
+        return isPostOwner() && resource != null;
+      }
+
+      allow get: if true;
+      allow list: if true;
+
+      allow create: if request.resource.data.userId == request.auth.uid;
+      allow update: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+    }
+
+    /**
+     * @description Allows creating comments on forum posts, with write access restricted to the comment author.
+     * @path /forumPosts/{forumPostId}/forumComments/{forumCommentId}
+     * @allow (get, list) Any user can read or list comments for a given forum post.
+     * @allow (create) User with ID 'user123' can create a comment with userId == 'user123' and postId == '{forumPostId}'.
+     * @allow (update, delete) User with ID 'user123' can update/delete their own comment (where userId == 'user123').
+     * @deny (create) User with ID 'user456' cannot create a comment with userId == 'user123'.
+     * @deny (update, delete) User with ID 'user456' cannot update/delete a comment belonging to user 'user123'.
+     * @principle Enforces document ownership for writes, denormalizes userId and postId for authorization independence.
+     */
+    match /forumPosts/{forumPostId}/forumComments/{forumCommentId} {
+
+
+
+
+      function isCommentOwner() {
+        return request.auth.uid == resource.data.userId;
+      }
+
+      function isExistingOwner() {
+        return isCommentOwner() && resource != null;
+      }
+
+
+      allow get: if true;
+      allow list: if true;
+
+      allow create: if request.resource.data.userId == request.auth.uid;
+      allow update: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isExistingOwner() && request.resource.data.userId == request.auth.uid;
+    }
+
+    /**
+     * @description Allows checking of user admin roles
+     * @path /roles_admin/{userId}
+     * @allow (get) Any user can read their own admin role
+     * @allow (create) Only authenticated users can create their own admin role (for testing)
+     *
+     */
+     match /roles_admin/{userId} {
+
+
+
+
+
+        allow get: if request.auth.uid == userId;
+        allow list: if false;
+        allow create: if request.auth.uid == userId;
+        allow update: if false;
+        allow delete: if false;
+    }
+  }
+}
