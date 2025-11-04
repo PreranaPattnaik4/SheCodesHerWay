@@ -35,9 +35,6 @@ export default function UserAuth() {
     return (
       <>
         <div className="flex gap-2">
-          <Button variant="ghost" onClick={() => setLogInOpen(true)}>
-            Log In
-          </Button>
           <Button onClick={() => setSignUpOpen(true)}>Sign Up</Button>
         </div>
         <SignUpDialog open={signUpOpen} onOpenChange={setSignUpOpen} onLoginRequest={() => setLogInOpen(true)}/>

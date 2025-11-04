@@ -37,9 +37,6 @@ export default function Header() {
            <div className="hidden sm:flex">
              <UserAuth />
            </div>
-           <Button asChild className="hidden sm:flex">
-            <Link href="/apply">Apply Now</Link>
-          </Button>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="outline" size="icon">
@@ -65,9 +62,6 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                 <Button asChild>
-                  <Link href="/apply" onClick={() => setOpen(false)}>Apply Now</Link>
-                </Button>
               </div>
             </SheetContent>
           </Sheet>
