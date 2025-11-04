@@ -11,21 +11,25 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import SignUpDialog from './sign-up-dialog';
-import LoginDialog from './login-dialog';
+import AuthDialog from './auth-dialog';
 import { useState } from 'react';
 
 export default function UserAuth() {
   const { user, isUserLoading } = useUser();
   const auth = useAuth();
-  const [signUpOpen, setSignUpOpen] = useState(false);
-  const [logInOpen, setLogInOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
+  const [initialTab, setInitialTab] = useState<'signup' | 'login'>('signup');
 
   const getInitials = (name?: string | null) => {
     if (!name) return 'U';
     const names = name.split(' ');
     return names.map((n) => n[0]).join('');
   };
+
+  const openDialog = (tab: 'signup' | 'login') => {
+    setInitialTab(tab);
+    setAuthDialogOpen(true);
+  }
 
   if (isUserLoading) {
     return <Button variant="outline">Loading...</Button>;
@@ -35,10 +39,13 @@ export default function UserAuth() {
     return (
       <>
         <div className="flex gap-2">
-          <Button onClick={() => setSignUpOpen(true)}>Sign Up</Button>
+          <Button onClick={() => openDialog('signup')}>Sign Up</Button>
         </div>
-        <SignUpDialog open={signUpOpen} onOpenChange={setSignUpOpen} onLoginRequest={() => setLogInOpen(true)}/>
-        <LoginDialog open={logInOpen} onOpenChange={setLogInOpen} onSignUpRequest={() => setSignUpOpen(false)}/>
+        <AuthDialog 
+            open={authDialogOpen} 
+            onOpenChange={setAuthDialogOpen}
+            initialTab={initialTab}
+        />
       </>
     );
   }
