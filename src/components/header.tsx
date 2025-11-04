@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/sangini-udaan', label: 'Sangini Udaan' },
+  { href: '/internship', label: 'Internship' },
   { href: '/community', label: 'Community' },
   { href: '/partner', label: 'Partner with Us' },
 ];

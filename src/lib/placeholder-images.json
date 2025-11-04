@@ -41,6 +41,24 @@
       "description": "An abstract banner for the community forum.",
       "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract banner"
+    },
+    {
+      "id": "internship-hero",
+      "description": "Welcoming banner showing diverse women collaborating online.",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women collaborating"
+    },
+    {
+      "id": "internship-community",
+      "description": "Illustration of women in an online meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1711898384503-49073c3edb99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21lbiUyMG9ubGluZSUyMG1lZXRpbmd8ZW58MHx8fHwxNzYyMjQ3MzQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women online meeting"
+    },
+    {
+      "id": "internship-certificate",
+      "description": "A mock certificate with floral borders.",
+      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate floral"
     }
   ]
 }
