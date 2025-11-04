@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
-import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School } from 'lucide-react';
+import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School, Gift } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const aboutIcons = [
@@ -15,6 +15,7 @@ const aboutIcons = [
     { icon: HeartHandshake, text: 'Mentorship' },
     { icon: Award, text: 'Certificate' },
     { icon: Globe, text: 'Community' },
+    { icon: Gift, text: 'Growth Focused' , description: "This is an unpaid, learning-focused internship." },
 ];
 
 const domains = [
@@ -76,18 +77,19 @@ export default function InternshipPage() {
                 <div className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
                     <div className="space-y-24">
                         <section className="bg-secondary rounded-lg p-12">
-                            <div className="max-w-3xl mx-auto text-center">
+                            <div className="max-w-4xl mx-auto text-center">
                                 <h2 className="font-headline text-3xl font-bold">About the Internship</h2>
                                 <p className="mt-4 text-lg text-foreground/80">
                                     Our training-based internship is designed to give you hands-on experience by working on real projects. You’ll receive dedicated mentorship, a certificate of completion, and become a lifetime member of the SheCodesHerWay community.
                                 </p>
-                                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+                                <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
                                     {aboutIcons.map((item, index) => (
                                         <div key={index} className="flex flex-col items-center gap-2">
                                             <div className="rounded-full bg-background p-4 text-primary">
                                                 <item.icon className="h-8 w-8" />
                                             </div>
                                             <p className="font-semibold text-foreground/90">{item.text}</p>
+                                            {item.description && <p className="text-xs text-muted-foreground">{item.description}</p>}
                                         </div>
                                     ))}
                                 </div>
