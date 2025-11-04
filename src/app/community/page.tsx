@@ -1,8 +1,11 @@
+
 import ForumList from '@/components/community/forum-list';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import JoinUs from '@/components/home/join-us';
+import { Separator } from '@/components/ui/separator';
 
 export default function CommunityPage() {
   const forumBanner = PlaceHolderImages.find(p => p.id === 'forum-banner');
@@ -33,7 +36,13 @@ export default function CommunityPage() {
         </div>
 
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-          <ForumList />
+            <div className="space-y-24">
+                <ForumList />
+                <Separator />
+                <div id="partner-with-us">
+                    <JoinUs />
+                </div>
+            </div>
         </div>
       </main>
       <Footer />
