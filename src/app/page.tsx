@@ -10,6 +10,7 @@ import CoreActivities from '@/components/home/core-activities';
 import Roadmap from '@/components/home/roadmap';
 import JoinUs from '@/components/home/join-us';
 import { Separator } from '@/components/ui/separator';
+import Faq from '@/components/faq';
 
 export default function Home() {
   return (
@@ -37,6 +38,10 @@ export default function Home() {
             <div className="grid gap-20 lg:grid-cols-2 lg:gap-12">
               <CoreActivities />
               <Roadmap />
+            </div>
+            <Separator />
+            <div id="faq">
+                <Faq />
             </div>
             <Separator />
             <div id="partner-with-us">

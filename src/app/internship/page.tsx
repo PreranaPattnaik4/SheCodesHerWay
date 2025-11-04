@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Laptop, Milestone, Feather, Globe, Users, Award, Briefcase, Bot, Megaphone, Search, HeartHandshake, Calendar, Clock, School, Gift, DollarSign } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Faq from '@/components/faq';
 
 const aboutIcons = [
     { icon: Laptop, text: 'Learning' },
@@ -113,6 +114,7 @@ export default function InternshipPage() {
                                         </CardContent>
                                     </Card>
                                 ))}
+                                {domains.length % 3 === 2 && <div className="hidden lg:block"></div>}
                             </div>
                         </section>
                         
@@ -170,7 +172,15 @@ export default function InternshipPage() {
                         <Separator />
                         
                         <section className="grid md:grid-cols-2 gap-12 items-center">
-                             {communityImage && (
+                            <div className="text-center md:text-left">
+                                <h2 className="font-headline text-3xl font-bold">Join our Sangini Circle</h2>
+                                <p className="mt-4 text-lg text-foreground/80">Become part of a digital sisterhood of learners and leaders, where you can connect, collaborate, and grow. Participate in exclusive events like the annual Udaan Summit.</p>
+                                <div className="flex justify-center md:justify-start gap-4 mt-6">
+                                    <span className="font-semibold font-headline text-lg text-primary">Udaan Summit</span>
+                                    <span className="font-semibold font-headline text-lg text-primary">Sangini Udaan</span>
+                                </div>
+                            </div>
+                            {communityImage && (
                                 <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
                                     <Image
                                     src={communityImage.imageUrl}
@@ -180,25 +190,17 @@ export default function InternshipPage() {
                                     data-ai-hint={communityImage.imageHint}
                                     />
                                 </div>
-                             )}
-                            <div className="text-center md:text-left">
-                                <h2 className="font-headline text-3xl font-bold">Join our Sangini Circle</h2>
-                                <p className="mt-4 text-lg text-foreground/80">Become part of a digital sisterhood of learners and leaders, where you can connect, collaborate, and grow. Participate in exclusive events like the annual Udaan Summit.</p>
-                                <div className="flex justify-center md:justify-start gap-4 mt-6">
-                                    <span className="font-semibold font-headline text-lg text-primary">Udaan Summit</span>
-                                    <span className="font-semibold font-headline text-lg text-primary">Sangini Udaan</span>
-                                </div>
-                            </div>
+                            )}
                         </section>
                         
                         <Separator />
 
-                         <section className="grid md:grid-cols-2 gap-12 items-center">
-                            <div className="text-center md:text-left">
+                        <section className="grid md:grid-cols-2 gap-12 items-center">
+                            <div className="text-center md:text-left order-last md:order-first">
                                 <h2 className="font-headline text-3xl font-bold">Get Certified</h2>
                                 <p className="mt-4 text-lg text-foreground/80">Receive an official SheCodesHerWay Internship Certificate recognizing your valuable learning and contributions to our mission.</p>
                             </div>
-                             {certificateImage && (
+                            {certificateImage && (
                                 <div className="relative h-80 w-full rounded-lg overflow-hidden shadow-lg">
                                     <Image
                                     src={certificateImage.imageUrl}
@@ -208,8 +210,14 @@ export default function InternshipPage() {
                                     data-ai-hint={certificateImage.imageHint}
                                     />
                                 </div>
-                             )}
+                            )}
                         </section>
+
+                        <Separator />
+
+                         <div id="faq">
+                            <Faq />
+                        </div>
 
                         <Separator />
 
