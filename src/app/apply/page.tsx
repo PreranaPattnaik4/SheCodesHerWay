@@ -240,11 +240,11 @@ export default function ApplyPage() {
                         <div className="space-y-1 leading-none">
                           <FormLabel>
                              I agree to the SheCodesHerWay{' '}
-                            <Link href="#" className="text-primary hover:underline">
+                            <Link href="/terms" className="text-primary hover:underline">
                               Terms & Conditions
                             </Link>{' '}
                             and{' '}
-                            <Link href="#" className="text-primary hover:underline">
+                            <Link href="/privacy" className="text-primary hover:underline">
                               Privacy Policy
                             </Link>
                             .

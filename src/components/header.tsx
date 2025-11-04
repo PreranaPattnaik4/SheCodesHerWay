@@ -16,6 +16,7 @@ const navLinks = [
   { href: '/community', label: 'Community' },
   { href: '/faq', label: 'FAQs' },
   { href: '/partner', label: 'Partner with Us' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
