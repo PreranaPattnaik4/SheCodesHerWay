@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { UserPlus, Briefcase } from "lucide-react"
+import { UserPlus, Briefcase, Handshake, Linkedin } from "lucide-react"
 
 export default function JoinUs() {
   const { toast } = useToast();
@@ -36,7 +36,7 @@ export default function JoinUs() {
         <Tabs defaultValue="enroll" className="w-full">
         <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-auto">
             <TabsTrigger value="enroll" className="py-2"><UserPlus className="mr-2 h-4 w-4"/>Enroll in Program</TabsTrigger>
-            <TabsTrigger value="partner" className="py-2"><Briefcase className="mr-2 h-4 w-4"/>Partner with Us</TabsTrigger>
+            <TabsTrigger value="partner" className="py-2"><Handshake className="mr-2 h-4 w-4"/>Become a Mentor</TabsTrigger>
         </TabsList>
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
@@ -83,41 +83,37 @@ export default function JoinUs() {
         </TabsContent>
         <TabsContent value="partner" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
-                 <form onSubmit={handleSubmit} data-form-type="Partnership application">
+                 <form onSubmit={handleSubmit} data-form-type="Mentor application">
                     <CardHeader>
-                        <CardTitle>Become a Partner</CardTitle>
-                        <CardDescription>Join us as a mentor, trainer, or collaborator to make a difference.</CardDescription>
+                        <CardTitle>Become a Mentor</CardTitle>
+                        <CardDescription>
+                            Are you a student or professional passionate about giving back? Join us as a mentor to guide and inspire the next generation.
+                            After you apply, our team will review your profile. Selected mentors will be added to our community WhatsApp group.
+                        </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="space-y-2">
-                            <Label htmlFor="partner-name">Name / Organization Name</Label>
-                            <Input id="partner-name" placeholder="Your Name or Company" required/>
+                            <Label htmlFor="mentor-name">Full Name</Label>
+                            <Input id="mentor-name" placeholder="Your Name" required/>
                         </div>
                          <div className="space-y-2">
-                            <Label htmlFor="partner-email">Contact Email</Label>
-                            <Input id="partner-email" type="email" placeholder="contact@company.com" required/>
+                            <Label htmlFor="mentor-email">Email Address</Label>
+                            <Input id="mentor-email" type="email" placeholder="you@example.com" required/>
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="partner-type">I want to...</Label>
-                            <Select required>
-                                <SelectTrigger id="partner-type">
-                                    <SelectValue placeholder="Select a partnership type" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="mentor">Be a Mentor</SelectItem>
-                                    <SelectItem value="trainer">Be a Trainer</SelectItem>
-                                    <SelectItem value="corporate">Become a Corporate Partner</SelectItem>
-                                    <SelectItem value="ngo">Collaborate as an NGO/Community</SelectItem>
-                                </SelectContent>
-                            </Select>
+                            <Label htmlFor="mentor-linkedin">LinkedIn Profile</Label>
+                             <div className="relative">
+                                <Linkedin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                                <Input id="mentor-linkedin" placeholder="https://linkedin.com/in/your-profile" className="pl-9" required/>
+                            </div>
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="partner-proposal">How would you like to contribute?</Label>
-                            <Textarea id="partner-proposal" placeholder="Tell us about your ideas for collaboration..." required/>
+                            <Label htmlFor="mentor-contribution">How would you like to contribute?</Label>
+                            <Textarea id="mentor-contribution" placeholder="Tell us about your expertise and how you'd like to help..." required/>
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button type="submit">Send Proposal</Button>
+                        <Button type="submit">Apply to be a Mentor</Button>
                     </CardFooter>
                 </form>
             </Card>
