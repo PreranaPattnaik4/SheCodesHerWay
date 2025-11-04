@@ -1,0 +1,69 @@
+"use client";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import Logo from '@/components/logo';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
+import React from 'react';
+
+const navLinks = [
+  { href: '/#about', label: 'About' },
+  { href: '/#program', label: 'Program' },
+  { href: '/#impact', label: 'Impact' },
+  { href: '/community', label: 'Community' },
+];
+
+export default function Header() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Logo />
+        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-foreground/80 transition-colors hover:text-foreground"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <div className="flex items-center gap-4">
+           <Button asChild className="hidden sm:flex">
+            <Link href="/#join-us">Join Us</Link>
+          </Button>
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="outline" size="icon">
+                <Menu className="h-5 w-5" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="left" className="w-3/4">
+              <div className="flex flex-col gap-8 mt-8">
+                <Logo />
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="text-lg font-medium text-foreground/80 transition-colors hover:text-foreground"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+                 <Button asChild>
+                  <Link href="/#join-us" onClick={() => setOpen(false)}>Join Us</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+}

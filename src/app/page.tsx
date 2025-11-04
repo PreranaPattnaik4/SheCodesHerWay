@@ -1,3 +1,53 @@
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import Hero from '@/components/home/hero';
+import MissionVision from '@/components/home/mission-vision';
+import ProgramOverview from '@/components/home/program-overview';
+import AboutFounder from '@/components/home/about-founder';
+import ImpactGoals from '@/components/home/impact-goals';
+import CoreActivities from '@/components/home/core-activities';
+import Roadmap from '@/components/home/roadmap';
+import JoinUs from '@/components/home/join-us';
+import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
+import { Separator } from '@/components/ui/separator';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex min-h-dvh flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        
+        <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+          <div className="space-y-24">
+            <div id="about">
+              <MissionVision />
+            </div>
+            <Separator />
+            <div id="program">
+              <ProgramOverview />
+            </div>
+            <Separator />
+            <AboutFounder />
+            <Separator />
+            <div id="impact">
+              <ImpactGoals />
+            </div>
+            <Separator />
+            <div className="grid gap-20 lg:grid-cols-2 lg:gap-12">
+              <CoreActivities />
+              <Roadmap />
+            </div>
+            <Separator />
+            <div id="join-us">
+              <JoinUs />
+            </div>
+            <Separator />
+            <ExecutiveSummaryGenerator />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
 }
