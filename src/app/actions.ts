@@ -15,7 +15,7 @@ const GenerateExecutiveSummaryInputSchema = z.object({
 export type ActionState = {
     success: boolean;
     data?: { executiveSummary: string; };
-    error?: string | z.typeToFlattenedError<GenerateExecutiveSummaryInput>;
+    error?: string | z.typeToFlattenedError<GenerateExecutiveSummaryInput>['fieldErrors'];
 }
 
 export async function handleGenerateSummary(prevState: ActionState, formData: FormData): Promise<ActionState> {
@@ -30,7 +30,7 @@ export async function handleGenerateSummary(prevState: ActionState, formData: Fo
     const validatedInput = GenerateExecutiveSummaryInputSchema.safeParse(input);
 
     if (!validatedInput.success) {
-        return { success: false, error: validatedInput.error.flatten() };
+        return { success: false, error: validatedInput.error.flatten().fieldErrors };
     }
     
     try {

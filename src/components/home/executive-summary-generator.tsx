@@ -1,7 +1,8 @@
+
 "use client"
 
 import React, { useEffect } from "react"
-import { useFormState } from "react-dom"
+import { useFormState, useFormStatus } from "react-dom"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -24,7 +25,27 @@ const formSchema = z.object({
   vision: z.string().default(brand.vision),
 })
 
-type FormData = z.infer<typeof formSchema>
+type FormData = z.infer<typeof formSchema>;
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" disabled={pending}>
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+          Generating...
+        </>
+      ) : (
+        <>
+          <Bot className="mr-2 h-4 w-4" />
+          Generate Summary
+        </>
+      )}
+    </Button>
+  );
+}
 
 export default function ExecutiveSummaryGenerator() {
   const [state, formAction] = useFormState<ActionState, FormData>(handleGenerateSummary, { success: false })
@@ -40,9 +61,10 @@ export default function ExecutiveSummaryGenerator() {
       vision: brand.vision,
     },
   })
-  const { formState, reset } = form
+  const { formState, reset } = form;
 
   const [generatedSummary, setGeneratedSummary] = React.useState<string | null>(null)
+  const { pending } = useFormStatus();
 
   useEffect(() => {
     if (state.success && state.data) {
@@ -159,19 +181,7 @@ export default function ExecutiveSummaryGenerator() {
                 />
               </CardContent>
               <CardFooter>
-                <Button type="submit" disabled={formState.isSubmitting}>
-                  {formState.isSubmitting ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <Bot className="mr-2 h-4 w-4" />
-                      Generate Summary
-                    </>
-                  )}
-                </Button>
+                <SubmitButton />
               </CardFooter>
             </Card>
           </form>
@@ -192,7 +202,7 @@ export default function ExecutiveSummaryGenerator() {
           </CardHeader>
           <CardContent>
             <div className="prose prose-stone dark:prose-invert min-h-[300px] rounded-md border bg-muted/50 p-4">
-              {formState.isSubmitting ? (
+              {pending ? (
                  <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
                     <Loader2 className="h-8 w-8 animate-spin mb-4" />
                     <p>Generating your summary...</p>

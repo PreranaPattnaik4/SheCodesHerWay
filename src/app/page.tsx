@@ -11,6 +11,7 @@ import Roadmap from '@/components/home/roadmap';
 import JoinUs from '@/components/home/join-us';
 import { Separator } from '@/components/ui/separator';
 import Faq from '@/components/faq';
+import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 
 export default function Home() {
   return (
@@ -38,6 +39,10 @@ export default function Home() {
             <div className="grid gap-20 lg:grid-cols-2 lg:gap-12">
               <CoreActivities />
               <Roadmap />
+            </div>
+            <Separator />
+            <div id="ai-tools">
+              <ExecutiveSummaryGenerator />
             </div>
             <Separator />
             <div id="faq">
