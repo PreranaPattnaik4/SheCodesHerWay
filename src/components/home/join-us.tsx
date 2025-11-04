@@ -9,6 +9,15 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 import { UserPlus, Briefcase, Handshake, Linkedin } from "lucide-react"
 import Link from "next/link"
+import { Checkbox } from "@/components/ui/checkbox"
+
+const mentorTopics = [
+  { id: 'tech', label: 'Tech Journeys (Coding, AI, etc.)' },
+  { id: 'startup', label: 'Startups & Business' },
+  { id: 'creative', label: 'Creative & Content Entrepreneurship' },
+  { id: 'soft-skills', label: 'Emotional & Soft Skills Growth' },
+];
+
 
 export default function JoinUs() {
   const { toast } = useToast();
@@ -76,6 +85,19 @@ export default function JoinUs() {
                                 <Linkedin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                                 <Input id="mentor-linkedin" placeholder="https://linkedin.com/in/your-profile" className="pl-9" required/>
                             </div>
+                        </div>
+                        <div className="space-y-4">
+                          <Label>Which topics can you teach?</Label>
+                          <div className="space-y-2">
+                            {mentorTopics.map((topic) => (
+                              <div key={topic.id} className="flex items-center space-x-2">
+                                <Checkbox id={`topic-${topic.id}`} />
+                                <Label htmlFor={`topic-${topic.id}`} className="font-normal">
+                                  {topic.label}
+                                </Label>
+                              </div>
+                            ))}
+                          </div>
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="mentor-contribution">How would you like to contribute?</Label>
