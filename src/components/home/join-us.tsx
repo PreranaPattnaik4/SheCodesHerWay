@@ -27,7 +27,7 @@ export default function JoinUs() {
   return (
     <section>
         <div className="text-center mb-10">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Join Our Movement</h2>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Partner with Us</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 Whether you're a student, professional, or an organization, there's a place for you at SheCodesHerWay.
             </p>
@@ -36,7 +36,7 @@ export default function JoinUs() {
         <Tabs defaultValue="enroll" className="w-full">
         <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto h-auto">
             <TabsTrigger value="enroll" className="py-2"><UserPlus className="mr-2 h-4 w-4"/>Enroll in Program</TabsTrigger>
-            <TabsTrigger value="partner" className="py-2"><Briefcase className="mr-2 h-4 w-4"/>Become a Mentor/Trainer</TabsTrigger>
+            <TabsTrigger value="partner" className="py-2"><Briefcase className="mr-2 h-4 w-4"/>Partner with Us</TabsTrigger>
         </TabsList>
         <TabsContent value="enroll" className="mt-8">
             <Card className="max-w-2xl mx-auto shadow-lg">
@@ -85,8 +85,8 @@ export default function JoinUs() {
             <Card className="max-w-2xl mx-auto shadow-lg">
                  <form onSubmit={handleSubmit} data-form-type="Partnership application">
                     <CardHeader>
-                        <CardTitle>Become a Mentor/Trainer</CardTitle>
-                        <CardDescription>Join us as a mentor, corporate partner, or collaborator.</CardDescription>
+                        <CardTitle>Become a Partner</CardTitle>
+                        <CardDescription>Join us as a mentor, trainer, or collaborator to make a difference.</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <div className="space-y-2">
@@ -98,16 +98,16 @@ export default function JoinUs() {
                             <Input id="partner-email" type="email" placeholder="contact@company.com" required/>
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="partner-type">Partnership Type</Label>
+                            <Label htmlFor="partner-type">I want to...</Label>
                             <Select required>
                                 <SelectTrigger id="partner-type">
-                                    <SelectValue placeholder="I want to be a..." />
+                                    <SelectValue placeholder="Select a partnership type" />
                                 </SelectTrigger>
                                 <SelectContent>
-                                    <SelectItem value="mentor">Mentor</SelectItem>
-                                    <SelectItem value="trainer">Trainer</SelectItem>
-                                    <SelectItem value="corporate">Corporate Partner</SelectItem>
-                                    <SelectItem value="ngo">NGO/Community Collaborator</SelectItem>
+                                    <SelectItem value="mentor">Be a Mentor</SelectItem>
+                                    <SelectItem value="trainer">Be a Trainer</SelectItem>
+                                    <SelectItem value="corporate">Become a Corporate Partner</SelectItem>
+                                    <SelectItem value="ngo">Collaborate as an NGO/Community</SelectItem>
                                 </SelectContent>
                             </Select>
                         </div>

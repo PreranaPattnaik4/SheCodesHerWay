@@ -32,7 +32,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
            <Button asChild className="hidden sm:flex">
-            <Link href="/#join-us">Join Us</Link>
+            <Link href="/#partner-with-us">Partner with Us</Link>
           </Button>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
@@ -57,7 +57,7 @@ export default function Header() {
                   ))}
                 </nav>
                  <Button asChild>
-                  <Link href="/#join-us" onClick={() => setOpen(false)}>Join Us</Link>
+                  <Link href="/#partner-with-us" onClick={() => setOpen(false)}>Partner with Us</Link>
                 </Button>
               </div>
             </SheetContent>

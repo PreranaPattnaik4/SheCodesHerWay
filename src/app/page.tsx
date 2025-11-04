@@ -38,7 +38,7 @@ export default function Home() {
               <Roadmap />
             </div>
             <Separator />
-            <div id="join-us">
+            <div id="partner-with-us">
               <JoinUs />
             </div>
           </div>
