@@ -2,7 +2,7 @@
 "use client"
 
 import React, { useEffect } from "react"
-import { useFormState, useFormStatus } from "react-dom"
+import { useFormStatus } from "react-dom"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
@@ -48,7 +48,7 @@ function SubmitButton() {
 }
 
 export default function ExecutiveSummaryGenerator() {
-  const [state, formAction] = useFormState<ActionState, FormData>(handleGenerateSummary, { success: false })
+  const [state, formAction] = React.useActionState<ActionState, FormData>(handleGenerateSummary, { success: false })
   const { toast } = useToast()
 
   const form = useForm<FormData>({
