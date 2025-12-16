@@ -50,6 +50,11 @@ export default function Home() {
               <ProgramOverview />
             </div>
             <Separator />
+            <div id="features" className="rounded-xl py-12 relative overflow-hidden">
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <Features />
+            </div>
+            <Separator />
             <div id="partner-with-us" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <JoinUs />
@@ -74,11 +79,6 @@ export default function Home() {
             <div id="ai-tools" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ExecutiveSummaryGenerator />
-            </div>
-            <Separator />
-            <div id="features" className="rounded-xl py-12 relative overflow-hidden">
-                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-                <Features />
             </div>
             <Separator />
             <div id="faq" className="rounded-xl py-12 relative overflow-hidden">
