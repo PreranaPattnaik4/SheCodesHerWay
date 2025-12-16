@@ -21,16 +21,6 @@ const categories = [
 
 const features = [
   {
-    id: 'feature-summary',
-    title: 'Generate an Executive Summary',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-summary'),
-    colSpan: 'col-span-1',
-    rowSpan: 'row-span-2',
-    href: '/ai-tools',
-    category: 'ai-tools',
-    height: 'h-96 md:h-full'
-  },
-  {
     id: 'feature-palai',
     title: 'Chat with PalAI to get guidance',
     image: PlaceHolderImages.find((p) => p.id === 'feature-palai'),
