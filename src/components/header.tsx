@@ -13,7 +13,7 @@ const navLinks = [
   { href: '/internship', label: 'Internship' },
   { href: '/ai-tools', label: 'AI Tools' },
   { href: '/partner', label: 'Partner with Us' },
-  { href: '/chatbot', label: 'Chatbot' },
+  { href: '/chatbot', label: 'PalAI' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];

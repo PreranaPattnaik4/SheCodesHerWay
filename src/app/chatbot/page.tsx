@@ -232,7 +232,7 @@ export default function ChatbotPage() {
                     <div className="h-full flex items-center justify-center">
                         <div className="text-center">
                             <Bot size={48} className="mx-auto text-gray-300" />
-                            <h2 className="mt-4 text-2xl font-bold text-gray-700">SheCodesHerWay Chat</h2>
+                            <h2 className="mt-4 text-2xl font-bold text-gray-700">PalAI</h2>
                              <p className="mt-2 text-muted-foreground">What are you working on?</p>
                         </div>
                     </div>
