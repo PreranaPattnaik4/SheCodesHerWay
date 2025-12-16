@@ -13,6 +13,7 @@ import { ArrowRight } from 'lucide-react';
 const categories = [
   { id: 'all-features', name: 'All Features' },
   { id: 'ai-tools', name: 'AI Tools' },
+  { id: 'ai-coaching', name: 'AI Coaching' },
   { id: 'mentorship', name: 'Mentorship' },
   { id: 'community', name: 'Community' },
   { id: 'workshops', name: 'Workshops' },
@@ -48,6 +49,16 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/community',
     category: 'community',
+    height: 'h-64'
+  },
+  {
+    id: 'feature-ai-coaching',
+    title: 'Get personalized AI Coaching',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching'),
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '/chatbot',
+    category: 'ai-coaching',
     height: 'h-64'
   },
   {
