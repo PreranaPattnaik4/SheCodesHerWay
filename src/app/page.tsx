@@ -49,6 +49,11 @@ export default function Home() {
               <ProgramOverview />
             </div>
             <Separator />
+            <div id="partner-with-us" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+              <JoinUs />
+            </div>
+            <Separator />
             <div id="impact" className="rounded-xl bg-white py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ImpactGoals />
@@ -73,11 +78,6 @@ export default function Home() {
             <div id="faq" className="rounded-xl bg-white py-12 relative overflow-hidden">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <Faq />
-            </div>
-            <Separator />
-            <div id="partner-with-us" className="rounded-xl bg-white py-12 relative overflow-hidden">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-              <JoinUs />
             </div>
           </div>
         </div>
