@@ -31,7 +31,7 @@ export default function WhatWeOffer() {
             </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {offers.map((offer) => (
-                    <Card key={offer.title} className="text-center shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
+                    <Card key={offer.title} className="text-center bg-white transform transition-transform hover:-translate-y-2 duration-300 shadow-[0_10px_40px_-15px_rgba(143,188,143,0.8)] hover:shadow-[0_20px_50px_-20px_rgba(143,188,143,1)]">
                         <CardHeader>
                             <div className="mx-auto bg-muted rounded-full p-4 w-fit">
                                 <offer.icon className="h-8 w-8 text-primary" />
