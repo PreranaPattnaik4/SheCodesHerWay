@@ -9,31 +9,31 @@
     {
       "id": "founder-portrait",
       "description": "A professional and friendly portrait of the founder, Prerana Kailash Pattnaik.",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "program-skill-dev",
       "description": "Women engaged in a coding workshop.",
-      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGNvZGluZ3xlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGNvZGluZ3xlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women coding"
     },
     {
       "id": "program-mentorship",
       "description": "A mentor guiding a mentee at a computer.",
-      "imageUrl": "https://images.unsplash.com/photo-1512238972088-8acb84db0771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW50b3JzaGlwfGVufDB8fHx8MTc2MjI0MDE0NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1512238972088-8acb84db0771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW50b3JzaGlwfGVufDB8fHx8MTc2MjI0MDE0NXww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "mentorship"
     },
     {
       "id": "program-internship",
       "description": "Women presenting a project in a professional setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1689782243562-2317509d17a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1689782243562-2317509d17a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women presentation"
     },
     {
       "id": "program-community",
       "description": "A group of women networking and talking at an event.",
-      "imageUrl": "https://images.unsplash.com/photo-1628551000838-b10c49d3b6f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628551000838-b10c49d3b6f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women networking"
     },
     {
@@ -116,9 +116,9 @@
     },
     {
       "id": "feature-internships",
-      "description": "A close-up shot of a plant with water droplets, representing growth.",
-      "imageUrl": "https://images.unsplash.com/photo-1456428199391-a3b1cb8e35a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncm93dGglMjBleHBlcmllbmNlfGVufDB8fHx8MTcxODcyMDQwMHww&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "growth experience"
+      "description": "A person working on a laptop in a creative environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMG9uJTIwZXhwZXJpZW5jZXxlbnwwfHx8fDE3MjI0OTczMzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hands-on experience"
     },
     {
       "id": "feature-ai-coaching",
@@ -129,7 +129,7 @@
     {
       "id": "feature-hackathon",
       "description": "A team of diverse developers collaborating intensely during a hackathon event.",
-      "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNrYXRob258ZW58MHx8fHwxNzIyNDYwMjc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNrYXRob258ZW58MHx8fHwxNzIyNDYwMjc0fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "hackathon event"
     }
   ]
