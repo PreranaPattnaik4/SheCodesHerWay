@@ -12,6 +12,7 @@ import JoinUs from '@/components/home/join-us';
 import { Separator } from '@/components/ui/separator';
 import Faq from '@/components/faq';
 import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
+import WhatWeOffer from '@/components/home/what-we-offer';
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
             <div id="mission">
               <MissionVision />
             </div>
+            <Separator />
+            <WhatWeOffer />
             <Separator />
             <div id="program">
               <ProgramOverview />
