@@ -33,19 +33,19 @@
     {
       "id": "program-community",
       "description": "A diverse group of cheerful women celebrating together.",
-      "imageUrl": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHdvbWVuJTIwY2VsZWJyYXRpbmd8ZW58MHx8fHwxNzIyNTEzOTIyfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHdvbWVuJTIwY2VsZWJyYXRpbmd8ZW58MHx8fHwxNzIyNTEzOTIyfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "women celebrating"
     },
     {
       "id": "forum-banner",
       "description": "An abstract banner for the community forum.",
-      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1706791722468-1e52d64bd3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGJhbm5lcnxlbnwwfHx8fDE3NjIxNjYwODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract banner"
     },
     {
       "id": "internship-hero",
       "description": "Welcoming banner showing diverse women collaborating online.",
-      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaborating"
     },
     {
@@ -62,15 +62,15 @@
     },
     {
       "id": "about-program-1",
-      "description": "A woman speaking and gesturing during a workshop.",
-      "imageUrl": "https://images.unsplash.com/photo-1595021247614-8920d4633d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzcGVha2luZ3xlbnwwfHx8fDE3NjU4NzYwMjl8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman speaking"
+      "description": "A woman confidently speaking to a group in an outdoor setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGxlYWRlcnxlbnwwfHx8fDE3NjY0NTM5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman leader"
     },
     {
       "id": "about-program-2",
-      "description": "Two men collaborating over a laptop in a classroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1671725779253-0a5a067cfac4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8fDE3NjU4NzYwMjh8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "men collaborating"
+      "description": "Two women collaborating and smiling in a bright, modern office space.",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "women collaboration"
     },
     {
       "id": "startup-school-hero",
