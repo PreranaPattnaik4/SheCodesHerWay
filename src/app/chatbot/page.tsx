@@ -36,13 +36,14 @@ export default function ChatbotPage() {
 
   useEffect(() => {
     if (scrollAreaRef.current) {
-      const scrollElement = scrollAreaRef.current.children[0] as HTMLElement;
-      if (scrollElement) {
-        scrollElement.scrollTo({
-            top: scrollElement.scrollHeight,
-            behavior: 'smooth',
-        });
-      }
+        // The viewport is the first child of the ScrollArea root
+        const viewport = scrollAreaRef.current.children[0] as HTMLElement;
+        if (viewport) {
+            viewport.scrollTo({
+                top: viewport.scrollHeight,
+                behavior: 'smooth',
+            });
+        }
     }
   }, [activeChat?.messages]);
   
@@ -141,30 +142,35 @@ export default function ChatbotPage() {
         </aside>
         
         <div className="flex-1 flex flex-col bg-white">
-          <div className="flex-1 flex flex-col items-center relative">
-            <ScrollArea className="w-full max-w-3xl flex-grow" ref={scrollAreaRef as any}>
-              <div className={cn("px-4 pb-20 pt-4", isChatEmpty ? "h-full flex items-center justify-center" : "space-y-6")}>
+          <div className="flex-1 relative flex flex-col">
+            <ScrollArea className="flex-grow w-full" ref={scrollAreaRef as any}>
+              <div className="max-w-3xl mx-auto w-full px-4 pb-20 pt-4">
                 {isChatEmpty ? (
-                    <div className="text-center">
-                        <h2 className="text-2xl font-bold text-gray-700">What are you working on?</h2>
+                    <div className="h-full flex items-center justify-center">
+                        <div className="text-center">
+                            <Bot size={48} className="mx-auto text-gray-300" />
+                            <h2 className="mt-4 text-2xl font-bold text-gray-700">SheCodesHerWay Chat</h2>
+                             <p className="mt-2 text-muted-foreground">What are you working on?</p>
+                        </div>
                     </div>
                 ) : (
-                  activeChat?.messages.map((message, index) => (
+                  <div className="space-y-6">
+                  {activeChat?.messages.map((message, index) => (
                     <div
                         key={index}
                         className={cn(
-                        'flex items-start gap-4',
-                        message.sender === 'user' ? 'justify-end' : ''
+                        'flex items-start gap-3',
+                        message.sender === 'user' ? 'justify-end' : 'justify-start'
                         )}
                     >
                         {message.sender === 'bot' && (
-                        <Avatar className="h-8 w-8">
+                        <Avatar className="h-8 w-8 border">
                             <AvatarFallback><Bot size={20}/></AvatarFallback>
                         </Avatar>
                         )}
                         <div
                         className={cn(
-                            'max-w-[75%] rounded-lg p-3 text-sm shadow-sm',
+                            'max-w-[75%] rounded-lg p-3 text-sm',
                             message.sender === 'user'
                             ? 'bg-primary text-primary-foreground'
                             : 'bg-secondary'
@@ -173,12 +179,13 @@ export default function ChatbotPage() {
                         {message.text}
                         </div>
                          {message.sender === 'user' && (
-                        <Avatar className="h-8 w-8">
+                        <Avatar className="h-8 w-8 border">
                             <AvatarFallback><User size={20}/></AvatarFallback>
                         </Avatar>
                         )}
                     </div>
-                  ))
+                  ))}
+                  </div>
                 )}
               </div>
             </ScrollArea>
