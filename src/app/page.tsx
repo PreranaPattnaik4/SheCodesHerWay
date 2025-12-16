@@ -23,36 +23,51 @@ export default function Home() {
         
         <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
           <div className="space-y-24">
-            <div id="mission">
+            <div id="mission" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <MissionVision />
             </div>
             <Separator />
             <WhatWeOffer />
             <Separator />
-            <div id="program">
+            <div id="program" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ProgramOverview />
             </div>
             <Separator />
-            <AboutFounder />
+            <div className="rounded-xl bg-white py-12 relative overflow-hidden">
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <AboutFounder />
+            </div>
             <Separator />
-            <div id="impact">
+            <div id="impact" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ImpactGoals />
             </div>
             <Separator />
             <div className="grid gap-20 lg:grid-cols-2 lg:gap-12">
-              <CoreActivities />
-              <Roadmap />
+             <div className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <CoreActivities />
+              </div>
+              <div className="rounded-xl bg-white py-12 relative overflow-hidden">
+                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+                <Roadmap />
+              </div>
             </div>
             <Separator />
-            <div id="ai-tools">
+            <div id="ai-tools" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ExecutiveSummaryGenerator />
             </div>
             <Separator />
-            <div id="faq">
+            <div id="faq" className="rounded-xl bg-white py-12 relative overflow-hidden">
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <Faq />
             </div>
             <Separator />
-            <div id="partner-with-us">
+            <div id="partner-with-us" className="rounded-xl bg-white py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <JoinUs />
             </div>
           </div>
