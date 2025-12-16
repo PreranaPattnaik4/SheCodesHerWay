@@ -1,5 +1,7 @@
+
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
+import { brand } from '@/lib/brand';
 
 export default function AboutProgram() {
   const image1 = PlaceHolderImages.find((p) => p.id === 'about-program-1');
@@ -33,14 +35,17 @@ export default function AboutProgram() {
           )}
         </div>
         <div>
-          <h2 className="font-headline text-4xl font-bold">About the program</h2>
+          <h2 className="font-headline text-4xl font-bold">{brand.programName}</h2>
+          <p className="mt-4 text-2xl text-primary italic">
+            “{brand.programTagline}”
+          </p>
           <div className="w-24 h-1 bg-primary my-4"></div>
-          <div className="space-y-4 text-foreground/80">
+          <div className="space-y-4 text-foreground/80 text-lg">
             <p>
-              Through a series of guided online trainings and workshops, the program empowers non-technical and creative founders, as well as pre-entrepreneurs to ideate, design, and validate prototypes using intuitive, prompt-based tools like Gemini, Nano Banana, Imagen, and Veo in AI Studio.
+              The flagship program of SheCodesHerWay, designed to help women rise with confidence, mentorship, and creativity — whether in tech or in art, innovation, or leadership.
             </p>
-            <p>
-              After the two week program, participants will be invited to submit their prototypes. Participants with outstanding submissions will be invited to present their prototypes at the "Build the Future" Showcase, which will take place in January. Showcase presenters will also receive mentoring from experts from Google.
+            <p className="font-semibold text-foreground/90 pt-4">
+              Because when one woman takes flight, she inspires a thousand more to soar. 🌸
             </p>
           </div>
         </div>
