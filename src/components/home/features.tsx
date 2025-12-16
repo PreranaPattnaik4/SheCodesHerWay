@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const categories = [
   { id: 'all-features', name: 'All Features' },
@@ -17,6 +18,7 @@ const categories = [
   { id: 'community', name: 'Community' },
   { id: 'workshops', name: 'Workshops' },
   { id: 'internships', name: 'Internships' },
+  { id: 'hackathons', name: 'Hackathons' },
 ];
 
 const features = [
@@ -28,7 +30,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/chatbot',
     category: 'ai-coaching',
-    height: 'h-64'
+    height: 'h-64',
   },
   {
     id: 'feature-mentors',
@@ -38,7 +40,7 @@ const features = [
     rowSpan: 'row-span-2',
     href: '/partner',
     category: 'mentorship',
-    height: 'h-96 md:h-full'
+    height: 'h-96 md:h-full',
   },
   {
     id: 'feature-community',
@@ -48,7 +50,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/community',
     category: 'community',
-    height: 'h-64'
+    height: 'h-64',
   },
   {
     id: 'feature-ai-coaching',
@@ -58,7 +60,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/chatbot',
     category: 'ai-coaching',
-    height: 'h-64'
+    height: 'h-64',
   },
   {
     id: 'feature-workshops',
@@ -68,7 +70,7 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/sangini-udaan',
     category: 'workshops',
-    height: 'h-64'
+    height: 'h-64',
   },
   {
     id: 'feature-internships',
@@ -78,7 +80,19 @@ const features = [
     rowSpan: 'row-span-1',
     href: '/internship',
     category: 'internships',
-    height: 'h-64'
+    height: 'h-64',
+    comingSoon: true,
+  },
+  {
+    id: 'feature-hackathon',
+    title: 'Participate in Hackathons',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-hackathon'),
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '#',
+    category: 'hackathons',
+    height: 'h-64',
+    comingSoon: true,
   },
 ];
 
@@ -106,7 +120,7 @@ export default function Features() {
               <li key={category.id}>
                 <Button
                   variant={activeCategory === category.id ? 'secondary' : 'ghost'}
-                  className="w-full justify-start text-base"
+                  className="w-full justify-start text-lg"
                   onClick={() => setActiveCategory(category.id)}
                 >
                   {category.name}
@@ -131,6 +145,9 @@ export default function Features() {
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    {feature.comingSoon && <Badge variant="secondary">Coming Soon</Badge>}
+                  </div>
                   <div className="absolute bottom-0 left-0 p-6">
                     <h3 className="text-2xl font-bold text-white drop-shadow-md">{feature.title}</h3>
                   </div>

@@ -45,7 +45,7 @@
     {
       "id": "internship-hero",
       "description": "Welcoming banner showing diverse women collaborating online.",
-      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaborating"
     },
     {
@@ -123,8 +123,14 @@
     {
       "id": "feature-ai-coaching",
       "description": "A futuristic image of a brain with network connections, representing AI intelligence and coaching.",
-      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhaSUyMGJyYWlufGVufDB8fHx8MTcyMjQzNTQ2NHww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ai brain"
+    },
+    {
+      "id": "feature-hackathon",
+      "description": "A team of diverse developers collaborating intensely during a hackathon event.",
+      "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYWNrYXRob258ZW58MHx8fHwxNzIyNDYwMjc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hackathon event"
     }
   ]
 }
