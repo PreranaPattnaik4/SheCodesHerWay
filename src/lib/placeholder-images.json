@@ -9,32 +9,32 @@
     {
       "id": "founder-portrait",
       "description": "A professional and friendly portrait of the founder, Prerana Kailash Pattnaik.",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjE1NDMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8fDE3NjIxNTQzMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
     },
     {
       "id": "program-skill-dev",
-      "description": "Women engaged in a coding workshop.",
-      "imageUrl": "https://images.unsplash.com/photo-1547860664-b8537ca5f833?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMGNvZGluZ3xlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "women coding"
+      "description": "A woman focused on her laptop in a colorful, creative environment.",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageHint": "woman learning"
     },
     {
       "id": "program-mentorship",
-      "description": "A mentor guiding a mentee at a computer.",
-      "imageUrl": "https://images.unsplash.com/photo-1512238972088-8acb84db0771?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtZW50b3JzaGlwfGVufDB8fHx8MTc2MjI0MDE0NXww&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "mentorship"
+      "description": "Two women having a supportive conversation over coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageHint": "women mentorship"
     },
     {
       "id": "program-internship",
-      "description": "Women presenting a project in a professional setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1689782243562-2317509d17a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHByZXNlbnRhdGlvbnxlbnwwfHx8fDE3NjIyNDAxNDV8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "women presentation"
+      "description": "A professional woman confidently leading a meeting.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageHint": "woman leading meeting"
     },
     {
       "id": "program-community",
-      "description": "A group of women networking and talking at an event.",
-      "imageUrl": "https://images.unsplash.com/photo-1628551000838-b10c49d3b6f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "women networking"
+      "description": "A diverse group of cheerful women celebrating together.",
+      "imageUrl": "https://images.unsplash.com/photo-1588702547919-26089e690ecc?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHdvbWVuJTIwY2VsZWJyYXRpbmd8ZW58MHx8fHwxNzIyNTEzOTIyfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageHint": "women celebrating"
     },
     {
       "id": "forum-banner",
@@ -69,19 +69,19 @@
     {
       "id": "about-program-2",
       "description": "Two men collaborating over a laptop in a classroom setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1671725779253-0a5a067cfac4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8MTc2NTg3NjAyOHww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671725779253-0a5a067cfac4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtZW4lMjBjb2xsYWJvcmF0aW5nfGVufDB8fHx8fDE3NjU4NzYwMjh8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "men collaborating"
     },
     {
       "id": "startup-school-hero",
       "description": "Three men having a discussion at a startup event.",
-      "imageUrl": "https://images.unsplash.com/photo-1671726805753-5d57b54c00fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8c3RhcnR1cCUyMGV2ZW50fGVufDB8fHx8MTc2NTg3ODA0OHww&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1671726805753-5d57b54c00fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8c3RhcnR1cCUyMGV2ZW50fGVufDB8fHx8fDE3NjU4NzgwNDh8MA&ixlib.rb-4.1.0&q=80&w=1080",
       "imageHint": "startup event"
     },
     {
       "id": "impact-goals-target",
       "description": "A stylized target with an arrow hitting the bullseye, representing business goals.",
-      "imageUrl": "https://images.unsplash.com/photo-1576405786725-9954316d2138?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YXJnZXQlMjBpY29ufGVufDB8fHx8MTc2NjM5NDY3NXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1576405786725-9954316d2138?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YXJnZXQlMjBpY29ufGVufDB8fHx8fDE3NjYzOTQ2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "target icon"
     },
     {
