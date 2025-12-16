@@ -1,122 +1,219 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Bot, Send } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { Bot, Send, User, Settings, Plus, MessageSquare } from 'lucide-react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
-import { Separator } from '@/components/ui/separator';
+import { cn } from '@/lib/utils';
 
 interface Message {
   text: string;
   sender: 'user' | 'bot';
 }
 
+interface ChatSession {
+  id: string;
+  title: string;
+  messages: Message[];
+}
+
 export default function ChatbotPage() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      text: "Hello! I'm the SheCodesHerWay AI assistant. How can I help you today? You can ask me about our programs, internships, or how to get involved.",
-      sender: 'bot',
-    },
-  ]);
+  const [chatHistory, setChatHistory] = useState<ChatSession[]>([]);
+  const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
-  const chatbotAvatar = PlaceHolderImages.find((p) => p.id === 'chatbot-avatar');
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
+
+  // Function to get the current active chat
+  const getActiveChat = () => {
+    if (!activeChatId) return null;
+    return chatHistory.find(chat => chat.id === activeChatId);
+  };
+  const activeChat = getActiveChat();
+
+  // Effect to scroll to the bottom of the chat on new messages
+  useEffect(() => {
+    if (scrollAreaRef.current) {
+      scrollAreaRef.current.scrollTo({
+        top: scrollAreaRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [activeChat?.messages]);
+  
+  // Start a new chat session
+  const handleNewChat = () => {
+    const newChatId = Date.now().toString();
+    const newChat: ChatSession = {
+      id: newChatId,
+      title: 'New Chat',
+      messages: [
+        {
+          text: "Hello! I'm the SheCodesHerWay AI assistant. How can I help you today?",
+          sender: 'bot',
+        },
+      ],
+    };
+    setChatHistory(prev => [newChat, ...prev]);
+    setActiveChatId(newChatId);
+  };
+  
+  // Start a new chat if none exists
+  useEffect(() => {
+    if (chatHistory.length === 0) {
+      handleNewChat();
+    } else if (!activeChatId) {
+      setActiveChatId(chatHistory[0].id);
+    }
+  }, []);
+
 
   const handleSendMessage = () => {
-    if (inputValue.trim()) {
-      setMessages([...messages, { text: inputValue, sender: 'user' }]);
-      // Simulate bot response
-      setTimeout(() => {
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { text: 'This is a simulated response. In a real application, I would connect to an AI service to provide a helpful answer!', sender: 'bot' },
-        ]);
-      }, 1000);
-      setInputValue('');
-    }
+    if (!inputValue.trim() || !activeChatId) return;
+
+    const userMessage: Message = { text: inputValue, sender: 'user' };
+
+    setChatHistory(prevHistory => {
+      const updatedHistory = prevHistory.map(chat => {
+        if (chat.id === activeChatId) {
+          // If this is the first user message, update the chat title
+          const isFirstUserMessage = chat.messages.filter(m => m.sender === 'user').length === 0;
+          const newTitle = isFirstUserMessage ? inputValue.substring(0, 30) + (inputValue.length > 30 ? '...' : '') : chat.title;
+          
+          return {
+            ...chat,
+            title: newTitle,
+            messages: [...chat.messages, userMessage],
+          };
+        }
+        return chat;
+      });
+      return updatedHistory;
+    });
+
+    setInputValue('');
+
+    // Simulate bot response
+    setTimeout(() => {
+      const botMessage: Message = {
+        text: 'This is a simulated response. In a real application, I would connect to an AI service to provide a helpful answer!',
+        sender: 'bot',
+      };
+      setChatHistory(prevHistory =>
+        prevHistory.map(chat =>
+          chat.id === activeChatId
+            ? { ...chat, messages: [...chat.messages, botMessage] }
+            : chat
+        )
+      );
+    }, 1000);
   };
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex h-screen flex-col bg-muted/50">
       <Header />
-      <main className="flex-1">
-        <div className="flex flex-col items-center justify-center bg-secondary p-4 pt-16">
-            <Card className="w-full max-w-2xl h-[70vh] shadow-2xl flex flex-col">
-            <CardHeader className="flex flex-row items-center gap-3 border-b">
-                {chatbotAvatar && (
-                    <Avatar>
-                        <AvatarImage src={chatbotAvatar.imageUrl} alt="Chatbot Avatar" data-ai-hint={chatbotAvatar.imageHint} />
-                        <AvatarFallback>AI</AvatarFallback>
-                    </Avatar>
-                )}
-                <div className="grid gap-0.5">
-                <CardTitle className="text-lg">AI Assistant</CardTitle>
-                <CardDescription>SheCodesHerWay</CardDescription>
-                </div>
-            </CardHeader>
-            <CardContent className="flex-1 p-0">
-                <ScrollArea className="h-full p-4 space-y-4">
-                    {messages.map((message, index) => (
-                    <div
-                        key={index}
-                        className={`flex items-start gap-3 my-4 ${
-                        message.sender === 'user' ? 'justify-end' : 'justify-start'
-                        }`}
-                    >
-                        {message.sender === 'bot' && chatbotAvatar && (
-                            <Avatar className="h-8 w-8">
-                                <AvatarImage src={chatbotAvatar.imageUrl} alt="Bot Avatar" data-ai-hint={chatbotAvatar.imageHint} />
-                                <AvatarFallback>AI</AvatarFallback>
-                            </Avatar>
-                        )}
-                        <div
-                        className={`max-w-[75%] rounded-lg px-4 py-2 text-sm shadow ${
-                            message.sender === 'user'
-                            ? 'bg-primary text-primary-foreground'
-                            : 'bg-muted'
-                        }`}
-                        >
-                        {message.text}
-                        </div>
-                    </div>
-                    ))}
-                </ScrollArea>
-            </CardContent>
-            <div className="p-4 border-t">
-                <div className="flex w-full items-center space-x-2">
-                <Input
-                    type="text"
-                    placeholder="Type a message..."
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                    className="flex-1"
-                />
-                <Button onClick={handleSendMessage} disabled={!inputValue.trim()}>
-                    <Send className="w-5 h-5" />
-                    <span className="sr-only">Send</span>
+      <main className="flex-1 flex overflow-hidden">
+        <aside className="w-64 flex flex-col p-4 bg-background border-r">
+            <Button onClick={handleNewChat} className="w-full justify-start">
+                <Plus className="mr-2 h-4 w-4" />
+                New Chat
+            </Button>
+            <p className="mt-6 mb-2 text-xs font-semibold text-muted-foreground uppercase">History</p>
+            <ScrollArea className="flex-1 -mx-4">
+              <div className="px-4 space-y-1">
+                {chatHistory.map(chat => (
+                  <Button
+                    key={chat.id}
+                    variant={activeChatId === chat.id ? 'secondary' : 'ghost'}
+                    className="w-full justify-start truncate"
+                    onClick={() => setActiveChatId(chat.id)}
+                  >
+                    <MessageSquare className="mr-2 h-4 w-4 flex-shrink-0" />
+                    {chat.title}
+                  </Button>
+                ))}
+              </div>
+            </ScrollArea>
+            <div className="mt-auto">
+                <Button variant="ghost" className="w-full justify-start">
+                    <Settings className="mr-2 h-4 w-4" />
+                    Settings
                 </Button>
+            </div>
+        </aside>
+        
+        <div className="flex-1 flex flex-col">
+            {activeChat ? (
+                <>
+                <ScrollArea className="flex-1 p-4" ref={scrollAreaRef as any}>
+                    <div className="max-w-3xl mx-auto space-y-6">
+                        {activeChat.messages.map((message, index) => (
+                        <div
+                            key={index}
+                            className={cn(
+                            'flex items-start gap-4',
+                            message.sender === 'user' ? 'justify-end' : ''
+                            )}
+                        >
+                            {message.sender === 'bot' && (
+                            <Avatar className="h-8 w-8">
+                                <AvatarFallback><Bot size={20}/></AvatarFallback>
+                            </Avatar>
+                            )}
+                            <div
+                            className={cn(
+                                'max-w-[75%] rounded-lg p-3 text-sm shadow-sm',
+                                message.sender === 'user'
+                                ? 'bg-primary text-primary-foreground'
+                                : 'bg-background'
+                            )}
+                            >
+                            {message.text}
+                            </div>
+                             {message.sender === 'user' && (
+                            <Avatar className="h-8 w-8">
+                                <AvatarFallback><User size={20}/></AvatarFallback>
+                            </Avatar>
+                            )}
+                        </div>
+                        ))}
+                    </div>
+                </ScrollArea>
+
+                <div className="p-4 border-t bg-background">
+                    <div className="relative max-w-3xl mx-auto">
+                    <Input
+                        type="text"
+                        placeholder="Type a message..."
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
+                        className="pr-12 h-12"
+                    />
+                    <Button 
+                        onClick={handleSendMessage} 
+                        disabled={!inputValue.trim()}
+                        size="icon"
+                        className="absolute right-2.5 top-1/2 -translate-y-1/2"
+                    >
+                        <Send className="w-5 h-5" />
+                        <span className="sr-only">Send</span>
+                    </Button>
+                    </div>
                 </div>
-            </div>
-            </Card>
-        </div>
-        <div className="bg-secondary">
-          <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <Separator className="my-16"/>
-            <div id="ai-tools">
-              <ExecutiveSummaryGenerator />
-            </div>
-          </div>
+                </>
+            ) : (
+                <div className="flex-1 flex items-center justify-center text-muted-foreground">
+                    <p>Select a chat or start a new one.</p>
+                </div>
+            )}
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
