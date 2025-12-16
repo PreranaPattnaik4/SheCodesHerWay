@@ -115,7 +115,7 @@ export default function ChatbotPage() {
   };
 
   return (
-    <div className="flex h-screen flex-col bg-muted/50">
+    <div className="flex h-screen flex-col bg-background">
       <Header />
       <main className="flex-1 flex overflow-hidden">
         <aside className="w-64 flex flex-col p-4 bg-background border-r">
