@@ -19,7 +19,7 @@ const activities = [
 export default function CoreActivities() {
   return (
     <section>
-      <Card className="h-full shadow-lg">
+      <Card className="h-full shadow-lg bg-white">
         <CardHeader>
           <CardTitle className="font-headline text-3xl">Core Activities</CardTitle>
           <CardDescription>Our key initiatives to empower women.</CardDescription>

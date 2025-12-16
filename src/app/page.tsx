@@ -59,7 +59,7 @@ export default function Home() {
               <ImpactGoals />
             </div>
             <Separator />
-            <div className="grid gap-20 lg:grid-cols-2 lg:gap-12">
+            <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-stretch">
              <div className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <CoreActivities />

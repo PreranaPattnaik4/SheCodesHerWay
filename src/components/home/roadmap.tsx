@@ -18,7 +18,7 @@ const roadmapPhases = [
 export default function Roadmap() {
   return (
     <section>
-      <Card className="h-full shadow-lg">
+      <Card className="h-full shadow-lg bg-white">
         <CardHeader>
           <CardTitle className="font-headline text-3xl">Future Roadmap</CardTitle>
           <CardDescription>Our strategic plan for growth and impact.</CardDescription>
