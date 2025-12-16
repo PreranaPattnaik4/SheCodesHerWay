@@ -6,7 +6,7 @@ export default function MissionVision() {
   return (
     <section>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300">
+            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300 bg-white dark:bg-card">
                 <CardHeader className="flex flex-row items-center gap-4">
                     <div className="rounded-full bg-primary/10 p-3 text-primary">
                         <Rocket className="h-6 w-6" />
@@ -17,7 +17,7 @@ export default function MissionVision() {
                     <p className="text-lg text-foreground/80">"{brand.mission}"</p>
                 </CardContent>
             </Card>
-            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300">
+            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300 bg-white dark:bg-card">
                 <CardHeader className="flex flex-row items-center gap-4">
                      <div className="rounded-full bg-accent/20 p-3 text-accent-foreground">
                         <Eye className="h-6 w-6" />
@@ -28,7 +28,7 @@ export default function MissionVision() {
                     <p className="text-lg text-foreground/80">{brand.vision}</p>
                 </CardContent>
             </Card>
-            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300 md:col-span-2 lg:col-span-1">
+            <Card className="shadow-lg transform transition-transform hover:scale-105 duration-300 md:col-span-2 lg:col-span-1 bg-white dark:bg-card">
                 <CardHeader className="flex flex-row items-center gap-4">
                      <div className="rounded-full bg-secondary p-3 text-secondary-foreground">
                         <Goal className="h-6 w-6" />
