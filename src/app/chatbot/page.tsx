@@ -4,12 +4,37 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Bot, Send, User, Settings, Plus, MessageSquare } from 'lucide-react';
+import { Bot, Send, User, Settings, Plus, MessageSquare, MoreHorizontal, Edit, Trash2 } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Label } from '@/components/ui/label';
+
 
 interface Message {
   text: string;
@@ -27,6 +52,12 @@ export default function ChatbotPage() {
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  // State for dialogs
+  const [chatToDelete, setChatToDelete] = useState<string | null>(null);
+  const [chatToRename, setChatToRename] = useState<ChatSession | null>(null);
+  const [newChatName, setNewChatName] = useState('');
 
   const getActiveChat = () => {
     if (!activeChatId) return null;
@@ -36,8 +67,7 @@ export default function ChatbotPage() {
 
   useEffect(() => {
     if (scrollAreaRef.current) {
-        // The viewport is the first child of the ScrollArea root
-        const viewport = scrollAreaRef.current.children[0] as HTMLElement;
+        const viewport = scrollAreaRef.current.querySelector('[data-radix-scroll-area-viewport]');
         if (viewport) {
             viewport.scrollTo({
                 top: viewport.scrollHeight,
@@ -106,13 +136,47 @@ export default function ChatbotPage() {
     }, 1000);
   };
 
+  const handleRenameChat = () => {
+    if (!chatToRename || !newChatName.trim()) return;
+
+    setChatHistory(prev =>
+      prev.map(chat =>
+        chat.id === chatToRename.id ? { ...chat, title: newChatName.trim() } : chat
+      )
+    );
+    setChatToRename(null);
+    setNewChatName('');
+  };
+
+  const handleDeleteChat = () => {
+    if (!chatToDelete) return;
+
+    setChatHistory(prev => prev.filter(chat => chat.id !== chatToDelete));
+    
+    // If the active chat is the one being deleted, switch to another one or create a new one
+    if (activeChatId === chatToDelete) {
+        const remainingChats = chatHistory.filter(chat => chat.id !== chatToDelete);
+        if (remainingChats.length > 0) {
+            setActiveChatId(remainingChats[0].id);
+        } else {
+            handleNewChat();
+        }
+    }
+    setChatToDelete(null);
+  };
+
+
   const isChatEmpty = !activeChat || activeChat.messages.length === 0;
 
   return (
+    <>
     <div className="flex h-screen flex-col bg-white">
       <Header />
-      <main className="flex-1 flex overflow-hidden">
-        <aside className="w-64 flex flex-col p-4 bg-white border-r">
+      <main className="flex-1 flex overflow-hidden bg-white">
+        <aside className={cn(
+            "flex flex-col p-4 bg-white border-r transition-all duration-300",
+            isSidebarOpen ? "w-64" : "w-0 p-0 overflow-hidden"
+        )}>
             <Button onClick={handleNewChat} className="w-full justify-start">
                 <Plus className="mr-2 h-4 w-4" />
                 New Chat
@@ -121,15 +185,34 @@ export default function ChatbotPage() {
             <ScrollArea className="flex-1 -mx-4">
               <div className="px-4 space-y-1">
                 {chatHistory.map(chat => (
-                  <Button
-                    key={chat.id}
-                    variant={activeChatId === chat.id ? 'secondary' : 'ghost'}
-                    className="w-full justify-start truncate"
-                    onClick={() => setActiveChatId(chat.id)}
-                  >
-                    <MessageSquare className="mr-2 h-4 w-4 flex-shrink-0" />
-                    {chat.title}
-                  </Button>
+                    <div key={chat.id} className="group relative flex items-center">
+                        <Button
+                            variant={activeChatId === chat.id ? 'secondary' : 'ghost'}
+                            className="w-full justify-start truncate pr-8"
+                            onClick={() => setActiveChatId(chat.id)}
+                        >
+                            <MessageSquare className="mr-2 h-4 w-4 flex-shrink-0" />
+                            {chat.title}
+                        </Button>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="ghost" size="icon" className="absolute right-1 h-7 w-7 opacity-0 group-hover:opacity-100">
+                                    <MoreHorizontal className="h-4 w-4" />
+                                    <span className="sr-only">More options</span>
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="end">
+                                <DropdownMenuItem onClick={() => { setChatToRename(chat); setNewChatName(chat.title); }}>
+                                    <Edit className="mr-2 h-4 w-4" />
+                                    <span>Rename</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem onClick={() => setChatToDelete(chat.id)} className="text-destructive">
+                                    <Trash2 className="mr-2 h-4 w-4" />
+                                    <span>Delete</span>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
                 ))}
               </div>
             </ScrollArea>
@@ -217,5 +300,50 @@ export default function ChatbotPage() {
         </div>
       </main>
     </div>
+
+    {/* Rename Chat Dialog */}
+    <Dialog open={!!chatToRename} onOpenChange={(open) => !open && setChatToRename(null)}>
+        <DialogContent>
+            <DialogHeader>
+                <DialogTitle>Rename Chat</DialogTitle>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+                <div className="grid gap-2">
+                    <Label htmlFor="chat-name">Chat Name</Label>
+                    <Input
+                        id="chat-name"
+                        value={newChatName}
+                        onChange={(e) => setNewChatName(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleRenameChat()}
+                    />
+                </div>
+            </div>
+            <DialogFooter>
+                <DialogClose asChild>
+                    <Button type="button" variant="secondary">Cancel</Button>
+                </DialogClose>
+                <Button onClick={handleRenameChat}>Save</Button>
+            </DialogFooter>
+        </DialogContent>
+    </Dialog>
+
+    {/* Delete Chat Alert Dialog */}
+    <AlertDialog open={!!chatToDelete} onOpenChange={(open) => !open && setChatToDelete(null)}>
+        <AlertDialogContent>
+            <AlertDialogHeader>
+                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                    This action cannot be undone. This will permanently delete this chat session.
+                </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+                <AlertDialogCancel onClick={() => setChatToDelete(null)}>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleDeleteChat} className={cn(buttonVariants({ variant: "destructive" }))}>
+                    Delete
+                </AlertDialogAction>
+            </AlertDialogFooter>
+        </AlertDialogContent>
+    </AlertDialog>
+    </>
   );
 }
