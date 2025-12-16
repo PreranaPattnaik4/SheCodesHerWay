@@ -21,13 +21,13 @@
     {
       "id": "program-mentorship",
       "description": "Two women having a supportive conversation over coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "women mentorship"
     },
     {
       "id": "program-internship",
       "description": "A professional woman confidently leading a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman leading meeting"
     },
     {
@@ -69,7 +69,7 @@
     {
       "id": "about-program-2",
       "description": "Two women collaborating and smiling in a bright, modern office space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaboration"
     },
     {
@@ -80,9 +80,9 @@
     },
     {
       "id": "impact-goals-target",
-      "description": "A stylized target with an arrow hitting the bullseye, representing business goals.",
-      "imageUrl": "https://images.unsplash.com/photo-1576405786725-9954316d2138?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YXJnZXQlMjBpY29ufGVufDB8fHx8fDE3NjYzOTQ2NzV8MA&ixlib-rb-4.1.0&q=80&w=1080",
-      "imageHint": "target icon"
+      "description": "An illustration of a successful business woman, representing achieving goals.",
+      "imageUrl": "https://storage.googleapis.com/aifirebase-79ed5.appspot.com/users/pattnaikprerana7%40gmail.com/gen-1722880016393.png",
+      "imageHint": "successful woman"
     },
     {
       "id": "chatbot-avatar",
