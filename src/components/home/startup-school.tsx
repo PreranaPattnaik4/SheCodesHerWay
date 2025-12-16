@@ -1,60 +1,106 @@
-
 import { Button } from "@/components/ui/button";
 import { brand } from "@/lib/brand";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Calendar, MapPin } from "lucide-react";
+import { GraduationCap, Users, Bot, Rocket, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+
+const whoIsItFor = [
+    "Students & beginners exploring career paths",
+    "Women returning to work",
+    "Aspiring tech professionals & creators",
+    "Early-stage founders & entrepreneurs",
+]
+
+const whatWeOffer = [
+    { icon: GraduationCap, text: "Skill-based learning (Tech, AI, Design, Business)" },
+    { icon: HeartHandshake, text: "Mentorship & community support" },
+    { icon: Bot, text: "Career & startup guidance" },
+    { icon: Rocket, text: "Project-based, outcome-driven journeys" },
+    { icon: Users, text: "Confidence, leadership & personal growth" },
+]
 
 export default function StartupSchool() {
-  const heroImage = PlaceHolderImages.find((p) => p.id === "startup-school-hero");
+  const heroImage = PlaceHolderImages.find((p) => p.id === "feature-live-events");
   return (
     <section>
        <div className="max-w-6xl mx-auto py-12">
-        <p>India</p>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
-              {brand.name}
-            </h1>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mt-2">
-              Startup School: Prompt to Prototype
-            </h2>
-            <p className="mt-8 text-lg text-foreground/80">
-              {brand.programTagline}
+            <h2 className="font-headline text-4xl font-bold">🌿 Sangini Udaan — Flagship Program</h2>
+            <p className="mt-4 text-2xl text-primary italic">
+              Empower Her to Fly Beyond Limits
             </p>
-            <p className="mt-4 text-lg text-foreground/80">
-              Startup School is a series of guided online trainings and
-              workshops designed to equip early-stage startup founders with the
-              tools, products, and knowledge that growing companies need.
+            <p className="mt-6 text-lg text-foreground/80">
+              Sangini Udaan is the soul of SheCodesHerWay — a guided mentorship and growth journey crafted to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.
             </p>
-            <Button asChild size="lg" className="mt-8">
-              <Link href="/apply">Apply Now</Link>
-            </Button>
+
+            <div className="mt-8 space-y-6">
+                <Card className="bg-muted/50 border-0">
+                    <CardHeader>
+                        <CardTitle className="text-xl">What is Sangini Udaan?</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p>A holistic, women-centric program designed to nurture learners into leaders and creators into founders — with real guidance, real projects, and real growth.</p>
+                    </CardContent>
+                </Card>
+                 <Card className="bg-muted/50 border-0">
+                    <CardHeader>
+                        <CardTitle className="text-xl">Who is it for?</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <ul className="space-y-2 list-disc list-inside">
+                            {whoIsItFor.map(item => <li key={item}>{item}</li>)}
+                        </ul>
+                    </CardContent>
+                </Card>
+            </div>
           </div>
           <div className="relative">
             {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                width={600}
-                height={400}
-                className="rounded-lg shadow-2xl"
-                data-ai-hint={heroImage.imageHint}
-              />
+              <div className="rounded-lg shadow-2xl overflow-hidden aspect-video">
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={heroImage.imageHint}
+                />
+              </div>
             )}
-            <div className="absolute bottom-4 right-4 bg-background/80 backdrop-blur-sm p-4 rounded-lg shadow-lg border">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                <span>India - online</span>
-              </div>
-              <div className="flex items-center gap-2 mt-2">
-                <Calendar className="w-5 h-5 text-primary" />
-                <span>November 27 - December 7, 2025</span>
-              </div>
-            </div>
+             <Card className="mt-8">
+                <CardHeader>
+                    <CardTitle className="text-xl">What We Offer</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ul className="space-y-4">
+                        {whatWeOffer.map(item => (
+                            <li key={item.text} className="flex items-start gap-3">
+                                <item.icon className="h-6 w-6 text-primary flex-shrink-0 mt-1"/>
+                                <span>{item.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </CardContent>
+            </Card>
+            
           </div>
         </div>
+
+        <div className="text-center mt-16 max-w-3xl mx-auto">
+            <h3 className="font-headline text-3xl font-bold text-primary">The Impact</h3>
+            <p className="mt-4 text-xl">Women don’t just learn — they launch, lead, and grow with purpose.</p>
+             <div className="mt-8 flex items-center justify-center gap-4">
+                <Button asChild size="lg">
+                <Link href="/apply">Apply Now</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                <Link href="/sangini-udaan">Learn More</Link>
+                </Button>
+            </div>
+        </div>
+
       </div>
     </section>
   );
