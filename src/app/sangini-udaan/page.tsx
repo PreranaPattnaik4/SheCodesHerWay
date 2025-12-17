@@ -6,9 +6,10 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, DollarSign } from 'lucide-react';
-import Faq from '@/components/faq';
+import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { programFaqData } from '@/lib/program-faq-data';
 
 const specializedPaths = [
     {
@@ -122,7 +123,7 @@ export default function SanginiUdaanPage() {
                                             Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program. ⭐ Best for women who want holistic growth, independence, and leadership.
                                         </p>
                                         <Button asChild size="lg" className="mt-6">
-                                            <Link href="/startup-school">Enroll in Sangini Udaan All-in-One</Link>
+                                            <Link href="/apply">Enroll in Sangini Udaan All-in-One</Link>
                                         </Button>
                                     </CardContent>
                                 </Card>
@@ -159,7 +160,24 @@ export default function SanginiUdaanPage() {
                         <Separator />
 
                         <div id="faq">
-                            <Faq />
+                           <section>
+                              <div className="text-center mb-10">
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
+                                <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                                  Your questions about the Sangini Udaan program, answered.
+                                </p>
+                              </div>
+                              <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+                                {programFaqData.map((faq, index) => (
+                                  <AccordionItem value={`item-${index}`} key={index}>
+                                    <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
+                                    <AccordionContent className="text-base text-foreground/80">
+                                      {faq.answer}
+                                    </AccordionContent>
+                                  </AccordionItem>
+                                ))}
+                              </Accordion>
+                            </section>
                         </div>
 
                     </div>
