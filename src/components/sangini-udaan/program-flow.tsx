@@ -65,7 +65,7 @@ export default function ProgramFlow() {
 
                                 <div className="absolute left-1/2 -translate-x-1/2 -translate-y-4 md:translate-y-0 h-8 w-8 rounded-full bg-background/30 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] border-2 border-primary-foreground/50">
                                     <div className="h-3 w-3 rounded-full bg-primary-foreground"></div>
-                                d_w-8iv>
+                                </div>
                                 <div className="md:hidden absolute left-0 -translate-y-4 h-8 w-8 rounded-full bg-background/30 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] border-2 border-primary-foreground/50">
                                     <div className="h-3 w-3 rounded-full bg-primary-foreground"></div>
                                 </div>
