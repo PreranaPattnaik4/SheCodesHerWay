@@ -1,5 +1,8 @@
 
+'use client';
+
 import { CheckCircle2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const timelineContent = [
     {
@@ -32,14 +35,38 @@ const optionalPrograms = [
 ];
 
 export default function ProgramFlow() {
+    const [lineHeight, setLineHeight] = useState(0);
+    const timelineRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (timelineRef.current) {
+                const { top, height } = timelineRef.current.getBoundingClientRect();
+                const screenHeight = window.innerHeight;
+
+                // Start animating when the top of the section is a bit into the viewport
+                const start = Math.max(0, screenHeight - top);
+                const scrollableHeight = height + screenHeight;
+                
+                const progress = Math.min(1, start / scrollableHeight);
+                setLineHeight(progress * height);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Initial check
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <section className="bg-gradient-to-b from-primary/90 via-primary to-accent/80 py-20 px-4 rounded-2xl shadow-2xl">
-            <div className="container mx-auto">
+        <section className="bg-background py-20 px-4 rounded-2xl">
+            <div className="container mx-auto" ref={timelineRef}>
                 <div className="text-center mb-16">
-                    <h2 className="font-headline text-4xl font-bold text-primary-foreground">
+                    <h2 className="font-headline text-4xl font-bold text-foreground">
                         🚀 Flagship Program: Sangini Udaan – Women Empowerment Initiative
                     </h2>
-                    <p className="mt-4 text-lg text-primary-foreground/90 max-w-3xl mx-auto">
+                    <p className="mt-4 text-lg text-foreground/80 max-w-3xl mx-auto">
                         Sangini Udaan is the flagship program of SheCodesHerWay. It is a transformative women empowerment journey that helps women
                         discover confidence, leadership, technical skills, creativity,
                         and independence in the digital era.
@@ -47,40 +74,46 @@ export default function ProgramFlow() {
                 </div>
 
                 <div className="relative">
-                    {/* The vertical line */}
-                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-primary-foreground/20 hidden md:block" aria-hidden="true"></div>
+                    {/* The vertical background line */}
+                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" aria-hidden="true"></div>
+                    {/* The animated vertical line */}
+                    <div 
+                        className="absolute left-1/2 -translate-x-1/2 w-0.5 bg-primary hidden md:block"
+                        style={{ height: `${lineHeight}px` }}
+                        aria-hidden="true"
+                    ></div>
 
                     <div className="space-y-12 md:space-y-0">
                         {timelineContent.map((item, index) => (
                             <div key={index} className="relative flex items-center md:items-start flex-col md:flex-row">
-                                <div className="md:hidden absolute left-0 h-full w-0.5 bg-primary-foreground/20" aria-hidden="true"></div>
+                                <div className="md:hidden absolute left-0 h-full w-0.5 bg-border" aria-hidden="true"></div>
                                 <div className="md:w-1/2 flex justify-start md:justify-end md:pr-8 order-1 md:order-none">
                                     {index % 2 === 0 && (
-                                         <div className="w-full md:max-w-md p-6 bg-background/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl text-right">
-                                            <h3 className="font-headline text-2xl text-primary-foreground">{item.title}</h3>
-                                            <p className="mt-2 text-primary-foreground/80">{item.description}</p>
+                                         <div className="w-full md:max-w-md p-6 bg-card border rounded-lg shadow-lg">
+                                            <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
+                                            <p className="mt-2 text-foreground/80">{item.description}</p>
                                         </div>
                                     )}
                                 </div>
 
-                                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-4 md:translate-y-0 h-8 w-8 rounded-full bg-background/30 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] border-2 border-primary-foreground/50">
-                                    <div className="h-3 w-3 rounded-full bg-primary-foreground"></div>
+                                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-4 md:translate-y-0 h-8 w-8 rounded-full bg-background flex items-center justify-center border-2 border-primary shadow-md">
+                                    <div className="h-3 w-3 rounded-full bg-primary"></div>
                                 </div>
-                                <div className="md:hidden absolute left-0 -translate-y-4 h-8 w-8 rounded-full bg-background/30 flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.4)] border-2 border-primary-foreground/50">
-                                    <div className="h-3 w-3 rounded-full bg-primary-foreground"></div>
+                                <div className="md:hidden absolute left-0 -translate-y-4 h-8 w-8 rounded-full bg-background flex items-center justify-center border-2 border-primary shadow-md">
+                                    <div className="h-3 w-3 rounded-full bg-primary"></div>
                                 </div>
 
                                 <div className="md:w-1/2 flex justify-start pl-8 order-2 mt-8 md:mt-0">
                                    {index % 2 !== 0 && (
-                                        <div className="w-full md:max-w-md p-6 bg-background/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl">
-                                            <h3 className="font-headline text-2xl text-primary-foreground">{item.title}</h3>
-                                            <p className="mt-2 text-primary-foreground/80">{item.description}</p>
+                                        <div className="w-full md:max-w-md p-6 bg-card border rounded-lg shadow-lg">
+                                            <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
+                                            <p className="mt-2 text-foreground/80">{item.description}</p>
                                         </div>
                                    )}
                                    {/* Mobile-only card */}
-                                   <div className="md:hidden w-full max-w-md p-6 bg-background/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl">
-                                        <h3 className="font-headline text-2xl text-primary-foreground">{item.title}</h3>
-                                        <p className="mt-2 text-primary-foreground/80">{item.description}</p>
+                                   <div className="md:hidden w-full max-w-md p-6 bg-card border rounded-lg shadow-lg">
+                                        <h3 className="font-headline text-2xl text-foreground">{item.title}</h3>
+                                        <p className="mt-2 text-foreground/80">{item.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -89,18 +122,18 @@ export default function ProgramFlow() {
                 </div>
 
                 <div className="text-center mt-20">
-                     <p className="font-headline text-2xl text-primary-foreground/90 italic max-w-3xl mx-auto">
+                     <p className="font-headline text-2xl text-primary italic max-w-3xl mx-auto">
                         “Every woman who joins Sangini Udaan embarks on a journey —
                         from learning and exploration to confidence, leadership, and independence.”
                     </p>
                 </div>
 
-                 <div className="mt-16 max-w-3xl mx-auto p-8 bg-black/20 rounded-lg">
+                 <div className="mt-16 max-w-3xl mx-auto p-8 bg-muted rounded-lg">
                     <ul className="space-y-3">
                         {optionalPrograms.map((program, index) => (
                             <li key={index} className="flex items-center gap-3">
-                                <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0" />
-                                <span className="text-primary-foreground/90">{program}</span>
+                                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
+                                <span className="text-foreground/90">{program}</span>
                             </li>
                         ))}
                     </ul>
@@ -110,3 +143,5 @@ export default function ProgramFlow() {
         </section>
     );
 }
+
+    
