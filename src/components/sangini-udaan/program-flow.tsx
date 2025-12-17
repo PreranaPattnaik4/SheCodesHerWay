@@ -1,4 +1,3 @@
-
 'use client';
 
 import { CheckCircle2 } from "lucide-react";
@@ -143,5 +142,3 @@ export default function ProgramFlow() {
         </section>
     );
 }
-
-    
