@@ -10,6 +10,7 @@ import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift } from 'lu
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
+import ProgramFlow from '@/components/sangini-udaan/program-flow';
 
 const specializedPaths = [
     {
@@ -157,6 +158,10 @@ export default function SanginiUdaanPage() {
                             </div>
                         </section>
                         
+                        <Separator />
+
+                        <ProgramFlow />
+
                         <Separator />
 
                         <div id="faq">
