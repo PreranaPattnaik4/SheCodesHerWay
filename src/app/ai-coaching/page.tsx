@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const aiTools = [
     {
@@ -39,12 +41,23 @@ const aiTools = [
 ]
 
 export default function AiCoachingPage() {
+  const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
+
   return (
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <section className="bg-secondary py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
+        <section className="relative bg-secondary py-16 md:py-24">
+            {heroImage && (
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    className="object-cover opacity-20"
+                    data-ai-hint={heroImage.imageHint}
+                />
+            )}
+            <div className="container relative mx-auto px-4 text-center">
                 <Bot className="mx-auto h-12 w-12 text-primary" />
                 <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">AI Coaching &amp; Tools</h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
