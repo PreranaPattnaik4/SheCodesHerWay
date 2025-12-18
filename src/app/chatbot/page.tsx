@@ -49,7 +49,7 @@ interface ChatSession {
 }
 
 const welcomeMessage: Message = {
-    text: "Hi, I’m PalAI — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?",
+    text: "Hi, I’m EmpowerFly AI Coach — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?",
     sender: 'bot',
 };
 
@@ -355,4 +355,5 @@ export default function ChatbotPage() {
   );
 }
 
+    
     
