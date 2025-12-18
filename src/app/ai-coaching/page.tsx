@@ -86,18 +86,8 @@ export default function AiCoachingPage() {
 
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
             <div className="space-y-16">
-                 <Card className="relative shadow-lg overflow-hidden min-h-[450px] flex items-center">
-                    {coachImage && (
-                        <Image
-                            src={coachImage.imageUrl}
-                            alt={coachImage.description}
-                            fill
-                            className="object-cover"
-                            data-ai-hint={coachImage.imageHint}
-                        />
-                    )}
-                    <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent"></div>
-                    <div className="relative p-8 md:p-12 md:w-3/5">
+                 <Card className="shadow-lg bg-muted/50">
+                    <div className="p-8 md:p-12">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="bg-primary/10 text-primary p-3 rounded-full">
                                 <MessageSquare className="h-7 w-7" />
