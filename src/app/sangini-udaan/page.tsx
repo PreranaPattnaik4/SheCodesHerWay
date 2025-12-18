@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift } from 'lucide-react';
+import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
@@ -139,6 +139,15 @@ export default function SanginiUdaanPage() {
                             <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                                 A very warm welcome to all the participants and mentors joining our founding cohort! We are thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something truly special.
                             </p>
+                             <p className="mt-6 text-foreground/80">
+                                Stay updated with our latest announcements and follow our journey on social media!
+                            </p>
+                            <Button asChild className="mt-4">
+                                <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="mr-2 h-4 w-4" />
+                                    Follow us on LinkedIn
+                                </Link>
+                            </Button>
                         </section>
 
                         <section>
@@ -251,3 +260,5 @@ export default function SanginiUdaanPage() {
         </div>
     );
 }
+
+    
