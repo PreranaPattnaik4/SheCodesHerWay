@@ -35,6 +35,7 @@ import {
 } from "@/components/ui/dialog";
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import LogoIcon from '@/components/logo-icon';
 
 
 interface Message {
@@ -249,8 +250,8 @@ export default function ChatbotPage() {
                         )}
                     >
                         {message.sender === 'bot' && (
-                        <Avatar className="h-8 w-8 border">
-                            <AvatarFallback><Bot size={20}/></AvatarFallback>
+                        <Avatar className="h-8 w-8 border bg-primary text-primary-foreground p-1">
+                            <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
                         </Avatar>
                         )}
                         <div
@@ -354,6 +355,3 @@ export default function ChatbotPage() {
     </>
   );
 }
-
-    
-    
