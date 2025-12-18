@@ -48,7 +48,7 @@ export default function CommunityVision() {
     <section className="w-full py-16 bg-secondary/50">
         <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <h2 className="font-headline text-3xl font-bold md:text-4xl">🌸 Voices, Vision & the Journey We’re Building</h2>
+                <h2 className="font-headline text-3xl font-bold md:text-4xl">Voices, Vision & the Journey We’re Building</h2>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                     A look into our purpose, progress, and the path we're paving together.
                 </p>
@@ -202,7 +202,3 @@ export default function CommunityVision() {
     </section>
   );
 }
-
-    
-
-    

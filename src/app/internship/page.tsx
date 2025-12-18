@@ -61,7 +61,7 @@ export default function InternshipPage() {
                         <div className="container mx-auto px-4 text-center text-foreground">
                             <Badge variant="secondary" className="mb-4 text-sm">Launching Soon</Badge>
                             <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-md sm:text-5xl md:text-6xl">
-                                Learn. Grow. Contribute. Shine. 🌸
+                                Learn. Grow. Contribute. Shine.
                             </h1>
                             <p className="mt-6 max-w-3xl mx-auto text-lg font-medium drop-shadow-sm md:text-xl">
                                 Empowering Women Through Learning & Experience.

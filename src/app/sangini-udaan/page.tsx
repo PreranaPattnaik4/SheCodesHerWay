@@ -123,7 +123,7 @@ export default function SanginiUdaanPage() {
                                     The flagship program of SheCodesHerWay, designed to help women rise with confidence, mentorship, and creativity — whether in tech or in art, innovation, or leadership.
                                     </p>
                                     <p className="font-semibold text-foreground/90 pt-4">
-                                    Because when one woman takes flight, she inspires a thousand more to soar. 🌸
+                                    Because when one woman takes flight, she inspires a thousand more to soar.
                                     </p>
                                 </div>
                                 </div>
