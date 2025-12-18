@@ -12,7 +12,7 @@ export default function JoinUs() {
   return (
     <section>
         <div className="text-center mb-10">
-            <h2 className="font-headline text-3xl font-bold md:text-4xl">Partner with Us</h2>
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Join the Movement</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
                 Whether you're a student, professional, or an organization, there's a place for you at SheCodesHerWay.
             </p>
