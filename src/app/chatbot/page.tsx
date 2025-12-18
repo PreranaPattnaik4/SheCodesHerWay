@@ -115,14 +115,17 @@ export default function ChatbotPage() {
 
   const handleSendMessage = () => {
     if (!inputValue.trim() || !activeChatId) return;
-
+  
     const userMessage: Message = { text: inputValue, sender: 'user' };
-
+  
     setChatHistory(prevHistory => {
+      let isFirstUserMessageInChat = false;
       const updatedHistory = prevHistory.map(chat => {
         if (chat.id === activeChatId) {
-          const isFirstUserMessage = chat.messages.filter(m => m.sender === 'user').length === 0;
-          const newTitle = isFirstUserMessage ? inputValue.substring(0, 30) + (inputValue.length > 30 ? '...' : '') : chat.title;
+          isFirstUserMessageInChat = chat.messages.filter(m => m.sender === 'user').length === 0;
+          const newTitle = isFirstUserMessageInChat 
+            ? inputValue.substring(0, 30) + (inputValue.length > 30 ? '...' : '') 
+            : chat.title;
           
           return {
             ...chat,
@@ -134,9 +137,10 @@ export default function ChatbotPage() {
       });
       return updatedHistory;
     });
-
+  
     setInputValue('');
-
+  
+    // Simulate bot response
     setTimeout(() => {
       const botMessage: Message = {
         text: 'This is a simulated response. In a real application, I would connect to an AI service to provide a helpful answer!',
@@ -355,3 +359,5 @@ export default function ChatbotPage() {
     </>
   );
 }
+
+    
