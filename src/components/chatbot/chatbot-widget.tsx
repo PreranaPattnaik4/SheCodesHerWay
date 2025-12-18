@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { MessageCircle, X } from 'lucide-react';
 import ChatbotPopup from './chatbot-popup';
 import { AnimatePresence, motion } from 'framer-motion';
 import LogoIcon from '../logo-icon';
