@@ -44,7 +44,7 @@ export default function WhatWeOffer() {
              <div className="text-center mb-12">
                 <h2 className="font-headline text-4xl font-bold">What We Offer</h2>
             </div>
-            <Card className="w-full max-w-6xl mx-auto shadow-lg overflow-hidden border-primary/20 bg-secondary/30 mb-12">
+            <Card className="w-full max-w-6xl mx-auto shadow-lg overflow-hidden border-primary/20 bg-white mb-12">
                 <div className="grid md:grid-cols-2">
                     <div className="p-8 md:p-12 flex flex-col justify-center">
                         <div>
@@ -84,14 +84,14 @@ export default function WhatWeOffer() {
                                 data-ai-hint={cardImage.imageHint}
                             />
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent md:bg-gradient-to-r"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent md:bg-gradient-to-r"></div>
                     </div>
                 </div>
             </Card>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {otherOfferings.map((offering) => (
-                    <Card key={offering.title} className="text-center shadow-md transform transition-transform hover:-translate-y-2 duration-300">
+                    <Card key={offering.title} className="text-center shadow-md transform transition-transform hover:-translate-y-2 duration-300 bg-white">
                         <CardHeader className="items-center">
                             <div className="rounded-full bg-primary/10 p-4 text-primary">
                                 <offering.icon className="h-8 w-8" />
