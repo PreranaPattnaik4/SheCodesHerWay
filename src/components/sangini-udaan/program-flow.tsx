@@ -81,7 +81,7 @@ export default function ProgramFlow() {
             <div className="container mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="font-headline text-4xl font-bold text-foreground">
-                        🚀 Flagship Program: Sangini Udaan – Women Empowerment Initiative
+                        Flagship Program: Sangini Udaan – Women Empowerment Initiative
                     </h2>
                     <p className="mt-4 text-lg text-foreground/80 max-w-3xl mx-auto">
                         Sangini Udaan is the flagship program of SheCodesHerWay. It is a transformative women empowerment journey that helps women

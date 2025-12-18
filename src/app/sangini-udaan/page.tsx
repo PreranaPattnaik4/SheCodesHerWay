@@ -34,7 +34,7 @@ const specializedPaths = [
     },
     {
         title: "For Emotional, Personal & Soft Skills Growth",
-        description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work. 💫 Soft skills and emotional strength are included in every track as a core foundation for growth.",
+        description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work.  Soft skills and emotional strength are included in every track as a core foundation for growth.",
         cta: "Grow Your Soft Skills",
         href: "/apply",
     }
@@ -163,14 +163,14 @@ export default function SanginiUdaanPage() {
 
                         <section className="space-y-16">
                             <div>
-                                <h2 className="text-center text-lg font-semibold text-primary">💖 Recommended:</h2>
+                                <h2 className="text-center text-lg font-semibold text-primary"> Recommended:</h2>
                                 <Card className="mt-4 max-w-3xl mx-auto shadow-lg transform transition-transform hover:scale-105 duration-300">
                                     <CardHeader>
                                         <CardTitle className="font-headline text-3xl">Complete Sangini Udaan Journey (All-in-One Track)</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <p className="text-lg text-foreground/80">
-                                            Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program. ⭐ Best for women who want holistic growth, independence, and leadership.
+                                            Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program.  Best for women who want holistic growth, independence, and leadership.
                                         </p>
                                         <Button asChild size="lg" className="mt-6">
                                             <Link href="/apply">Enroll in Sangini Udaan All-in-One</Link>
@@ -202,7 +202,7 @@ export default function SanginiUdaanPage() {
 
                             <div className="text-center mt-16">
                                 <p className="font-headline text-2xl">
-                                    ✨ Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay. 🌷
+                                     Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay. 🌷
                                 </p>
                             </div>
                         </section>

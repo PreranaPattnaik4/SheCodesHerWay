@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { brand } from "@/lib/brand";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -28,7 +29,7 @@ export default function StartupSchool() {
        <div className="max-w-6xl mx-auto py-12">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="font-headline text-4xl font-bold">🌿 Sangini Udaan — Flagship Program</h2>
+            <h2 className="font-headline text-4xl font-bold">Sangini Udaan — Flagship Program</h2>
             <p className="mt-4 text-2xl text-primary italic">
               Empower Her to Fly Beyond Limits
             </p>
