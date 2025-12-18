@@ -114,7 +114,7 @@ export default function ChatbotPage() {
 
 
   const sendMessage = (text: string) => {
-    if (!text.trim() || !activeChatId) return;
+    if (!text.trim() || !activeChatId || isTyping) return;
 
     const userMessage: Message = { text, sender: 'user' };
   
@@ -325,7 +325,7 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-2"
+                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-1.5"
                   />
                   <Button 
                       onClick={handleSendMessage} 
