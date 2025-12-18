@@ -12,6 +12,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { programFaqData } from '@/lib/program-faq-data';
 import ProgramFlow from '@/components/sangini-udaan/program-flow';
 import { brand } from '@/lib/brand';
+import { Badge } from '@/components/ui/badge';
 
 const specializedPaths = [
     {
@@ -131,6 +132,14 @@ export default function SanginiUdaanPage() {
                         </section>
 
                         <Separator />
+
+                        <section className="text-center bg-accent/30 py-12 rounded-lg">
+                            <Badge variant="secondary" className="mb-4">Starting Soon</Badge>
+                            <h2 className="font-headline text-3xl font-bold">Sangini Udaan : EmpowerFly — Cohort 1</h2>
+                            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                                A very warm welcome to all the participants and mentors joining our founding cohort! We are thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something truly special.
+                            </p>
+                        </section>
 
                         <section>
                             <div className="text-center mb-12">
