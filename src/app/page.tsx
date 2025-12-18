@@ -18,6 +18,7 @@ import Features from '@/components/home/features';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
+import CommunityVision from '@/components/home/community-vision';
 
 export default function Home() {
   return (
@@ -105,6 +106,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <CommunityVision />
       </main>
       <Footer />
     </div>
