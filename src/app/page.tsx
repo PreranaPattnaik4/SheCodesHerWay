@@ -13,10 +13,11 @@ import ExecutiveSummaryGenerator from '@/components/home/executive-summary-gener
 import WhatWeOffer from '@/components/home/what-we-offer';
 import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Handshake } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -95,6 +96,22 @@ export default function Home() {
           </div>
         </div>
         <CommunityVision />
+        
+        <section className="bg-muted py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to Make an Impact?</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+              Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
+            </p>
+            <Button asChild size="lg" className="mt-8">
+              <Link href="/partner">
+                <Handshake className="mr-2 h-5 w-5" />
+                Become a Mentor Today
+              </Link>
+            </Button>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
