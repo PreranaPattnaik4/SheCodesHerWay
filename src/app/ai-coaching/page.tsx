@@ -25,6 +25,7 @@ const otherAiTools = [
         ],
         href: "/ai-coaching/image-generator",
         isReady: false,
+        poweredBy: "Google Imagen"
     },
     {
         icon: Code,
@@ -38,6 +39,7 @@ const otherAiTools = [
         ],
         href: "/ai-coaching/code-canvas",
         isReady: false,
+        poweredBy: "Google Gemini"
     },
     {
         icon: FileText,
@@ -51,12 +53,13 @@ const otherAiTools = [
         ],
         href: "/ai-tools",
         isReady: true,
+        poweredBy: "Google Gemini"
     }
 ];
 
 export default function AiCoachingPage() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
-  const coachImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
+  const coachImage = PlaceHolderImages.find((p) => p.id === 'feature-palai');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -101,8 +104,8 @@ export default function AiCoachingPage() {
                             </div>
                              <h2 className="font-headline text-3xl font-bold">EmpowerFly AI Coach</h2>
                         </div>
-                       
-                        <p className="text-foreground/80 mb-6 text-lg">
+                       <Badge variant="secondary">Powered by Google Gemini</Badge>
+                        <p className="text-foreground/80 my-6 text-lg">
                             Your personal AI guide is here to help you navigate your journey. Ask questions about our programs, get advice on your career path, or brainstorm ideas for your next project. The EmpowerFly AI Coach is available 24/7 to provide support and guidance whenever you need it.
                         </p>
                         <Button asChild className="w-fit" size="lg">
@@ -142,7 +145,8 @@ export default function AiCoachingPage() {
                                     </ul>
                                 </div>
                             </CardContent>
-                            <CardFooter>
+                            <CardFooter className="flex-col items-start gap-4">
+                                <Badge variant="secondary">Powered by {tool.poweredBy}</Badge>
                                 <Button asChild variant="outline" className="w-full" disabled={!tool.isReady}>
                                     <Link href={tool.isReady ? tool.href : '#'}>
                                         {tool.isReady ? 'Use Tool' : 'Coming Soon'}
