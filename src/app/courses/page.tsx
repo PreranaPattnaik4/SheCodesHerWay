@@ -15,8 +15,17 @@ export default function CoursesPage() {
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <section className="bg-secondary py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
+        <section className="relative bg-secondary py-20 md:py-32">
+             {pageImage && (
+                <Image
+                    src={pageImage.imageUrl}
+                    alt={pageImage.description}
+                    fill
+                    className="object-cover opacity-20"
+                    data-ai-hint={pageImage.imageHint}
+                />
+            )}
+            <div className="container relative mx-auto px-4 text-center">
                 <BookOpen className="mx-auto h-12 w-12 text-primary" />
                 <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Our Courses</h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
@@ -28,17 +37,6 @@ export default function CoursesPage() {
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
             <Card className="max-w-2xl mx-auto text-center shadow-lg">
                 <CardHeader>
-                    {pageImage && (
-                        <div className="relative h-48 w-full rounded-t-lg overflow-hidden mb-4">
-                            <Image
-                                src={pageImage.imageUrl}
-                                alt={pageImage.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={pageImage.imageHint}
-                            />
-                        </div>
-                    )}
                     <CardTitle>Coming Soon!</CardTitle>
                     <CardDescription>
                         We are busy creating inspiring courses on tech, creativity, and leadership. Stay tuned!
