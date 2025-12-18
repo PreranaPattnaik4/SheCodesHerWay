@@ -9,14 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
-const aiTools = [
-    {
-        icon: MessageSquare,
-        title: "EmpowerFly AI Coach",
-        description: "Get personalized guidance on careers, learning, and more from our AI coach.",
-        href: "/chatbot",
-        isReady: true,
-    },
+const otherAiTools = [
     {
         icon: ImageIcon,
         title: "AI Image Generator",
@@ -42,6 +35,7 @@ const aiTools = [
 
 export default function AiCoachingPage() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
+  const coachImage = PlaceHolderImages.find((p) => p.id === 'feature-palai');
 
   return (
     <div className="flex min-h-dvh flex-col">
@@ -67,31 +61,66 @@ export default function AiCoachingPage() {
         </section>
 
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-                {aiTools.map((tool) => (
-                    <Card key={tool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
-                        <CardHeader>
-                            <div className="flex items-center justify-between">
-                                <div className="bg-primary/10 text-primary p-3 rounded-full">
-                                    <tool.icon className="h-7 w-7" />
-                                </div>
-                                {!tool.isReady && <Badge variant="outline">Coming Soon</Badge>}
+            <div className="space-y-16">
+                <Card className="shadow-lg overflow-hidden grid md:grid-cols-2">
+                     <div className="relative min-h-[300px] md:min-h-full">
+                         {coachImage && (
+                            <Image
+                                src={coachImage.imageUrl}
+                                alt={coachImage.description}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={coachImage.imageHint}
+                            />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-gradient-to-r"></div>
+                    </div>
+                    <div className="p-8 flex flex-col justify-center">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                <MessageSquare className="h-7 w-7" />
                             </div>
-                            <CardTitle className="pt-4">{tool.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <CardDescription>{tool.description}</CardDescription>
-                        </CardContent>
-                        <div className="p-6 pt-0">
-                            <Button asChild variant="outline" className="w-full" disabled={!tool.isReady}>
-                                <Link href={tool.isReady ? tool.href : '#'}>
-                                    {tool.isReady ? 'Use Tool' : 'Coming Soon'}
-                                    {tool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
-                                </Link>
-                            </Button>
+                             <h2 className="font-headline text-3xl font-bold">EmpowerFly AI Coach</h2>
                         </div>
-                    </Card>
-                ))}
+                       
+                        <p className="text-foreground/80 mb-6">
+                            Your personal AI guide is here to help you navigate your journey. Ask questions about our programs, get advice on your career path, or brainstorm ideas for your next project. The EmpowerFly AI Coach is available 24/7 to provide support and guidance whenever you need it.
+                        </p>
+                        <Button asChild className="w-fit">
+                            <Link href="/chatbot">
+                                Chat with the Coach
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                        </Button>
+                    </div>
+                </Card>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {otherAiTools.map((tool) => (
+                        <Card key={tool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
+                            <CardHeader>
+                                <div className="flex items-center justify-between">
+                                    <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                        <tool.icon className="h-7 w-7" />
+                                    </div>
+                                    {!tool.isReady && <Badge variant="outline">Coming Soon</Badge>}
+                                </div>
+                                <CardTitle className="pt-4">{tool.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <CardDescription>{tool.description}</CardDescription>
+                            </CardContent>
+                            <div className="p-6 pt-0">
+                                <Button asChild variant="outline" className="w-full" disabled={!tool.isReady}>
+                                    <Link href={tool.isReady ? tool.href : '#'}>
+                                        {tool.isReady ? 'Use Tool' : 'Coming Soon'}
+                                        {tool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
+                                    </Link>
+                                </Button>
+                            </div>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </section>
 
