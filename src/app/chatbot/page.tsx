@@ -311,31 +311,35 @@ export default function ChatbotPage() {
             </ScrollArea>
 
             <div className="p-4 bg-white border-t">
-              <div className="relative max-w-3xl mx-auto">
-                <div className='relative flex items-end'>
-                    <Textarea
-                      ref={textareaRef}
-                      rows={1}
-                      placeholder="Ask EmpowerFly AI Coach anything..."
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' && !e.shiftKey) {
-                            e.preventDefault();
-                            handleSendMessage();
-                        }
-                      }}
-                      className="pr-12 py-2 resize-none max-h-36 rounded-lg shadow-sm border-input"
-                    />
-                    <Button 
-                        onClick={handleSendMessage} 
-                        disabled={!inputValue.trim() || isTyping}
-                        size="icon"
-                        className="absolute right-2 bottom-1.5 h-8 w-8 rounded-full"
-                    >
-                        <Send className="w-4 h-4" />
-                        <span className="sr-only">Send</span>
-                    </Button>
+              <div className="max-w-3xl mx-auto">
+                <div className="relative flex items-end w-full p-2 bg-white rounded-full border shadow-sm">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full flex-shrink-0">
+                    <Plus className="w-4 h-4" />
+                    <span className="sr-only">Add attachment</span>
+                  </Button>
+                  <Textarea
+                    ref={textareaRef}
+                    rows={1}
+                    placeholder="Ask EmpowerFly AI Coach anything..."
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          handleSendMessage();
+                      }
+                    }}
+                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-36 py-2"
+                  />
+                  <Button 
+                      onClick={handleSendMessage} 
+                      disabled={!inputValue.trim() || isTyping}
+                      size="icon"
+                      className="h-8 w-8 rounded-full flex-shrink-0"
+                  >
+                      <Send className="w-4 h-4" />
+                      <span className="sr-only">Send</span>
+                  </Button>
                 </div>
               </div>
             </div>
