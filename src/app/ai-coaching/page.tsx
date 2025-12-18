@@ -35,7 +35,7 @@ const otherAiTools = [
 
 export default function AiCoachingPage() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
-  const coachImage = PlaceHolderImages.find((p) => p.id === 'feature-palai');
+  const coachImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
 
   return (
     <div className="flex min-h-dvh flex-col">
