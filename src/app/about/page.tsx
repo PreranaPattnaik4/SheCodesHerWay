@@ -24,10 +24,10 @@ export default function AboutPage() {
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
 
     return (
-        <div className="flex min-h-dvh flex-col bg-white">
+        <div className="flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">
-                <section className="bg-secondary/50 py-16 md:py-24">
+                <section className="bg-secondary py-16 md:py-24">
                     <div className="container mx-auto px-4 text-center">
                         <h1 className="font-headline text-4xl font-bold md:text-6xl">About SheCodesHerWay</h1>
                         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
