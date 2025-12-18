@@ -104,7 +104,7 @@ export default function Home() {
               Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="/partner">
+              <Link href="/#partner-with-us">
                 Join the Movement
               </Link>
             </Button>
