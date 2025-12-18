@@ -4,7 +4,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button, buttonVariants } from '@/components/ui/button';
-import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, Bot, User } from 'lucide-react';
+import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, User } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -71,14 +71,12 @@ export default function ChatbotPage() {
   const scrollAreaRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  // State for dialogs
   const [chatToDelete, setChatToDelete] = useState<string | null>(null);
   const [chatToRename, setChatToRename] = useState<ChatSession | null>(null);
   const [newChatName, setNewChatName] = useState('');
 
   const activeChat = chatHistory.find(chat => chat.id === activeChatId);
 
-  // Auto-resize textarea
   useEffect(() => {
     if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
@@ -87,7 +85,6 @@ export default function ChatbotPage() {
     }
   }, [inputValue]);
   
-  // Auto-scroll chat
   useEffect(() => {
     const viewport = scrollAreaRef.current?.querySelector('[data-radix-scroll-area-viewport]');
     if (viewport) {
@@ -139,7 +136,6 @@ export default function ChatbotPage() {
     setInputValue('');
     setIsTyping(true);
   
-    // Simulate bot response
     setTimeout(() => {
       const botMessage: Message = {
         text: `I'm still in training, but I'm learning to answer questions like: "${text}". Soon, I'll be able to help with your learning journey!`,
@@ -312,7 +308,7 @@ export default function ChatbotPage() {
 
             <div className="p-4 bg-white border-t">
               <div className="max-w-3xl mx-auto">
-                <div className="relative flex items-end w-full p-2 bg-white rounded-full border shadow-sm">
+                <div className="relative flex items-end w-full p-1.5 bg-white rounded-full border shadow-sm">
                   <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full flex-shrink-0">
                     <Plus className="w-4 h-4" />
                     <span className="sr-only">Add attachment</span>
@@ -329,7 +325,7 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-36 py-2"
+                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-2"
                   />
                   <Button 
                       onClick={handleSendMessage} 
