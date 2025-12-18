@@ -290,13 +290,13 @@ export default function ChatbotPage() {
                             handleSendMessage();
                         }
                       }}
-                      className="pr-16 py-3 resize-none max-h-40 overflow-y-auto rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
+                      className="pr-16 py-2 resize-none max-h-40 overflow-y-auto rounded-full shadow-md border-gray-300 focus:border-primary focus:ring-primary"
                     />
                     <Button 
                         onClick={handleSendMessage} 
                         disabled={!inputValue.trim()}
                         size="icon"
-                        className="absolute right-2.5 bottom-2 rounded-full"
+                        className="absolute right-2.5 bottom-1.5 rounded-full"
                     >
                         <Send className="w-5 h-5" />
                         <span className="sr-only">Send</span>
