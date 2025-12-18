@@ -52,6 +52,7 @@ const features = [
     href: '/chatbot',
     category: 'ai-coaching',
     height: 'h-64',
+    isBeta: true,
   },
   {
     id: 'feature-workshops',
@@ -148,7 +149,8 @@ export default function Features() {
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
                   <div className="absolute top-4 left-4">
-                    {feature.comingSoon && <Badge variant="secondary">Coming Soon</Badge>}
+                    {feature.comingSoon && <Badge variant="secondary">Launching Soon</Badge>}
+                    {feature.isBeta && <Badge variant="outline">Beta</Badge>}
                   </div>
                   <div className="absolute bottom-0 left-0 p-6">
                     <h3 className="text-2xl font-bold text-white drop-shadow-md">{feature.title}</h3>

@@ -58,7 +58,7 @@ export default function InternshipPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="container mx-auto px-4 text-center text-foreground">
-                            <Badge variant="secondary" className="mb-4 text-sm">Our Internship Program will start soon!</Badge>
+                            <Badge variant="secondary" className="mb-4 text-sm">Launching Soon</Badge>
                             <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-md sm:text-5xl md:text-6xl">
                                 Learn. Grow. Contribute. Shine. 🌸
                             </h1>

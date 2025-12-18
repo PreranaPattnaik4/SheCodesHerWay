@@ -3,6 +3,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import ExecutiveSummaryGenerator from '@/components/home/executive-summary-generator';
 import { Bot } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 export default function AiToolsPage() {
   return (
@@ -12,7 +13,10 @@ export default function AiToolsPage() {
         <section className="bg-secondary py-16 md:py-24">
             <div className="container mx-auto px-4 text-center">
                 <Bot className="mx-auto h-12 w-12 text-primary" />
-                <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">AI-Powered Tools</h1>
+                <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl flex items-center justify-center gap-4">
+                    AI-Powered Tools
+                    <Badge variant="outline" className="text-lg">Beta</Badge>
+                </h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                     Leverage the power of AI to streamline your work and craft compelling narratives for your startup journey.
                 </p>
