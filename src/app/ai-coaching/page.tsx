@@ -1,10 +1,13 @@
 
+'use client';
+
+import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -12,26 +15,44 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const otherAiTools = [
     {
         icon: ImageIcon,
-        title: "AI Image Generator",
-        description: "Create stunning visuals and graphics for your projects with simple text prompts.",
+        title: "AI Image Studio",
+        subtitle: "From Idea to Image",
+        description: "Generate stunning, unique visuals for your projects, presentations, or social media. Simply describe what you want to see, and our AI will bring it to life.",
+        features: [
+            "Text-to-image generation",
+            "Multiple art styles",
+            "High-resolution outputs"
+        ],
         href: "/ai-coaching/image-generator",
         isReady: false,
     },
     {
         icon: Code,
-        title: "CodeCanvas",
-        description: "Generate code snippets, get debugging help, and accelerate your development.",
+        title: "CodeCanvas Assistant",
+        subtitle: "Your AI Coding Partner",
+        description: "Accelerate your development process with an AI that can generate code snippets, explain complex concepts, and help you debug. Perfect for learning and building.",
+        features: [
+            "Generate code in multiple languages",
+            "Get explanations for code blocks",
+            "Assistance with debugging"
+        ],
         href: "/ai-coaching/code-canvas",
         isReady: false,
     },
     {
         icon: FileText,
-        title: "AI-Powered Executive Summary",
-        description: "Craft a compelling executive summary for your startup pitch deck in minutes.",
+        title: "Executive Summary Generator",
+        subtitle: "Craft the Perfect Pitch",
+        description: "Distill your startup's vision into a concise, powerful executive summary. Our AI helps you structure your ideas for maximum impact on investors and partners.",
+        features: [
+            "Guided input fields",
+            "Professional, structured output",
+            "Instantly ready for your pitch deck"
+        ],
         href: "/ai-tools",
         isReady: true,
     }
-]
+];
 
 export default function AiCoachingPage() {
   const heroImage = PlaceHolderImages.find((p) => p.id === 'feature-ai-coaching');
@@ -94,7 +115,7 @@ export default function AiCoachingPage() {
                 </Card>
 
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     {otherAiTools.map((tool) => (
                         <Card key={tool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
                             <CardHeader>
@@ -105,18 +126,30 @@ export default function AiCoachingPage() {
                                     {!tool.isReady && <Badge variant="outline">Coming Soon</Badge>}
                                 </div>
                                 <CardTitle className="pt-4">{tool.title}</CardTitle>
+                                <CardDescription>{tool.subtitle}</CardDescription>
                             </CardHeader>
-                            <CardContent className="flex-grow">
-                                <CardDescription>{tool.description}</CardDescription>
+                            <CardContent className="flex-grow space-y-4">
+                                <p className="text-foreground/80">{tool.description}</p>
+                                <div>
+                                    <h4 className="font-semibold mb-2">Key Features:</h4>
+                                    <ul className="space-y-2">
+                                        {tool.features.map((feature, index) => (
+                                            <li key={index} className="flex items-start gap-2">
+                                                <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                                                <span className="text-sm text-foreground/80">{feature}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </CardContent>
-                            <div className="p-6 pt-0">
+                            <CardFooter>
                                 <Button asChild variant="outline" className="w-full" disabled={!tool.isReady}>
                                     <Link href={tool.isReady ? tool.href : '#'}>
                                         {tool.isReady ? 'Use Tool' : 'Coming Soon'}
                                         {tool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
                                     </Link>
                                 </Button>
-                            </div>
+                            </CardFooter>
                         </Card>
                     ))}
                 </div>
