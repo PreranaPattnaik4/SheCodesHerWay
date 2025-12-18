@@ -24,10 +24,10 @@ export default function AboutPage() {
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
 
     return (
-        <div className="flex min-h-dvh flex-col">
+        <div className="flex min-h-dvh flex-col bg-white">
             <Header />
             <main className="flex-1">
-                <section className="bg-secondary py-16 md:py-24">
+                <section className="bg-secondary/50 py-16 md:py-24">
                     <div className="container mx-auto px-4 text-center">
                         <h1 className="font-headline text-4xl font-bold md:text-6xl">About SheCodesHerWay</h1>
                         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
@@ -57,7 +57,7 @@ export default function AboutPage() {
                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Mission and Vision</h2>
                             </div>
                             <div className="mt-8 grid gap-8 md:grid-cols-2">
-                                <Card className="shadow-lg">
+                                <Card className="shadow-lg bg-white">
                                     <CardHeader>
                                         <CardTitle className="font-headline text-3xl">Mission</CardTitle>
                                     </CardHeader>
@@ -65,7 +65,7 @@ export default function AboutPage() {
                                         <p className="text-lg text-foreground/80">To empower women with digital learning, mentorship, leadership development, and emotional strength, while building a global community that celebrates creativity, collaboration, and courage.</p>
                                     </CardContent>
                                 </Card>
-                                <Card className="shadow-lg">
+                                <Card className="shadow-lg bg-white">
                                     <CardHeader>
                                         <CardTitle className="font-headline text-3xl">Vision</CardTitle>
                                     </CardHeader>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                         
                         <Separator/>
                         
-                        <section className="max-w-3xl mx-auto bg-muted p-8 rounded-lg">
+                        <section className="max-w-3xl mx-auto bg-muted/50 p-8 rounded-lg">
                              <h2 className="font-headline text-3xl font-bold text-center">A Note of Gratitude</h2>
                              <div className="prose dark:prose-invert max-w-none mx-auto mt-6">
                                 <p>SheCodesHerWay stands today because of a dream—your dream, Prerana. You created a platform where women can discover their voice, build their skills, grow without fear, find a community, and spread their wings.</p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                             <div className="text-center mb-10">
                                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Values</h2>
                             </div>
-                            <Card className="max-w-2xl mx-auto shadow-lg">
+                            <Card className="max-w-2xl mx-auto shadow-lg bg-white">
                                 <CardContent className="pt-6">
                                      <Table>
                                         <TableHeader>

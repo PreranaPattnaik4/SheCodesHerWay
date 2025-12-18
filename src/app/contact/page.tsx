@@ -25,10 +25,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex min-h-dvh flex-col bg-white">
       <Header />
       <main className="flex-1">
-        <section className="bg-secondary py-16">
+        <section className="bg-secondary/50 py-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="font-headline text-4xl font-bold md:text-5xl">Contact Us</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
@@ -38,7 +38,7 @@ export default function ContactPage() {
         </section>
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-          <Card className="max-w-2xl mx-auto shadow-lg">
+          <Card className="max-w-2xl mx-auto shadow-lg bg-white">
             <CardHeader>
               <CardTitle>Send us a Message</CardTitle>
               <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
