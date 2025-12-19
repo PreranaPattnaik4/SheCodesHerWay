@@ -19,7 +19,7 @@ const coreValues = [
 ]
 
 const teamMembers = [
-    { name: "Jane Doe", role: "Lead Developer", imageId: "team-member-1" },
+    { name: "Prerana K.", role: "Lead Developer", imageId: "founder-portrait" },
     { name: "John Smith", role: "UI/UX Designer", imageId: "team-member-2" },
     { name: "Priya Patel", role: "Community Manager – Build, engage, and grow our community", imageId: "team-member-3" },
     { name: "Maria Garcia", role: "Marketing & Growth Lead – Drive visibility, campaigns, and growth", imageId: "team-member-4" },
