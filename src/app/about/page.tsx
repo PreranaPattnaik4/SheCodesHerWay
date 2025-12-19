@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import Image from 'next/image';
 import { brand } from '@/lib/brand';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
@@ -16,6 +16,12 @@ const coreValues = [
     { value: "Community", meaning: "Building sisterhood through support and shared growth" },
     { value: "Inclusivity", meaning: "Every woman is welcome, regardless of background" },
     { value: "Courage", meaning: "Encouraging women to dream, lead, and take flight" },
+]
+
+const teamMembers = [
+    { name: "Jane Doe", role: "Lead Developer", imageId: "team-member-1" },
+    { name: "John Smith", role: "UI/UX Designer", imageId: "team-member-2" },
+    { name: "Priya Patel", role: "Community Manager", imageId: "team-member-3" },
 ]
 
 export default function AboutPage() {
@@ -130,6 +136,41 @@ export default function AboutPage() {
                         </section>
                         
                         <Separator/>
+
+                        <section>
+                            <div className="text-center mb-12">
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Team</h2>
+                                <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                                    Meet the passionate individuals behind SheCodesHerWay.
+                                </p>
+                            </div>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {teamMembers.map((member) => {
+                                    const memberImage = PlaceHolderImages.find((p) => p.id === member.imageId);
+                                    return (
+                                    <Card key={member.name} className="text-center shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
+                                        {memberImage && (
+                                            <div className="relative h-64 w-full">
+                                                 <Image
+                                                    src={memberImage.imageUrl}
+                                                    alt={memberImage.description}
+                                                    fill
+                                                    className="object-cover rounded-t-lg"
+                                                    data-ai-hint={memberImage.imageHint}
+                                                />
+                                            </div>
+                                        )}
+                                        <CardHeader>
+                                            <CardTitle>{member.name}</CardTitle>
+                                            <CardDescription>{member.role}</CardDescription>
+                                        </CardHeader>
+                                    </Card>
+                                    );
+                                })}
+                            </div>
+                        </section>
+
+                        <Separator/>
                         
                         <section className="max-w-3xl mx-auto bg-muted/50 p-8 rounded-lg">
                              <h2 className="font-headline text-3xl font-bold text-center">A Note of Gratitude</h2>
@@ -187,3 +228,4 @@ export default function AboutPage() {
         </div>
     );
 }
+    

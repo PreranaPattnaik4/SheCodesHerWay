@@ -13,6 +13,24 @@
       "imageHint": "woman portrait"
     },
     {
+      "id": "team-member-1",
+      "description": "Portrait of a female team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Portrait of a female team member in a professional setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Portrait of a smiling team member.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
       "id": "program-skill-dev",
       "description": "A woman focused on her laptop in a colorful, creative environment.",
       "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
@@ -45,7 +63,7 @@
     {
       "id": "internship-hero",
       "description": "Welcoming banner showing diverse women collaborating online.",
-      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaborating"
     },
     {
@@ -57,13 +75,13 @@
     {
       "id": "internship-certificate",
       "description": "A mock certificate with floral borders.",
-      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate floral"
     },
     {
       "id": "about-program-1",
       "description": "A woman confidently speaking to a group in an outdoor setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtZW50b3J8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman leader"
     },
     {
@@ -93,7 +111,7 @@
     {
       "id": "feature-palai",
       "description": "A vibrant lightbulb with colorful smoke, representing ideas and AI.",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "ai chatbot"
     },
     {
@@ -140,37 +158,37 @@
     },
     {
       "id": "vision-community-voices",
-      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "A group of diverse women engaged in a supportive conversation.",
       "imageHint": "women talking"
     },
     {
       "id": "vision-why-created",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxpbnNwaXJhdGlvbnxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "A lightbulb moment, symbolizing the inspiration behind the startup.",
       "imageHint": "inspiration lightbulb"
     },
     {
       "id": "vision-impact",
-      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxjb21tdW5pdHl8ZW58MHx8fHwxNzE4NzIwMzM5fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "People working together, symbolizing community impact.",
       "imageHint": "community impact"
     },
     {
       "id": "vision-early-metrics",
-      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "A dashboard showing growth charts and metrics, representing early positive signals.",
       "imageHint": "analytics dashboard"
     },
     {
       "id": "vision-journey",
-      "imageUrl": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxwYXRoJTIwaW4lMjBmb3Jlc3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1476820865390-c52aeebb9891?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxwYXRoJTIwaW4lMjBmb3Jlc3R8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "A winding path through a forest, symbolizing the transformative journey of members.",
       "imageHint": "path forest"
     },
     {
       "id": "vision-our-approach",
-      "imageUrl": "https://images.unsplash.com/photo-1588340373801-fce3a3a31147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBoZWFydHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1588340373801-fce3a3a31147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHxoYW5kcyUyMGhvbGRpbmclMjBoZWFydHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "description": "Hands holding a heart shape, symbolizing care, intention, and authenticity.",
       "imageHint": "hands heart"
     }
