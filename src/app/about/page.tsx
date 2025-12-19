@@ -21,7 +21,9 @@ const coreValues = [
 const teamMembers = [
     { name: "Jane Doe", role: "Lead Developer", imageId: "team-member-1" },
     { name: "John Smith", role: "UI/UX Designer", imageId: "team-member-2" },
-    { name: "Priya Patel", role: "Community Manager", imageId: "team-member-3" },
+    { name: "Priya Patel", role: "Community Manager – Build, engage, and grow our community", imageId: "team-member-3" },
+    { name: "Maria Garcia", role: "Marketing & Growth Lead – Drive visibility, campaigns, and growth", imageId: "team-member-4" },
+    { name: "David Kim", role: "Program Coordinator – Plan, host, and manage workshops and cohorts", imageId: "team-member-5" },
 ]
 
 export default function AboutPage() {

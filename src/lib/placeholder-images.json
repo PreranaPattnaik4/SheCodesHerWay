@@ -27,8 +27,20 @@
     {
       "id": "team-member-3",
       "description": "Portrait of a smiling team member.",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman portrait"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Portrait of a smiling team member with a warm background.",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTcxODcyMDI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "team-member-5",
+      "description": "Portrait of a team member in a creative office.",
+      "imageUrl": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man creative"
     },
     {
       "id": "program-skill-dev",
@@ -39,7 +51,7 @@
     {
       "id": "program-mentorship",
       "description": "Two women having a supportive conversation over coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "women mentorship"
     },
     {
@@ -51,7 +63,7 @@
     {
       "id": "program-community",
       "description": "A woman focused on her laptop in a colorful, creative environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlibrb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "women learning"
     },
     {
@@ -69,7 +81,7 @@
     {
       "id": "internship-community",
       "description": "A diverse group of women engaged in a lively and supportive discussion in a modern, bright space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital sisterhood"
     },
     {
@@ -99,7 +111,7 @@
     {
       "id": "impact-goals-target",
       "description": "A woman holding a bow and aiming at a target.",
-      "imageUrl": "https://images.unsplash.com/photo-1558546416-e8d2243e936b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFpbWluZyUyMGF0JTIwdGFyZ2V0fGVufDB8fHx8fDE3MjM1ODk2ODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558546416-e8d2243e936b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFpbWluZyUyMGF0JTIwdGFyZ2V0fGVufDB8fHx8fDE3MjM1ODk2ODN8MA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "woman target"
     },
     {
@@ -111,7 +123,7 @@
     {
       "id": "feature-palai",
       "description": "A vibrant lightbulb with colorful smoke, representing ideas and AI.",
-      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1521791136064-7986c2920216?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbiUyMGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MTg3MjAyNzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ai chatbot"
     },
     {
@@ -135,7 +147,7 @@
     {
       "id": "feature-internships",
       "description": "A person working on a laptop in a creative environment.",
-      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMG9uJTIwZXhwZXJpZW5jZXxlbnwwfHx8fDE3MjI0OTczMzd8MA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMG9uJTIwZXhwZXJpZW5jZXxlbnwwfHx8fDE3MjI0OTczMzd8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "hands-on experience"
     },
     {
@@ -158,7 +170,7 @@
     },
     {
       "id": "vision-community-voices",
-      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwxfHx3b21lbiUyMHRhbGtpbmd8ZW58MHx8fHwxNzE4NzIwMzEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "description": "A group of diverse women engaged in a supportive conversation.",
       "imageHint": "women talking"
     },
