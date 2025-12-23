@@ -62,15 +62,12 @@ export default function AboutPage() {
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
                                     <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                                        {aboutHeroImage && (
-                                            <Image 
-                                                src={aboutHeroImage.imageUrl}
-                                                alt={aboutHeroImage.description}
-                                                fill
-                                                className="object-cover"
-                                                data-ai-hint={aboutHeroImage.imageHint}
-                                            />
-                                        )}
+                                        <Image
+                                            src="https://i.postimg.cc/9M28bVsy/final.png"
+                                            alt="About illustration"
+                                            fill
+                                            className="object-contain"
+                                        />
                                     </div>
                                 </div>
                                  <div className="mt-8 md:mt-0 md:pt-8 md:w-1/2">
@@ -224,5 +221,3 @@ export default function AboutPage() {
         </div>
     );
 }
-
-    
