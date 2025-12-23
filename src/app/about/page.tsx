@@ -19,6 +19,13 @@ const coreValues = [
     { value: "Courage", meaning: "Encouraging women to dream, lead, and take flight" },
 ]
 
+const teamMembers = [
+    { name: "Prerana", role: "Lead Developer", image: PlaceHolderImages.find((p) => p.id === 'founder-portrait') },
+    { name: "Sanjana M.", role: "Community Manager", image: PlaceHolderImages.find((p) => p.id === 'team-member-2')},
+    { name: "Rhea S.", role: "Marketing & Growth Lead", image: PlaceHolderImages.find((p) => p.id === 'team-member-3')},
+    { name: "Priya V.", role: "Program Coordinator", image: PlaceHolderImages.find((p) => p.id === 'team-member-4')},
+]
+
 export default function AboutPage() {
     const image1 = PlaceHolderImages.find((p) => p.id === 'about-program-1');
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
@@ -58,10 +65,10 @@ export default function AboutPage() {
                             <div className="relative flex items-center justify-center md:justify-start">
                                 <div className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px] group">
                                      {/* Ambient glow effect */}
-                                     <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl transition-opacity duration-500 opacity-70 group-hover:opacity-100"></div>
+                                     <div className="absolute inset-0 bg-yellow-300/20 rounded-full blur-3xl transition-opacity duration-500 opacity-70 group-hover:opacity-100"></div>
 
                                      {/* Image card with shadow and fog */}
-                                     <Card className="relative z-10 w-full h-full rounded-xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                                     <Card className="relative z-10 w-full h-full rounded-full overflow-hidden shadow-2xl transition-transform duration-500 group-hover:scale-105">
                                         <Image
                                             src="https://i.postimg.cc/9M28bVsy/final.png"
                                             alt="Abstract illustration representing technology and innovation"
@@ -172,13 +179,29 @@ export default function AboutPage() {
                         
                         <Separator/>
 
-                        <section className="max-w-3xl mx-auto bg-muted/50 p-8 rounded-lg">
-                             <h2 className="font-headline text-3xl font-bold text-center">A Note of Gratitude</h2>
-                             <div className="prose dark:prose-invert max-w-none mx-auto mt-6">
-                                <p>SheCodesHerWay stands today because of a dream—your dream, Prerana. You created a platform where women can discover their voice, build their skills, grow without fear, find a community, and spread their wings.</p>
-                                <p>Your dedication transformed SheCodesHerWay and Sangini Udaan : EmpowerFly into symbols of hope, empowerment, and possibility. Your courage and innovation continue to inspire the women who join this movement every day.</p>
-                                <p className="text-right italic">— The SheCodesHerWay Team</p>
-                             </div>
+                        <section className="bg-muted/50 p-8 rounded-lg">
+                             <h2 className="font-headline text-3xl font-bold text-center">Our Team</h2>
+                             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {teamMembers.map((member) => (
+                                    <Card key={member.name} className="text-center shadow-lg">
+                                        <CardContent className="p-4">
+                                            {member.image && (
+                                                <div className="relative h-40 w-40 mx-auto rounded-full overflow-hidden mb-4">
+                                                    <Image
+                                                        src={member.image.imageUrl}
+                                                        alt={member.name}
+                                                        fill
+                                                        className="object-cover"
+                                                        data-ai-hint={member.image.imageHint}
+                                                    />
+                                                </div>
+                                            )}
+                                            <h3 className="text-lg font-bold">{member.name}</h3>
+                                            <p className="text-sm text-primary">{member.role}</p>
+                                        </CardContent>
+                                    </Card>
+                                ))}
+                            </div>
                         </section>
 
                         <Separator />
