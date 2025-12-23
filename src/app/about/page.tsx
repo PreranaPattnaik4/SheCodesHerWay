@@ -70,9 +70,10 @@ export default function AboutPage() {
                                         />
                                     </div>
                                 </div>
-                                 <div className="mt-8 md:mt-0 md:pt-8 md:w-1/2">
-                                    <p className="text-lg text-foreground/80">
-                                        Hello. We’re {brand.name}. We’re a women-led startup agency for a better tomorrow.
+                                 <div className="mt-8 md:mt-0 md:pt-8">
+                                    <div className="text-6xl font-bold text-foreground/80">{brand.name}</div>
+                                    <p className="text-lg text-foreground/80 mt-4">
+                                        Hello. We’re a women-led startup agency for a better tomorrow.
                                     </p>
                                 </div>
                             </div>
