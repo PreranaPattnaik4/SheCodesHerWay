@@ -26,7 +26,7 @@ const opportunities = [
         icon: Handshake,
         title: "Partner with Us",
         description: "Collaborate with SheCodesHerWay to create a wider impact. We're looking for organizations that share our vision for empowering women.",
-        cta: "Contact Us for Partnerships",
+        cta: "Contact for Partnerships",
         href: "/contact"
     }
 ];
