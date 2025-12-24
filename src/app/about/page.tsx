@@ -209,7 +209,7 @@ export default function AboutPage() {
                             <Card className="max-w-4xl mx-auto bg-accent/20 border-accent/50 shadow-lg">
                                 <CardHeader className="text-center">
                                     <CardTitle className="font-headline text-2xl md:text-3xl">
-                                        🌸 Join SheCodesHerWay – Core Team Collaboration! 🌸
+                                        Join SheCodesHerWay – Core Team Collaboration!
                                     </CardTitle>
                                     <CardContent className="text-lg text-accent-foreground/90 pt-4">
                                          We’re inviting passionate, purpose-driven individuals to collaborate with us at SheCodesHerWay, a women-led, mission-driven startup (pre-seed stage).
@@ -246,7 +246,9 @@ export default function AboutPage() {
                                             </Link>
                                         </Button>
                                     </div>
-                                    <p className="text-center mt-8 font-semibold text-lg text-primary">Let’s build, grow, and empower together! 💖</p>
+                                    <p className="text-center mt-8 font-semibold text-lg text-primary flex items-center justify-center gap-2">
+                                        Let’s build, grow, and empower together! <Heart size={20} />
+                                    </p>
                                 </CardContent>
                             </Card>
                         </section>
