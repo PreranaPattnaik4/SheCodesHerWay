@@ -95,6 +95,26 @@ Implement the following pages and features:
 *   **UI Components:** Use **ShadCN UI** components by default. Ensure a clean, modern aesthetic with rounded corners, soft shadows, and subtle animations.
 *   **Icons:** Use `lucide-react` for all iconography.
 
+### UI Element Specifications
+
+*   **Header:**
+    *   **Layout:** A sticky header that remains at the top of the page on scroll.
+    *   **Style:** Should have a subtle background blur (`backdrop-blur`) and semi-transparent background (`bg-background/95`) to create a modern, layered effect.
+    *   **Content:**
+        *   **Left:** The brand logo, which links to the homepage.
+        *   **Center (Desktop):** A navigation bar with links to key pages (Home, Our Program, AI Coaching, etc.). Links should have a `hover` effect that changes their color to `primary`.
+        *   **Right:** A `UserAuth` component for sign-up/login and user profile management. A `Sheet` (slide-out menu) trigger with a `Menu` icon for mobile navigation.
+    *   **Mobile View:** The desktop navigation should be hidden, and a hamburger menu icon should trigger a slide-out `Sheet` from the left, containing all navigation links.
+
+*   **Footer:**
+    *   **Layout:** A three-column layout on larger screens, stacking vertically on mobile.
+    *   **Style:** Should have a `bg-secondary` background color to distinguish it from the main content.
+    *   **Content:**
+        *   **Column 1:** The brand logo, the mission statement, and the copyright notice.
+        *   **Column 2:** A "Quick Links" section with two columns of navigation links to important pages (About, Programs, FAQ, etc.).
+        *   **Column 3:** A "Get in Touch" section with the company's contact email and social media icons (Twitter, LinkedIn, GitHub).
+    *   **Overall Feel:** Professional, informative, and consistent with the site's branding.
+
 ---
 
 ## 4. Technical Specifications
