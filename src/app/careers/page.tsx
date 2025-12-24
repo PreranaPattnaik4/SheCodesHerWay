@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Briefcase, Handshake, HeartHandshake, ArrowRight } from 'lucide-react';
+import { Briefcase, HeartHandshake, Handshake, ArrowRight, ClipboardList, UserCheck, Zap, CheckCircle2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const opportunities = [
@@ -30,6 +30,42 @@ const opportunities = [
         href: "/partner"
     }
 ];
+
+const responsibilities = [
+    {
+        icon: ClipboardList,
+        title: "Internship Responsibilities",
+        points: [
+            "Contribute to live projects in your chosen domain (Tech, Design, Content, etc.).",
+            "Collaborate with team members and mentors to achieve project goals.",
+            "Participate actively in learning sessions and workshops.",
+            "Complete assigned tasks and deliverables within the specified timelines.",
+            "Engage with the community and share your learning journey."
+        ]
+    },
+    {
+        icon: UserCheck,
+        title: "Mentor Responsibilities",
+        points: [
+            "Provide one-on-one or group guidance to program participants.",
+            "Share industry knowledge, experience, and career advice.",
+            "Participate in mentorship circles and Q&A sessions.",
+            "Help mentees set and achieve their personal and professional goals.",
+            "Offer constructive feedback and encouragement.",
+        ]
+    },
+    {
+        icon: Zap,
+        title: "Core Team Responsibilities",
+        points: [
+            "Drive strategic initiatives and contribute to program development.",
+            "Help manage community engagement, events, and communications.",
+            "Collaborate on platform growth, partnerships, and outreach efforts.",
+            "Take ownership of key areas and contribute to operational excellence.",
+            "Uphold the mission and values of SheCodesHerWay in all activities.",
+        ]
+    }
+]
 
 export default function CareersPage() {
   return (
@@ -72,6 +108,41 @@ export default function CareersPage() {
         </section>
 
         <Separator />
+
+        <section className="bg-muted/50 py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <div className="text-center mb-12">
+                    <h2 className="font-headline text-3xl font-bold">Roles &amp; Responsibilities</h2>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                        Understand the key responsibilities for each role and how you can make an impact.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {responsibilities.map((role) => (
+                         <Card key={role.title} className="flex flex-col shadow-lg bg-white">
+                            <CardHeader>
+                                <div className="flex items-center gap-4">
+                                    <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                        <role.icon className="h-6 w-6" />
+                                    </div>
+                                    <CardTitle>{role.title}</CardTitle>
+                                </div>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                               <ul className="space-y-3">
+                                 {role.points.map((point, index) => (
+                                    <li key={index} className="flex items-start gap-3">
+                                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                                        <span className="text-sm text-foreground/80">{point}</span>
+                                    </li>
+                                 ))}
+                               </ul>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
 
         <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8 text-center">
             <h2 className="font-headline text-3xl font-bold">Don't see a fit?</h2>
