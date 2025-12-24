@@ -63,7 +63,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
                                         <Image
-                                            src="https://i.postimg.cc/9M28bVsy/final.png"
+                                            src="https://i.postimg.cc/1fmkPTpR/Generated_Image_November_05_2025_8_01AM_Copy.png"
                                             alt="About illustration"
                                             fill
                                             className="object-contain"
