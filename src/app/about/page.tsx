@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Github, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Zap } from 'lucide-react';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -203,6 +203,54 @@ export default function AboutPage() {
                             </Card>
                         </section>
 
+                        <Separator/>
+                        
+                        <section>
+                            <Card className="max-w-4xl mx-auto bg-accent/20 border-accent/50 shadow-lg">
+                                <CardHeader className="text-center">
+                                    <CardTitle className="font-headline text-2xl md:text-3xl">
+                                        🌸 Join SheCodesHerWay – Core Team Collaboration! 🌸
+                                    </CardTitle>
+                                    <CardContent className="text-lg text-accent-foreground/90 pt-4">
+                                         We’re inviting passionate, purpose-driven individuals to collaborate with us at SheCodesHerWay, a women-led, mission-driven startup (pre-seed stage).
+                                    </CardContent>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="text-center mb-6">
+                                        <h3 className="font-semibold text-xl text-primary flex items-center justify-center gap-2"><Zap size={20}/> What’s in it for you:</h3>
+                                    </div>
+                                    <ul className="space-y-3 max-w-2xl mx-auto text-foreground/80">
+                                        <li className="flex items-start gap-3">
+                                            <Users size={20} className="text-primary mt-1"/>
+                                            <div><span className="font-bold">Participation Recognition:</span> Receive a Collaboration Template at joining.</div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <Award size={20} className="text-primary mt-1"/>
+                                            <div><span className="font-bold">Certificates:</span> 3-month Diamond & 6-month Platinum tiers for dedicated contributors.</div>
+                                        </li>
+                                         <li className="flex items-start gap-3">
+                                            <Linkedin size={20} className="text-primary mt-1"/>
+                                            <div><span className="font-bold">Career Visibility:</span> LinkedIn experience guidance and platform recognition.</div>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <Star size={20} className="text-primary mt-1"/>
+                                            <div><span className="font-bold">Top Contributor Spotlight:</span> Exceptional contributors recognized at the top in every field.</div>
+                                        </li>
+                                    </ul>
+                                    <div className="mt-8 text-center bg-background/50 p-4 rounded-lg">
+                                        <p className="font-semibold text-lg">📝 Flexible, experience-driven collaboration – learn, contribute, and grow in a real startup environment.</p>
+                                        <p className="text-sm mt-2"><span className="font-bold">Important:</span> This is voluntary, unpaid, and non-employment collaboration, designed for impact, learning, and skill-building.</p>
+                                        <Button asChild variant="link" className="mt-2">
+                                            <Link href="https://docs.google.com/document/d/1aGJ6ldythh6hwnUa-zz-mr23x-hSPRlzuJKA2qIXZR0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                                <FileText className="mr-2"/> Read the full Collaboration Guidelines here
+                                            </Link>
+                                        </Button>
+                                    </div>
+                                    <p className="text-center mt-8 font-semibold text-lg text-primary">Let’s build, grow, and empower together! 💖</p>
+                                </CardContent>
+                            </Card>
+                        </section>
+                        
                         <Separator/>
 
                         <section className="max-w-4xl mx-auto text-center">
