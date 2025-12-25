@@ -353,17 +353,13 @@ export default function ChatbotPage() {
                 </div>
             </ScrollArea>
 
-            <div className="p-4 bg-white border-t">
+            <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
               <div className="max-w-3xl mx-auto">
-                <div className="relative flex items-end w-full p-0.5 bg-white rounded-full border shadow-sm">
-                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full flex-shrink-0">
-                    <Plus className="w-4 h-4" />
-                    <span className="sr-only">Add attachment</span>
-                  </Button>
+                <div className="relative">
                   <Textarea
                     ref={textareaRef}
                     rows={1}
-                    placeholder="Ask EmpowerFly Assistant anything..."
+                    placeholder={`Ask ${brand.appName} anything...`}
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyDown={(e) => {
@@ -372,13 +368,13 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-1.5"
+                    className="w-full resize-none rounded-xl border-2 bg-background p-4 pr-14 shadow-sm min-h-[56px]"
                   />
                   <Button 
                       onClick={handleSendMessage} 
                       disabled={!inputValue.trim() || isTyping}
                       size="icon"
-                      className="h-8 w-8 rounded-full flex-shrink-0"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg"
                   >
                       <Send className="w-4 h-4" />
                       <span className="sr-only">Send</span>
@@ -436,3 +432,5 @@ export default function ChatbotPage() {
     </>
   );
 }
+
+    

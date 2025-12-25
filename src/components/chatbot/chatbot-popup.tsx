@@ -180,12 +180,8 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
         )}
       </ScrollArea>
       
-      <div className="p-4 bg-white border-t">
-         <div className="relative flex items-end w-full p-0.5 bg-white rounded-full border shadow-sm">
-          <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full flex-shrink-0">
-            <Plus className="w-4 h-4" />
-            <span className="sr-only">Add attachment</span>
-          </Button>
+      <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
+         <div className="relative">
           <Textarea
             ref={textareaRef}
             rows={1}
@@ -198,13 +194,13 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
                 handleSendMessage();
               }
             }}
-            className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-24 py-1.5"
+            className="w-full resize-none rounded-xl border-2 bg-background p-3 pr-12 shadow-sm min-h-[48px]"
           />
           <Button 
               onClick={handleSendMessage} 
               disabled={!inputValue.trim() || isTyping}
               size="icon"
-              className="h-8 w-8 rounded-full flex-shrink-0"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg"
           >
               <Send className="w-4 h-4" />
               <span className="sr-only">Send</span>
@@ -220,3 +216,5 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
     </motion.div>
   );
 }
+
+    
