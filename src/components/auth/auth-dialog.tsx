@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -80,6 +81,11 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
     setLastName('');
   }
 
+  const autoFillCredentials = () => {
+    setEmail('test@example.com');
+    setPassword('password123');
+  }
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
@@ -141,9 +147,12 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                 <ShadCNCardHeader className="p-4">
                   <CardDescription>For testing purposes, you can use:</CardDescription>
                 </ShadCNCardHeader>
-                <CardContent className="p-4 pt-0 text-sm">
-                  <p><strong>Email:</strong> test@example.com</p>
-                  <p><strong>Password:</strong> password123</p>
+                <CardContent className="p-4 pt-0 text-sm space-y-2">
+                  <div>
+                    <p><strong>Email:</strong> test@example.com</p>
+                    <p><strong>Password:</strong> password123</p>
+                  </div>
+                  <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillCredentials}>Autofill</Button>
                 </CardContent>
               </Card>
 
