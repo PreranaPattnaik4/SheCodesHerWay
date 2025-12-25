@@ -14,6 +14,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import AuthDialog from './auth-dialog';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function UserAuth() {
   const { user, isUserLoading } = useUser();
@@ -68,6 +69,13 @@ export default function UserAuth() {
             <p className="text-xs leading-none text-muted-foreground">{user.email}</p>
           </div>
         </DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem asChild>
+            <Link href="/dashboard">Dashboard</Link>
+        </DropdownMenuItem>
+         <DropdownMenuItem asChild>
+            <Link href="/dashboard/profile">My Profile</Link>
+        </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => signOut(auth)}>
           Log out
