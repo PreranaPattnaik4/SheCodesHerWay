@@ -7,7 +7,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck, CheckCircle2, BrainCircuit } from 'lucide-react';
+import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, ShieldCheck, CheckCircle2, BrainCircuit, Info, Server, Cpu, Database, Cloud, Code2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -253,8 +253,79 @@ export default function AiCoachingPage() {
             </div>
         </section>
 
+        <section className="py-20">
+            <div className="container mx-auto px-4">
+                <Card className="max-w-4xl mx-auto shadow-lg border-primary/20 bg-gradient-to-br from-background via-accent/10 to-background">
+                    <CardHeader>
+                        <CardTitle className="font-headline text-2xl md:text-3xl">Technology, AI Stack and Platform Status</CardTitle>
+                        <CardDescription>
+                            All AI features and tools on this platform are thoughtfully designed and built using Google’s advanced technology ecosystem.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-8">
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <div className="space-y-6">
+                                <div>
+                                    <h4 className="font-semibold text-lg flex items-center gap-2"><Server className="text-primary"/> AI and Platform Foundation</h4>
+                                    <ul className="mt-2 space-y-2 list-disc list-inside text-foreground/80">
+                                        <li>Built using Google Firebase AI Studio</li>
+                                        <li>Powered by Google AI and Gemini models</li>
+                                        <li>Secure backend with Firebase Authentication</li>
+                                        <li>Real-time data handling via Cloud Firestore</li>
+                                        <li>Scalable and reliable hosting using Firebase Hosting</li>
+                                        <li>Performance optimized through Google Cloud services</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 className="font-semibold text-lg flex items-center gap-2"><Cpu className="text-primary"/> AI Capabilities on This Platform</h4>
+                                    <ul className="mt-2 space-y-2 list-disc list-inside text-foreground/80">
+                                        <li>AI powered learning assistance</li>
+                                        <li>Smart coaching and guided support tools</li>
+                                        <li>Interactive AI features for skill building</li>
+                                        <li>Intelligent content assistance for users</li>
+                                        <li>Scalable AI integrations for future expansion</li>
+                                    </ul>
+                                </div>
+                                 <div>
+                                    <h4 className="font-semibold text-lg flex items-center gap-2"><Code2 className="text-primary"/> Development Stack</h4>
+                                    <ul className="mt-2 space-y-2 list-disc list-inside text-foreground/80">
+                                        <li>Frontend developed using modern web technologies</li>
+                                        <li>Backend, AI services and infrastructure managed through Firebase and Google Cloud</li>
+                                        <li>Designed with a focus on scalability, security and performance</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="bg-accent/30 p-6 rounded-lg border border-accent/50">
+                                <h4 className="font-semibold text-lg flex items-center gap-2"><Info className="text-accent-foreground"/> Important Note: Prototype Phase</h4>
+                                <div className="mt-2 space-y-4 text-accent-foreground/90">
+                                    <p>This platform is currently in its <strong>prototype stage</strong>.</p>
+                                    <ul className="space-y-2 list-disc list-inside text-sm">
+                                        <li>All AI features, tools and coaching modules displayed on this website are under active development and testing.</li>
+                                        <li>Some functionalities may be limited, partially available or marked as coming soon.</li>
+                                    </ul>
+                                    <h5 className="font-semibold pt-2">What This Means for Users</h5>
+                                    <ul className="space-y-2 list-disc list-inside text-sm">
+                                        <li>The platform is currently available for demonstration and early access purposes</li>
+                                        <li>AI Coaching and advanced AI tools will be fully enabled soon</li>
+                                        <li>Features will be rolled out gradually for all users</li>
+                                        <li>User feedback during this phase helps improve and refine the experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-muted/80 p-4 rounded-lg text-center mt-8">
+                             <h4 className="font-semibold text-lg">Technology Transparency</h4>
+                             <p className="text-sm text-muted-foreground mt-2 max-w-3xl mx-auto">This prototype is built using Firebase AI Studio and Google’s AI focused technology stack, ensuring a secure, scalable and future ready foundation. We are actively working to make all AI powered features fully available very soon for our community. Thank you for being part of the early journey with EmpowerFly by SheCodesHerWay, a platform built to help women grow, learn and lead with confidence.</p>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+        </section>
+
       </main>
       <Footer />
     </div>
   );
 }
+
+    
