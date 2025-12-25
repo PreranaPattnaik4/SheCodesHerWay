@@ -61,13 +61,15 @@ export default function AboutPage() {
                                         </h1>
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
-                                    <div className="relative h-96 md:h-[480px] rounded-lg overflow-hidden">
-                                        <Image
-                                            src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
-                                            alt="About illustration"
-                                            fill
-                                            className="object-cover"
-                                        />
+                                    <div>
+                                        <div className="relative h-96 md:h-[480px] rounded-lg overflow-hidden">
+                                            <Image
+                                                src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
+                                                alt="About illustration"
+                                                fill
+                                                className="object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                                  <div className="mt-0">
