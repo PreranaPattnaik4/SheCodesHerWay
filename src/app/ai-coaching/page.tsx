@@ -12,21 +12,22 @@ import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
+const aiCoachTool = {
+    icon: BrainCircuit,
+    title: "AI Coaching",
+    subtitle: "Learn Anything, Just Ask",
+    description: "An agentic AI-powered coach that helps you learn any skill, from coding to creative writing, through personalized, conversational lessons.",
+    features: [
+        "Personalized learning paths",
+        "Interactive exercises",
+        "Real-time feedback"
+    ],
+    href: "#",
+    isReady: false,
+    poweredBy: "Google's Tech"
+};
+
 const otherAiTools = [
-    {
-        icon: BrainCircuit,
-        title: "AI Coaching",
-        subtitle: "Learn Anything, Just Ask",
-        description: "An agentic AI-powered coach that helps you learn any skill, from coding to creative writing, through personalized, conversational lessons.",
-        features: [
-            "Personalized learning paths",
-            "Interactive exercises",
-            "Real-time feedback"
-        ],
-        href: "#",
-        isReady: false,
-        poweredBy: "Google's Tech"
-    },
     {
         icon: ImageIcon,
         title: "AI Image Studio",
@@ -158,8 +159,49 @@ export default function AiCoachingPage() {
                     </CardFooter>
                 </Card>
 
+                <div>
+                    <div className="text-center mb-6">
+                        <h2 className="font-headline text-3xl font-bold">Agentic AI-powered coach</h2>
+                        <Badge variant="secondary" className="mt-2">Powered by Google's Tech</Badge>
+                    </div>
+                    <Card key={aiCoachTool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300 max-w-lg mx-auto">
+                        <CardHeader>
+                            <div className="flex items-center justify-between">
+                                <div className="bg-primary/10 text-primary p-3 rounded-full">
+                                    <aiCoachTool.icon className="h-7 w-7" />
+                                </div>
+                                {!aiCoachTool.isReady && <Badge variant="outline">Coming Soon</Badge>}
+                            </div>
+                            <CardTitle className="pt-4">{aiCoachTool.title}</CardTitle>
+                            <CardDescription>{aiCoachTool.subtitle}</CardDescription>
+                        </CardHeader>
+                        <CardContent className="flex-grow space-y-4">
+                            <p className="text-foreground/80">{aiCoachTool.description}</p>
+                            <div>
+                                <h4 className="font-semibold mb-2">Key Features:</h4>
+                                <ul className="space-y-2">
+                                    {aiCoachTool.features.map((feature, index) => (
+                                        <li key={index} className="flex items-start gap-2">
+                                            <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-foreground/80">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </CardContent>
+                        <CardFooter className="flex-col items-start gap-4">
+                            <Button asChild variant="outline" className="w-full" disabled={!aiCoachTool.isReady}>
+                                <Link href={aiCoachTool.isReady ? aiCoachTool.href : '#'}>
+                                    {aiCoachTool.isReady ? 'Use Tool' : 'Coming Soon'}
+                                    {aiCoachTool.isReady && <ArrowRight className="ml-2 h-4 w-4" />}
+                                </Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     {otherAiTools.map((tool) => (
                         <Card key={tool.title} className="flex flex-col shadow-lg transform transition-transform hover:-translate-y-2 duration-300">
                             <CardHeader>
@@ -216,3 +258,5 @@ export default function AiCoachingPage() {
     </div>
   );
 }
+
+    
