@@ -13,7 +13,6 @@ const mainNav = [
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
     { name: 'My Program', href: '/dashboard/program', icon: Rocket },
     { name: 'Enrolled Courses', href: '/courses', icon: BookOpen },
-    { name: 'Reviews', href: '/dashboard/reviews', icon: Star },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },
     { name: 'Wishlist', href: '/dashboard/wishlist', icon: Heart },
     { name: 'Order History', href: '/dashboard/order-history', icon: ShoppingCart },
