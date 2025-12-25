@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">
-                <section className="bg-primary/10 py-20 md:py-28 flex items-center justify-center">
+                <section className="bg-primary/10 py-12 flex items-center justify-center">
                     <div className="container mx-auto px-4">
                         <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
                             {/* Card Header */}
