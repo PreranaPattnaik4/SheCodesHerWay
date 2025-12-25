@@ -107,9 +107,43 @@ export default function CareersPage() {
             </div>
         </section>
 
+        <section className="bg-muted/50 py-20">
+             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Card className="max-w-4xl mx-auto shadow-2xl bg-gradient-to-br from-background via-accent/10 to-background">
+                    <CardHeader className="text-center p-8 md:p-12">
+                        <CardTitle className="font-headline text-3xl md:text-4xl">
+                          Early Core Contributor Application | SheCodesHerWay
+                        </CardTitle>
+                        <CardDescription className="text-lg pt-4 text-foreground/80">
+                           Join the founding circle of SheCodesHerWay. We are looking for passionate individuals—including students, freshers, and working professionals—to join us as Early Core Contributors on a part-time basis.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="px-8 md:px-12 pb-12">
+                        <div className="prose dark:prose-invert max-w-none text-foreground/90">
+                            <p>
+                                In this role, you will take full ownership of high-impact modules, building specialized tools, creative assets, and strategic systems from the ground up. As a Core Contributor, you will work independently in a dedicated local environment, contributing your expertise to help scale our mission.
+                            </p>
+                            <p className="font-semibold text-primary">
+                                This is a unique opportunity to lead "zero-to-one" development and shape the future of our platform.
+                            </p>
+                        </div>
+                         <div className="mt-8 text-center">
+                            <Button asChild size="lg">
+                                <Link href="https://docs.google.com/document/d/1yycVFW7TiH2P-KCBuvHyNLg03mOqATPS/edit?usp=sharing&ouid=104571785946165056965&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">
+                                    <FileText className="mr-2 h-5 w-5" />
+                                    Learn More & Apply
+                                    <ArrowRight className="ml-2 h-5 w-5" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+        </section>
+
         <Separator />
 
-        <section className="bg-muted/50 py-20">
+        <section className="bg-white py-20">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                  <div className="text-center mb-12">
                     <h2 className="font-headline text-3xl font-bold">Roles &amp; Responsibilities</h2>
@@ -119,7 +153,7 @@ export default function CareersPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {responsibilities.map((role) => (
-                         <Card key={role.title} className="flex flex-col shadow-lg bg-white">
+                         <Card key={role.title} className="flex flex-col shadow-lg bg-muted/40">
                             <CardHeader>
                                 <div className="flex items-center gap-4">
                                     <div className="bg-primary/10 text-primary p-3 rounded-full">
@@ -142,54 +176,6 @@ export default function CareersPage() {
                     ))}
                 </div>
             </div>
-        </section>
-
-        <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-            <Card className="max-w-4xl mx-auto bg-accent/20 border-accent/50 shadow-lg">
-                <CardHeader className="text-center">
-                    <CardTitle className="font-headline text-2xl md:text-3xl">
-                        Join SheCodesHerWay – Core Team Collaboration!
-                    </CardTitle>
-                    <CardContent className="text-lg text-accent-foreground/90 pt-4">
-                         We’re inviting passionate, purpose-driven individuals to collaborate with us at SheCodesHerWay, a women-led, mission-driven startup (pre-seed stage).
-                    </CardContent>
-                </CardHeader>
-                <CardContent>
-                    <div className="text-center mb-6">
-                        <h3 className="font-semibold text-xl text-primary flex items-center justify-center gap-2"><Zap size={20}/> What’s in it for you:</h3>
-                    </div>
-                    <ul className="space-y-3 max-w-2xl mx-auto text-foreground/80">
-                        <li className="flex items-start gap-3">
-                            <Users size={20} className="text-primary mt-1"/>
-                            <div><span className="font-bold">Participation Recognition:</span> Receive a Collaboration Template at joining.</div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <Award size={20} className="text-primary mt-1"/>
-                            <div><span className="font-bold">Certificates:</span> 3-month Diamond & 6-month Platinum tiers for dedicated contributors.</div>
-                        </li>
-                         <li className="flex items-start gap-3">
-                            <Linkedin size={20} className="text-primary mt-1"/>
-                            <div><span className="font-bold">Career Visibility:</span> LinkedIn experience guidance and platform recognition.</div>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <Zap size={20} className="text-primary mt-1"/>
-                            <div><span className="font-bold">Top Contributor Spotlight:</span> Exceptional contributors recognized at the top in every field.</div>
-                        </li>
-                    </ul>
-                    <div className="mt-8 text-center bg-background/50 p-4 rounded-lg">
-                        <p className="font-semibold text-lg">📝 Flexible, experience-driven collaboration – learn, contribute, and grow in a real startup environment.</p>
-                        <p className="text-sm mt-2"><span className="font-bold">Important:</span> This is voluntary, unpaid, and non-employment collaboration, designed for impact, learning, and skill-building.</p>
-                        <Button asChild variant="link" className="mt-2">
-                            <Link href="https://docs.google.com/document/d/1aGJ6ldythh6hwnUa-zz-mr23x-hSPRlzuJKA2qIXZR0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                <FileText className="mr-2"/> Read the full Collaboration Guidelines here
-                            </Link>
-                        </Button>
-                    </div>
-                    <p className="text-center mt-8 font-semibold text-lg text-primary flex items-center justify-center gap-2">
-                        Let’s build, grow, and empower together! <Heart size={20} />
-                    </p>
-                </CardContent>
-            </Card>
         </section>
 
         <section className="container mx-auto px-4 pb-20 sm:px-6 lg:px-8 text-center">
