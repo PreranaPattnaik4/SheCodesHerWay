@@ -222,7 +222,7 @@ export default function ChatbotPage() {
             handleNewChat();
         }
     }
-    setToDelete(null);
+    setChatToDelete(null);
 
     // Also remove from local storage if it was the last chat
     if (updatedHistory.length === 0) {
@@ -355,8 +355,8 @@ export default function ChatbotPage() {
 
             <div className="p-4 bg-white border-t">
               <div className="max-w-3xl mx-auto">
-                <div className="relative flex items-end w-full p-1 bg-white rounded-full border shadow-sm">
-                  <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full flex-shrink-0">
+                <div className="relative flex items-end w-full p-0.5 bg-white rounded-full border shadow-sm">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full flex-shrink-0">
                     <Plus className="w-4 h-4" />
                     <span className="sr-only">Add attachment</span>
                   </Button>
@@ -372,13 +372,13 @@ export default function ChatbotPage() {
                           handleSendMessage();
                       }
                     }}
-                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-2"
+                    className="flex-1 resize-none border-0 shadow-none focus-visible:ring-0 bg-transparent max-h-32 py-1.5"
                   />
                   <Button 
                       onClick={handleSendMessage} 
                       disabled={!inputValue.trim() || isTyping}
                       size="icon"
-                      className="h-9 w-9 rounded-full flex-shrink-0"
+                      className="h-8 w-8 rounded-full flex-shrink-0"
                   >
                       <Send className="w-4 h-4" />
                       <span className="sr-only">Send</span>
@@ -436,5 +436,3 @@ export default function ChatbotPage() {
     </>
   );
 }
-
-    
