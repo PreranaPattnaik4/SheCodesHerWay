@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useUser } from '@/firebase/hooks';
-import { Star, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck } from 'lucide-react';
+import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck } from 'lucide-react';
 import Logo from '../logo';
 
 const mainNav = [
@@ -13,6 +13,7 @@ const mainNav = [
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
     { name: 'My Program', href: '/dashboard/program', icon: Rocket },
     { name: 'Enrolled Courses', href: '/courses', icon: BookOpen },
+    { name: 'My Certificates', href: '/dashboard/certificates', icon: Award },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },
     { name: 'Wishlist', href: '/dashboard/wishlist', icon: Heart },
     { name: 'Order History', href: '/dashboard/order-history', icon: ShoppingCart },
