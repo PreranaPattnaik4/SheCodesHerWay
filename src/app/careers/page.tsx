@@ -114,6 +114,7 @@ export default function CareersPage() {
                             <p className="font-semibold text-primary">
                                 This is a unique opportunity to lead "zero-to-one" development and shape the future of our platform.
                             </p>
+                            <p className="mt-4"><span className="font-bold">⚖️ Important:</span> This is voluntary, unpaid, and non-employment collaboration, designed for impact, learning, and skill-building.</p>
                         </div>
                          <div className="mt-8 text-center">
                             <Button asChild size="lg">
