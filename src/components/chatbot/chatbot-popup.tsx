@@ -110,7 +110,7 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
             <AvatarFallback className='bg-transparent'><LogoIcon/></AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-semibold">{brand.appName} Assistant</h3>
+            <h3 className="font-semibold">{brand.appName}</h3>
             <p className="text-xs text-muted-foreground">Powered by Genkit</p>
           </div>
         </div>
