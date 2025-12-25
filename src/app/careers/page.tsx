@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Briefcase, HeartHandshake, Handshake, ArrowRight, ClipboardList, UserCheck, Zap, CheckCircle2, Users, Award, Linkedin, FileText, Heart } from 'lucide-react';
+import { Briefcase, HeartHandshake, Handshake, ArrowRight, ClipboardList, UserCheck, Zap, CheckCircle2, Users, Award, Linkedin, FileText, Heart, BrainCircuit } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const opportunities = [
@@ -63,6 +63,17 @@ const responsibilities = [
             "Collaborate on platform growth, partnerships, and outreach efforts.",
             "Take ownership of key areas and contribute to operational excellence.",
             "Uphold the mission and values of SheCodesHerWay in all activities.",
+        ]
+    },
+    {
+        icon: BrainCircuit,
+        title: "Early Core Contributor Responsibilities",
+        points: [
+            "Take full ownership of high-impact modules and features.",
+            "Build specialized tools, creative assets, and strategic systems from the ground up.",
+            "Work independently to contribute expertise and help scale our mission.",
+            "Lead 'zero-to-one' development on key platform components.",
+            "Shape the future of the SheCodesHerWay platform through direct contributions.",
         ]
     }
 ]
@@ -151,7 +162,7 @@ export default function CareersPage() {
                         Understand the key responsibilities for each role and how you can make an impact.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {responsibilities.map((role) => (
                          <Card key={role.title} className="flex flex-col shadow-lg bg-muted/40">
                             <CardHeader>
