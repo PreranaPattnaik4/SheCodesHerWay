@@ -1,11 +1,10 @@
-
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Send, X, Plus, User, Bot } from 'lucide-react';
+import { Send, X, Plus, User, Bot, ArrowUp } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
@@ -181,7 +180,7 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
       </ScrollArea>
       
       <div className="p-4 bg-white/95 backdrop-blur-sm border-t">
-         <div className="relative flex items-center w-full border-2 rounded-2xl shadow-sm p-1">
+         <div className="relative">
           <Textarea
             ref={textareaRef}
             rows={1}
@@ -194,15 +193,15 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
                 handleSendMessage();
               }
             }}
-            className="w-full resize-none bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 p-2 pr-10 shadow-none"
+            className="w-full resize-none bg-transparent border-2 border-border focus-visible:ring-primary focus-visible:ring-offset-0 p-3 pr-14 rounded-2xl shadow-sm"
           />
           <Button 
               onClick={handleSendMessage} 
               disabled={!inputValue.trim() || isTyping}
               size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 h-8 w-8 rounded-lg"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-foreground text-background hover:bg-foreground/80"
           >
-              <Send className="w-4 h-4" />
+              <ArrowUp className="w-4 h-4" />
               <span className="sr-only">Send</span>
           </Button>
         </div>
@@ -216,5 +215,3 @@ export default function ChatbotPopup({ isOpen, onClose }: ChatbotPopupProps) {
     </motion.div>
   );
 }
-
-    
