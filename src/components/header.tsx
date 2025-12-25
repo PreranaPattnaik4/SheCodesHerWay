@@ -1,4 +1,3 @@
-
 "use client";
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,6 @@ const navLinks = [
   { href: '/sangini-udaan', label: 'Our Program' },
   { href: '/ai-coaching', label: 'AI Coaching' },
   { href: '/chatbot', label: 'EmpowerFly Assistant' },
-  { href: '/courses', label: 'Courses' },
   { href: '/community', label: 'Community' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
