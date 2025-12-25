@@ -142,14 +142,14 @@ export default function AboutPage() {
                         <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-[450px]">
-                                {image1 && (
+                                {founderImage && (
                                     <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-lg overflow-hidden shadow-2xl">
                                     <Image
-                                        src={image1.imageUrl}
-                                        alt={image1.description}
+                                        src={founderImage.imageUrl}
+                                        alt={founderImage.description}
                                         fill
                                         className="object-cover"
-                                        data-ai-hint={image1.imageHint}
+                                        data-ai-hint={founderImage.imageHint}
                                     />
                                     </div>
                                 )}
@@ -173,7 +173,7 @@ export default function AboutPage() {
                                     <div className="mt-4 flex items-center gap-4">
                                         <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></Link>
                                         <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover:text-primary"><FileText size={20}/></Link>
-                                        <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></Link>
+                                        <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></Link>
                                     </div>
                                     <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of SheCodesHerWay.</p>
                                 </div>
