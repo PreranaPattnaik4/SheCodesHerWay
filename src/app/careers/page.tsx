@@ -88,9 +88,9 @@ export default function CareersPage() {
       <main className="flex-1">
         <section className="bg-secondary py-16 md:py-24">
             <div className="container mx-auto px-4 text-center">
-                <h1 className="font-headline text-4xl font-bold md:text-6xl">Get Involved</h1>
+                <h1 className="font-headline text-4xl font-bold md:text-6xl">Grow With SheCodesHerWay</h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                    Join our mission to build a world where every woman has the opportunity to soar. Explore how you can contribute.
+                    Join our mission to build a world where every woman has the opportunity to soar. Explore how you can contribute. Where Passion Meets Purpose to Build Something Meaningful Together
                 </p>
             </div>
         </section>
