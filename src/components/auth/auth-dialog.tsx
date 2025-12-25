@@ -57,7 +57,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
 
   const handleLogin = async () => {
     setError(null);
-    set-loading(true);
+    setLoading(true);
     if (!email || !password) {
       setError("Please enter email and password.");
       setLoading(false);
