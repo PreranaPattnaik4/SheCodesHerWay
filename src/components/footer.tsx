@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="font-semibold">Quick Links</p>
             <nav className="mt-4 grid grid-cols-2 gap-2 text-sm text-secondary-foreground/80">
               <Link href="/about" className="transition-colors hover:text-primary">About Us</Link>
-              <Link href="/sangini-udaan" className="transition-colors hover:text-primary">Sangini Udaan</Link>
+              <Link href="/sangini-udaan" className="transition-colors hover:text-primary">Our Program</Link>
               <Link href="/internship" className="transition-colors hover:text-primary">Internships</Link>
               <Link href="/careers" className="transition-colors hover:text-primary">Careers</Link>
               <Link href="/community" className="transition-colors hover:text-primary">Community</Link>
