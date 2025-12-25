@@ -82,14 +82,14 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
   }
 
   const autoFillLoginCredentials = () => {
-    setEmail('test@example.com');
+    setEmail('user@example.com');
     setPassword('password123');
   }
 
   const autoFillSignUpCredentials = () => {
-    setFirstName('Test');
+    setFirstName('Demo');
     setLastName('User');
-    setEmail('test@example.com');
+    setEmail('user@example.com');
     setPassword('password123');
   }
 
@@ -141,8 +141,8 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                     </CardHeader>
                     <CardContent className="p-4 pt-0 text-sm space-y-2">
                         <div>
-                            <p><strong>Name:</strong> Test User</p>
-                            <p><strong>Email:</strong> test@example.com</p>
+                            <p><strong>Name:</strong> Demo User</p>
+                            <p><strong>Email:</strong> user@example.com</p>
                             <p><strong>Password:</strong> password123</p>
                         </div>
                         <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillSignUpCredentials}>Autofill</Button>
@@ -169,7 +169,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                 </CardHeader>
                 <CardContent className="p-4 pt-0 text-sm space-y-2">
                   <div>
-                    <p><strong>Email:</strong> test@example.com</p>
+                    <p><strong>Email:</strong> user@example.com</p>
                     <p><strong>Password:</strong> password123</p>
                   </div>
                   <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillLoginCredentials}>Autofill</Button>
