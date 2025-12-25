@@ -17,7 +17,7 @@ import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPasswo
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { brand } from '@/lib/brand';
 import Logo from '../logo';
-import { Card, CardContent, CardDescription, CardHeader as ShadCNCardHeader } from '../ui/card';
+import { Card, CardContent, CardDescription, CardHeader } from '../ui/card';
 
 interface AuthDialogProps {
   open: boolean;
@@ -81,7 +81,14 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
     setLastName('');
   }
 
-  const autoFillCredentials = () => {
+  const autoFillLoginCredentials = () => {
+    setEmail('test@example.com');
+    setPassword('password123');
+  }
+
+  const autoFillSignUpCredentials = () => {
+    setFirstName('Test');
+    setLastName('User');
     setEmail('test@example.com');
     setPassword('password123');
   }
@@ -128,6 +135,19 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                 </div>
                 {error && <p className="text-sm text-destructive">{error}</p>}
                 <Button onClick={handleSignUp} disabled={loading}>{loading ? 'Signing Up...' : 'Sign Up'}</Button>
+                 <Card className="mt-4 bg-muted/50 border-dashed">
+                    <CardHeader className="p-4">
+                        <CardDescription>For testing, you can use:</CardDescription>
+                    </CardHeader>
+                    <CardContent className="p-4 pt-0 text-sm space-y-2">
+                        <div>
+                            <p><strong>Name:</strong> Test User</p>
+                            <p><strong>Email:</strong> test@example.com</p>
+                            <p><strong>Password:</strong> password123</p>
+                        </div>
+                        <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillSignUpCredentials}>Autofill</Button>
+                    </CardContent>
+                </Card>
             </div>
           </TabsContent>
           <TabsContent value="login">
@@ -144,15 +164,15 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
               <Button onClick={handleLogin} disabled={loading}>{loading ? 'Logging In...' : 'Log In'}</Button>
 
               <Card className="mt-4 bg-muted/50 border-dashed">
-                <ShadCNCardHeader className="p-4">
+                <CardHeader className="p-4">
                   <CardDescription>For testing purposes, you can use:</CardDescription>
-                </ShadCNCardHeader>
+                </CardHeader>
                 <CardContent className="p-4 pt-0 text-sm space-y-2">
                   <div>
                     <p><strong>Email:</strong> test@example.com</p>
                     <p><strong>Password:</strong> password123</p>
                   </div>
-                  <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillCredentials}>Autofill</Button>
+                  <Button variant="link" size="sm" className="p-0 h-auto" onClick={autoFillLoginCredentials}>Autofill</Button>
                 </CardContent>
               </Card>
 
