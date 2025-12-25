@@ -14,7 +14,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const aiCoachTool = {
     icon: BrainCircuit,
-    title: "AI Coaching",
+    title: "EmpowerFly AI Coach",
     subtitle: "Learn Anything, Just Ask",
     description: "An agentic AI-powered coach that helps you learn any skill, from coding to creative writing, through personalized, conversational lessons.",
     features: [
@@ -93,7 +93,7 @@ export default function AiCoachingPage() {
             )}
             <div className="container relative mx-auto px-4 text-center">
                 <Bot className="mx-auto h-12 w-12 text-primary" />
-                <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">AI Coaching &amp; Tools</h1>
+                <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">EmpowerFly AI Coach &amp; Tools</h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                     Explore our suite of AI-powered tools designed to help you learn, create, and grow with confidence.
                 </p>
@@ -327,5 +327,3 @@ export default function AiCoachingPage() {
     </div>
   );
 }
-
-    
