@@ -2,20 +2,17 @@
 'use client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Book, CheckCircle, Users, GraduationCap, DollarSign, Plus, ArrowRight } from 'lucide-react';
+import { BookOpen, Book, CheckCircle, GraduationCap, ArrowRight, Home } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
-import { brand } from '@/lib/brand';
 
 const stats = [
     { icon: BookOpen, label: "Enrolled Courses", value: "4" },
     { icon: Book, label: "Active Courses", value: "4" },
     { icon: CheckCircle, label: "Completed Courses", value: "0" },
-    { icon: Users, label: "Total Students", value: "17" },
     { icon: GraduationCap, label: "Total Courses", value: "5" },
-    { icon: DollarSign, label: "Total Earnings", value: "0" },
 ];
 
 const inProgressCourse = {
@@ -31,9 +28,11 @@ export default function DashboardPage() {
     <div className="w-full">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold">Dashboard</h1>
-            <Button>
-                <Plus className="mr-2 h-4 w-4"/>
-                New Course
+            <Button asChild>
+                <Link href="/">
+                    <Home className="mr-2 h-4 w-4"/>
+                    Home
+                </Link>
             </Button>
         </div>
 
@@ -52,7 +51,7 @@ export default function DashboardPage() {
             </CardContent>
         </Card>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
             {stats.map((stat) => (
                 <Card key={stat.label}>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
