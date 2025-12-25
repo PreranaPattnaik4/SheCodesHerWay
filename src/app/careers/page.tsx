@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Briefcase, HeartHandshake, Handshake, ArrowRight, ClipboardList, UserCheck, Zap, CheckCircle2, Users, Award, Linkedin, FileText, Heart, BrainCircuit } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
 const opportunities = [
     {
@@ -63,7 +64,8 @@ const responsibilities = [
             "Participate actively in learning sessions and workshops.",
             "Complete assigned tasks and deliverables within the specified timelines.",
             "Engage with the community and share your learning journey."
-        ]
+        ],
+        comingSoon: true,
     },
     {
         icon: UserCheck,
@@ -74,7 +76,8 @@ const responsibilities = [
             "Participate in mentorship circles and Q&A sessions.",
             "Help mentees set and achieve their personal and professional goals.",
             "Offer constructive feedback and encouragement.",
-        ]
+        ],
+        comingSoon: true,
     },
 ]
 
@@ -170,7 +173,10 @@ export default function CareersPage() {
                                     <div className="bg-primary/10 text-primary p-3 rounded-full">
                                         <role.icon className="h-6 w-6" />
                                     </div>
-                                    <CardTitle>{role.title}</CardTitle>
+                                    <div className="flex items-center gap-4">
+                                        <CardTitle>{role.title}</CardTitle>
+                                        {role.comingSoon && <Badge variant="outline">Coming Soon</Badge>}
+                                    </div>
                                 </div>
                             </CardHeader>
                             <CardContent className="flex-grow">
