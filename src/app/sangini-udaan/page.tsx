@@ -87,6 +87,23 @@ export default function SanginiUdaanPage() {
                 <div className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
                     <div className="space-y-24">
 
+                        <section className="text-center bg-accent/30 py-12 rounded-lg">
+                            <Badge variant="secondary" className="mb-4">Starting Soon</Badge>
+                            <h2 className="font-headline text-3xl font-bold">Sangini Udaan : EmpowerFly — Cohort 1</h2>
+                            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                                A very warm welcome to all the participants and mentors joining our founding cohort! We are thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something truly special.
+                            </p>
+                             <p className="mt-6 text-foreground/80">
+                                Stay updated with our latest announcements and follow our journey on social media!
+                            </p>
+                            <Button asChild className="mt-4">
+                                <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="mr-2 h-4 w-4" />
+                                    Follow us on LinkedIn
+                                </Link>
+                            </Button>
+                        </section>
+                        
                         <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-[450px]">
@@ -132,23 +149,6 @@ export default function SanginiUdaanPage() {
                         </section>
 
                         <Separator />
-
-                        <section className="text-center bg-accent/30 py-12 rounded-lg">
-                            <Badge variant="secondary" className="mb-4">Starting Soon</Badge>
-                            <h2 className="font-headline text-3xl font-bold">Sangini Udaan : EmpowerFly — Cohort 1</h2>
-                            <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                                A very warm welcome to all the participants and mentors joining our founding cohort! We are thrilled to have you on this journey of growth, learning, and empowerment. Together, we will build something truly special.
-                            </p>
-                             <p className="mt-6 text-foreground/80">
-                                Stay updated with our latest announcements and follow our journey on social media!
-                            </p>
-                            <Button asChild className="mt-4">
-                                <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer">
-                                    <Linkedin className="mr-2 h-4 w-4" />
-                                    Follow us on LinkedIn
-                                </Link>
-                            </Button>
-                        </section>
 
                         <section>
                             <div className="text-center mb-12">
@@ -260,5 +260,3 @@ export default function SanginiUdaanPage() {
         </div>
     );
 }
-
-    
