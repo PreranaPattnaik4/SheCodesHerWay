@@ -1,10 +1,13 @@
+
 'use client';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Book, CheckCircle, Users, GraduationCap, DollarSign, Plus } from 'lucide-react';
+import { BookOpen, Book, CheckCircle, Users, GraduationCap, DollarSign, Plus, ArrowRight } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Link from 'next/link';
+import { brand } from '@/lib/brand';
 
 const stats = [
     { icon: BookOpen, label: "Enrolled Courses", value: "4" },
@@ -48,6 +51,22 @@ export default function DashboardPage() {
                     </CardContent>
                 </Card>
             ))}
+        </div>
+
+        <div className="mt-8">
+            <Card className="bg-accent/30 border-accent/50 mb-8">
+                <CardHeader>
+                    <CardTitle>My Program Journey</CardTitle>
+                    <CardDescription>Track your progress in the {brand.programName} program.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                    <Button asChild>
+                        <Link href="/dashboard/program">
+                            View My Journey <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                    </Button>
+                </CardContent>
+            </Card>
         </div>
 
         <div className="mt-8">
