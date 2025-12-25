@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Zap, HeartHandshake } from 'lucide-react';
+import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake } from 'lucide-react';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -61,7 +61,7 @@ export default function AboutPage() {
                                         </h1>
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
-                                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                                    <div className="relative h-80 md:h-96 rounded-lg overflow-hidden">
                                         <Image
                                             src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
                                             alt="About illustration"
@@ -75,6 +75,11 @@ export default function AboutPage() {
                                     <p className="text-lg text-foreground/80 mt-4">
                                         Hello. We’re a women-led startup agency for a better tomorrow.
                                     </p>
+                                     <div className="mt-6 flex items-center gap-4">
+                                        <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={24}/></Link>
+                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube size={24}/></Link>
+                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram size={24}/></Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -277,3 +282,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
