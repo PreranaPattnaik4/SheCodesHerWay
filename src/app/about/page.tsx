@@ -73,7 +73,7 @@ export default function AboutPage() {
                                  <div className="mt-8 md:mt-0 md:pt-8">
                                     <div className="text-6xl font-bold text-foreground/80">{brand.name}</div>
                                     <p className="text-lg text-foreground/80 mt-4">
-                                        Hello. We’re a women-led startup agency for a better tomorrow.
+                                        SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
                                     </p>
                                      <div className="mt-6 flex items-center gap-4">
                                         <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={24}/></Link>
@@ -283,4 +283,3 @@ export default function AboutPage() {
     );
 }
 
-    
