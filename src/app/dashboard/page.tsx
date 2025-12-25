@@ -7,6 +7,7 @@ import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Link from 'next/link';
+import { useUser } from '@/firebase/hooks';
 
 const stats = [
     { icon: BookOpen, label: "Enrolled Courses", value: "4" },
@@ -24,10 +25,11 @@ const inProgressCourse = {
 }
 
 export default function DashboardPage() {
+    const { user } = useUser();
   return (
     <div className="w-full">
         <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold">Dashboard</h1>
+            <h1 className="text-3xl font-bold">Welcome, {user?.displayName?.split(' ')[0] || 'User'}!</h1>
             <Button asChild>
                 <Link href="/">
                     <Home className="mr-2 h-4 w-4"/>
