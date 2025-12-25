@@ -17,6 +17,7 @@ import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPasswo
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { brand } from '@/lib/brand';
 import Logo from '../logo';
+import { Card, CardContent, CardDescription } from '../ui/card';
 
 interface AuthDialogProps {
   open: boolean;
@@ -136,6 +137,17 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
               </div>
               {error && <p className="text-sm text-destructive">{error}</p>}
               <Button onClick={handleLogin} disabled={loading}>{loading ? 'Logging In...' : 'Log In'}</Button>
+
+              <Card className="mt-4 bg-muted/50 border-dashed">
+                <CardHeader className="p-4">
+                  <CardDescription>For testing purposes, you can use:</CardDescription>
+                </CardHeader>
+                <CardContent className="p-4 pt-0 text-sm">
+                  <p><strong>Email:</strong> test@example.com</p>
+                  <p><strong>Password:</strong> password123</p>
+                </CardContent>
+              </Card>
+
             </div>
           </TabsContent>
         </Tabs>
