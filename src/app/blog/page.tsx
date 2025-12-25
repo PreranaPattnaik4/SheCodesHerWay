@@ -3,7 +3,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Rss, ArrowLeft } from 'lucide-react';
+import { Rss, ArrowLeft, PenSquare } from 'lucide-react';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -12,12 +12,20 @@ export default function BlogPage() {
       <Header />
       <main className="flex-1">
         <section className="bg-secondary py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
-                <Rss className="mx-auto h-12 w-12 text-primary" />
-                <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Our Blog</h1>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-                    Stories, insights, and updates from the SheCodesHerWay community.
-                </p>
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-center sm:text-left">
+                  <div>
+                    <Rss className="mx-auto sm:mx-0 h-12 w-12 text-primary" />
+                    <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Our Blog</h1>
+                    <p className="mt-4 max-w-3xl mx-auto sm:mx-0 text-lg text-foreground/80">
+                        Stories, insights, and updates from the SheCodesHerWay community.
+                    </p>
+                  </div>
+                  <Button disabled>
+                      <PenSquare className="mr-2 h-5 w-5" />
+                      Write a Post
+                  </Button>
+              </div>
             </div>
         </section>
 
