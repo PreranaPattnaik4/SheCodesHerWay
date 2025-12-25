@@ -57,7 +57,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
 
   const handleLogin = async () => {
     setError(null);
-    setLoading(true);
+    set-loading(true);
     if (!email || !password) {
       setError("Please enter email and password.");
       setLoading(false);
@@ -87,8 +87,8 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
   }
 
   const autoFillSignUpCredentials = () => {
-    setFirstName('Demo');
-    setLastName('User');
+    setFirstName('DemoUser');
+    setLastName('Example');
     setEmail('user@example.com');
     setPassword('password123');
   }
@@ -141,7 +141,7 @@ export default function AuthDialog({ open, onOpenChange, initialTab = "signup" }
                     </CardHeader>
                     <CardContent className="p-4 pt-0 text-sm space-y-2">
                         <div>
-                            <p><strong>Name:</strong> Demo User</p>
+                            <p><strong>Name:</strong> DemoUser Example</p>
                             <p><strong>Email:</strong> user@example.com</p>
                             <p><strong>Password:</strong> password123</p>
                         </div>
