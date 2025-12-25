@@ -11,6 +11,7 @@ import Logo from '../logo';
 const mainNav = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
+    { name: 'Program', href: '/sangini-udaan', icon: Rocket },
     { name: 'Enrolled Courses', href: '/dashboard/enrolled-courses', icon: BookOpen },
     { name: 'Reviews', href: '/dashboard/reviews', icon: Star },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },
@@ -40,13 +41,13 @@ export default function Sidebar() {
     <aside className="w-64 flex-shrink-0 bg-white shadow-lg">
       <div className="flex flex-col h-full">
         <div className="p-6 text-center border-b">
-            <Avatar className="h-24 w-24 mx-auto border-4 border-yellow-400">
+            <Avatar className="h-24 w-24 mx-auto border-4 border-primary">
                 <AvatarImage src={user?.photoURL || ''} alt={user?.displayName || 'User'} />
                 <AvatarFallback className="text-3xl">{getInitials(user?.displayName)}</AvatarFallback>
             </Avatar>
             <h3 className="mt-4 text-lg font-semibold">{user?.displayName}</h3>
-            <div className="flex items-center justify-center gap-1 text-sm text-yellow-500 mt-1">
-                <Star className="w-4 h-4 fill-current"/>
+            <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground mt-1">
+                <Star className="w-4 h-4 fill-primary text-primary"/>
                 <span>4.50 (2 Ratings)</span>
             </div>
         </div>
@@ -56,8 +57,7 @@ export default function Sidebar() {
                     <Button
                         variant={pathname === item.href ? 'secondary' : 'ghost'}
                         className={cn(
-                            'w-full justify-start',
-                            pathname === item.href && "bg-yellow-400 text-black hover:bg-yellow-500"
+                            'w-full justify-start'
                         )}
                     >
                         <item.icon className="mr-2 h-4 w-4" />

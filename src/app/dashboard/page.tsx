@@ -39,8 +39,8 @@ export default function DashboardPage() {
                 <Card key={stat.label}>
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                         <CardTitle className="text-sm font-medium">{stat.label}</CardTitle>
-                        <div className="p-2 bg-yellow-100 rounded-full">
-                            <stat.icon className="h-5 w-5 text-yellow-600" />
+                        <div className="p-2 bg-primary/10 rounded-full">
+                            <stat.icon className="h-5 w-5 text-primary" />
                         </div>
                     </CardHeader>
                     <CardContent>
