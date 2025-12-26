@@ -47,13 +47,13 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-3/4">
-              <div className="flex flex-col gap-8 mt-8">
+            <SheetContent side="left" className="w-full h-full bg-background/90 backdrop-blur-lg">
+              <div className="flex flex-col items-center justify-center h-full gap-8">
                 <Logo />
                  <div className="sm:hidden">
                   <UserAuth />
                 </div>
-                <nav className="flex flex-col gap-4">
+                <nav className="flex flex-col gap-4 text-center">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
