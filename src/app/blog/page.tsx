@@ -15,7 +15,11 @@ const blogPosts = [
     author: 'AI Content Team',
     date: 'August 6, 2024',
     excerpt: 'The digital content landscape is evolving faster than ever. AI no longer just writes text — it generates stunning visuals, infographics, and cinematic videos...',
-    image: PlaceHolderImages.find((p) => p.id === 'ai-tools-banner'),
+    image: {
+        imageUrl: "https://i.postimg.cc/3wc105jw/Whats-App-Image-2025-12-02-at-3-55-38-PM.jpg",
+        description: "AI tools banner",
+        imageHint: "AI tools",
+    },
     href: '/blog/post/6'
   },
   {
