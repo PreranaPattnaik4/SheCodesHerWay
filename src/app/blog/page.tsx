@@ -10,6 +10,15 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const blogPosts = [
   {
+    id: '5',
+    title: 'From Prompt to Prototype: My Startup Building Journey',
+    author: 'Prerana K.',
+    date: 'August 5, 2024',
+    excerpt: 'Every startup begins with an idea. Mine began with a prompt. This blog is a reflection of my startup-building journey — how I moved from thinking about ideas to actually prototyping and shipping them...',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
+    href: '/blog/post/5'
+  },
+  {
     id: '4',
     title: 'SheCodesHerWay: Where Women Build Their Path, Lead Their Way, and Leave Their Mark',
     author: 'Prerana K.',
