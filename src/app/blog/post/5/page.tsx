@@ -15,7 +15,11 @@ const post = {
     author: 'Prerana K.',
     authorAvatar: 'https://i.postimg.cc/HkLGWcM4/1718292767884.jpg',
     date: 'August 5, 2024',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
+    image: {
+        imageUrl: "https://i.postimg.cc/1RqPqqfF/Banners3.png",
+        description: "From Prompt to Prototype",
+        imageHint: "startup journey",
+    },
 };
 
 export default function BlogPostPage5() {
