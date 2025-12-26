@@ -214,7 +214,7 @@ export default function SanginiUdaanPage() {
                                                 <p className="text-foreground/80">{path.description}</p>
                                             </CardContent>
                                             <CardFooter>
-                                                <Button asChild variant="outline">
+                                                <Button asChild>
                                                     <Link href={path.href}>{path.cta}</Link>
                                                 </Button>
                                             </CardFooter>
@@ -222,7 +222,7 @@ export default function SanginiUdaanPage() {
                                     ))}
                                 </div>
                             </div>
-
+                            
                             <div className="text-center mt-16">
                                 <p className="font-headline text-2xl">
                                      Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
