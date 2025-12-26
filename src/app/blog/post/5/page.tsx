@@ -63,7 +63,7 @@ export default function BlogPostPage5() {
                     <p>From Prompt to Prototype: My Google Startup School Experience</p>
                     <p>Every startup begins with an idea. Mine began with a prompt.</p>
                     <p>I officially graduated from Google Startup School: Prompt to Prototype, but what stayed with me was far more valuable than a certificate. I walked away with a new way of thinking about building — not just products, but clarity, systems, and momentum.</p>
-                    <p>This blog is a reflection of my startup-building journey — how I moved from thinking about ideas to actually prototyping and shipping them, using Google’s AI ecosystem as a true collaborator.</p>
+                    <p>This blog is a reflection of my startup-building journey with Google Startup School: Prompt to Prototype program! — how I moved from thinking about ideas to actually prototyping and shipping them, using Google’s AI ecosystem as a true collaborator.</p>
                     
                     <h3>My Core Belief: Startups Are Thinking Systems Before Tech Systems</h3>
                     <p>One idea became crystal clear to me during this journey:</p>
