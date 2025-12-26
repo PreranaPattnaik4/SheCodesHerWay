@@ -1,9 +1,10 @@
+
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
 import { Button, buttonVariants } from '@/components/ui/button';
-import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, User, ArrowUp, Mic } from 'lucide-react';
+import { Send, Plus, Settings, MessageSquare, MoreHorizontal, Edit, Trash2, User, ArrowUp, Mic, Menu } from 'lucide-react';
 import Header from '@/components/header';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { cn } from '@/lib/utils';
@@ -340,6 +341,19 @@ export default function ChatbotPage() {
         </aside>
         
         <main className="flex-1 flex flex-col bg-white">
+            <div className="p-2 border-b flex items-center">
+                <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                >
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle sidebar</span>
+                </Button>
+                <h2 className="text-lg font-semibold ml-2 truncate">
+                    {activeChat ? activeChat.title : 'Chat'}
+                </h2>
+            </div>
             <ScrollArea className="flex-grow" ref={scrollAreaRef as any}>
                 <div className="max-w-3xl mx-auto w-full px-4 pt-8 pb-4">
                     <div className="space-y-6">
@@ -497,4 +511,5 @@ export default function ChatbotPage() {
     </AlertDialog>
     </>
   );
-}
+
+    
