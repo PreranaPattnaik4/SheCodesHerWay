@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useUser } from '@/firebase/hooks';
-import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck } from 'lucide-react';
+import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from 'lucide-react';
 import Logo from '../logo';
 
 const mainNav = [
@@ -20,7 +20,7 @@ const mainNav = [
     { name: 'Question & Answer', href: '/dashboard/q-a', icon: HelpCircle },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isSidebarOpen }: { isSidebarOpen: boolean }) {
   const pathname = usePathname();
   const { user } = useUser();
 
@@ -31,29 +31,42 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 flex-shrink-0 bg-white shadow-lg">
+    <aside className={cn("flex-shrink-0 bg-white shadow-lg transition-all duration-300", isSidebarOpen ? 'w-64' : 'w-20')}>
       <div className="flex flex-col h-full">
-        <div className="p-6 text-center border-b">
-            <Avatar className="h-24 w-24 mx-auto border-4 border-primary">
+        <div className={cn("p-6 text-center border-b", isSidebarOpen ? 'p-6' : 'p-2')}>
+            <Avatar className={cn("mx-auto border-4 border-primary", isSidebarOpen ? "h-24 w-24" : "h-12 w-12")}>
                 <AvatarImage src={user?.photoURL || ''} alt={user?.displayName || 'User'} />
-                <AvatarFallback className="text-3xl">{getInitials(user?.displayName)}</AvatarFallback>
+                <AvatarFallback className={cn(isSidebarOpen ? "text-3xl" : "text-lg")}>{getInitials(user?.displayName)}</AvatarFallback>
             </Avatar>
-            <h3 className="mt-4 text-lg font-semibold">{user?.displayName}</h3>
+            <h3 className={cn("mt-4 text-lg font-semibold transition-opacity", isSidebarOpen ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden')}>{user?.displayName}</h3>
         </div>
-        <nav className="flex-1 p-4 space-y-2">
+        <nav className={cn("flex-1 p-4 space-y-2", !isSidebarOpen && 'p-2')}>
+          <TooltipProvider delayDuration={0}>
             {mainNav.map((item) => (
-                <Link href={item.href} key={item.name}>
-                    <Button
-                        variant={pathname === item.href ? 'secondary' : 'ghost'}
-                        className={cn(
-                            'w-full justify-start'
-                        )}
-                    >
-                        <item.icon className="mr-2 h-4 w-4" />
-                        {item.name}
-                    </Button>
-                </Link>
+              <Tooltip key={item.name}>
+                <TooltipTrigger asChild>
+                   <Link href={item.href}>
+                      <Button
+                          variant={pathname === item.href ? 'secondary' : 'ghost'}
+                          className={cn(
+                              'w-full justify-start',
+                              !isSidebarOpen && 'justify-center w-12 h-12'
+                          )}
+                          aria-label={item.name}
+                      >
+                          <item.icon className={cn("h-5 w-5", isSidebarOpen && "mr-3")} />
+                          <span className={cn(isSidebarOpen ? 'inline' : 'hidden')}>{item.name}</span>
+                      </Button>
+                  </Link>
+                </TooltipTrigger>
+                 {!isSidebarOpen && (
+                  <TooltipContent side="right">
+                    {item.name}
+                  </TooltipContent>
+                 )}
+              </Tooltip>
             ))}
+          </TooltipProvider>
         </nav>
       </div>
     </aside>
