@@ -54,7 +54,7 @@ export default function AboutPage() {
                             <div className="p-8 md:p-12">
                                 <div className="grid md:grid-cols-2 gap-8 items-center">
                                     <div className="relative">
-                                        <h1 className="font-headline text-7xl md:text-9xl font-bold text-foreground -mt-12">
+                                        <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
                                             About
                                             <br />
                                             Us
@@ -73,7 +73,7 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                                  <div className="mt-8">
-                                    <div className="text-4xl sm:text-6xl font-bold text-foreground/80 break-words">{brand.name}</div>
+                                    <div className="text-2xl sm:text-4xl font-bold text-foreground/80 break-words">{brand.name}</div>
                                     <p className="font-headline text-lg text-foreground/80 mt-2">{brand.mission}</p>
                                     <p className="text-lg text-foreground mt-4">
                                         SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
@@ -185,6 +185,41 @@ export default function AboutPage() {
                                     </div>
                                     <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of SheCodesHerWay.</p>
                                 </div>
+                            </div>
+                        </section>
+
+                        <Separator />
+
+                        <section>
+                            <div className="text-center mb-12">
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Team</h2>
+                            </div>
+                            <div className="max-w-2xl mx-auto">
+                                <Card>
+                                    <div className="grid md:grid-cols-3 items-center">
+                                        <div className="relative h-48 md:h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg overflow-hidden">
+                                            {founderImage && (
+                                                <Image
+                                                    src={founderImage.imageUrl}
+                                                    alt={founderImage.description}
+                                                    fill
+                                                    className="object-cover object-center"
+                                                    data-ai-hint={founderImage.imageHint}
+                                                />
+                                            )}
+                                        </div>
+                                        <div className="md:col-span-2 p-6">
+                                            <h3 className="text-xl font-bold">{brand.founder.name}</h3>
+                                            <p className="text-primary font-semibold">Head of Platform Development</p>
+                                            <p className="mt-2 text-foreground/80">Sole developer responsible for platform architecture, full-stack development, and AI integration.</p>
+                                            <div className="mt-4 flex items-center gap-4">
+                                                <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></Link>
+                                                <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover:text-primary"><FileText size={20}/></Link>
+                                                <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Card>
                             </div>
                         </section>
 
