@@ -230,11 +230,11 @@ export default function ProgramSyllabusPage() {
                                 <div className="grid md:grid-cols-2 gap-8">
                                     <div>
                                         <h4 className="font-semibold mb-2 flex items-center gap-2"><Code className="h-5 w-5 text-primary"/>Vibe Coding Explained</h4>
-                                        <p>Vibe Coding is an inclusive, human-centered approach to building with technology using AI-assisted creation, natural language and intuition-driven problem solving, creativity and experimentation, and clear human intent, review, and judgment. This approach enables beginners, non-tech users, creators, and founders to build and experiment without fear of complex coding.</p>
+                                        <p>Vibe Coding is an inclusive, human-centered approach to building with technology using: AI-assisted creation, natural language and intuition-driven problem solving, creativity and experimentation, and clear human intent, review, and judgment. This approach enables beginners, non-tech users, creators, and founders to build and experiment without fear of complex coding.</p>
                                     </div>
                                     <div>
                                         <h4 className="font-semibold mb-2 flex items-center gap-2"><Pilcrow className="h-5 w-5 text-primary"/>Prompt Writing as a Core Life Skill</h4>
-                                        <p>Prompt writing is taught as a communication, thinking, and problem-solving skill, not just a technical concept. Participants learn how AI interprets instructions, writing clear, structured, goal-oriented prompts, context setting and iterative refinement, and using prompts for content, creativity, learning, planning, and building. Human originality, review, and validation remain central throughout.</p>
+                                        <p>Prompt writing is taught as a communication, thinking, and problem-solving skill, not just a technical concept. Participants learn: How AI interprets instructions, writing clear, structured, goal-oriented prompts, context setting and iterative refinement, and using prompts for content, creativity, learning, planning, and building. Human originality, review, and validation remain central throughout.</p>
                                     </div>
                                 </div>
                                 <div>
@@ -248,11 +248,11 @@ export default function ProgramSyllabusPage() {
 
                         <div className="text-center space-y-4">
                             <h2 className="font-headline text-3xl">Sangini Udaan : EmpowerFly</h2>
-                            <p className="text-xl font-semibold text-primary">Choose your track. Build with confidence. Lead with purpose. Grow responsibly.</p>
+                             <p className="!mt-8 text-xl font-semibold text-primary">"Choose your path. Build with confidence. Lead with purpose. Grow responsibly."</p>
                             <Card className="!mt-8 text-sm text-muted-foreground p-4 bg-muted/50 text-left">
                                 <p><strong className="text-foreground font-semibold">Program Assurance & Syllabus Evolution Note:</strong> All AI tools, digital platforms, and learning methodologies used in Sangini Udaan : EmpowerFly align with current industry standards and responsible AI principles. The program emphasizes ethical, inclusive, secure, and future-ready use of technology across all tracks. To stay aligned with evolving industry needs, ethical frameworks, and technological advancements, tools and technologies may be updated periodically. Such updates will be introduced thoughtfully, ensuring minimal disruption to learning outcomes, program values, and participant experience. Syllabus refinements during launch or early rollout phases may occur to better reflect real-world requirements and learner needs, without diluting the program’s core intent of confidence building, skill development, responsible AI awareness, and holistic empowerment.</p>
                             </Card>
-                             <p className="!mt-8 text-xl font-semibold text-primary">"Choose your path. Build with confidence. Lead with purpose. Grow responsibly."</p>
+                             <p className="!mt-8 text-xl font-semibold text-primary">"Choose your track. Build with confidence. Lead with purpose. Grow responsibly."</p>
                         </div>
                     </div>
                 </section>
@@ -261,3 +261,5 @@ export default function ProgramSyllabusPage() {
         </div>
     );
 }
+
+    
