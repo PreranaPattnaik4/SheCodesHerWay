@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin } from 'lucide-react';
+import { Laptop, HeartHandshake, Award, Calendar, Users, School, Gift, Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
@@ -228,6 +228,41 @@ export default function SanginiUdaanPage() {
                                      Choose your path and begin your journey to learn, lead, and rise with SheCodesHerWay.
                                 </p>
                             </div>
+
+                            <div className="mt-16">
+                                <div className="text-center mb-12">
+                                    <h2 className="font-headline text-3xl font-bold md:text-4xl">Core Program Foundations</h2>
+                                    <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
+                                        These principles are integrated into every learning path to ensure a holistic, modern, and ethical growth experience.
+                                    </p>
+                                </div>
+                                <Card className="max-w-4xl mx-auto shadow-lg">
+                                    <CardHeader>
+                                        <CardTitle className="font-headline text-3xl">Vibe Coding, Prompt Writing & Responsible AI</CardTitle>
+                                        <CardDescription>Program-Wide Core Foundation</CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="space-y-8">
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2 flex items-center gap-2"><Lightbulb className="h-5 w-5 text-primary"/>What This Means</h3>
+                                            <p>Vibe Coding, Prompt Writing & Responsible AI are not separate tracks. They are core foundations integrated across all Sangini Udaan : EmpowerFly programs, adapted to each learner’s journey and background.</p>
+                                        </div>
+                                        <div className="grid md:grid-cols-2 gap-8">
+                                            <div>
+                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Code className="h-5 w-5 text-primary"/>Vibe Coding Explained</h4>
+                                                <p className="text-sm text-foreground/80">An inclusive, human-centered approach to building with technology using AI-assisted creation, natural language, and intuition-driven problem-solving. It enables beginners and non-tech users to build and experiment without fear of complex code.</p>
+                                            </div>
+                                            <div>
+                                                <h4 className="font-semibold mb-2 flex items-center gap-2"><Pilcrow className="h-5 w-5 text-primary"/>Prompt Writing as a Core Life Skill</h4>
+                                                <p className="text-sm text-foreground/80">Taught as a communication and problem-solving skill, not just a technical concept. Participants learn to write clear, goal-oriented prompts for content, creativity, learning, and planning, while keeping human originality central.</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4 className="font-semibold mb-2 flex items-center gap-2"><BrainCircuit className="h-5 w-5 text-primary"/>Responsible AI Foundation</h4>
+                                            <p className="text-sm text-foreground/80">A mandatory foundation covering human-centered AI usage, transparency, bias awareness, data privacy, and accountability. Ethical AI practices are applied through real projects and scenarios.</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
                         </section>
                         
                         <Separator />
@@ -265,3 +300,5 @@ export default function SanginiUdaanPage() {
         </div>
     );
 }
+
+    
