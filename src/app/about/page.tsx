@@ -275,7 +275,7 @@ export default function AboutPage() {
                                 {teamMembers.map((member, index) => (
                                     <Card key={index} className="flex flex-col items-center text-center p-6 shadow-lg">
                                         {member.image && (
-                                            <Avatar className="w-24 h-24 border-4 border-primary/20">
+                                            <Avatar className="w-32 h-32 border-4 border-primary/20">
                                                 <AvatarImage src={member.image.imageUrl} alt={member.name} />
                                                 <AvatarFallback>
                                                     {member.hiringSoon ? <UserPlus/> : member.name.charAt(0)}
