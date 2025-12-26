@@ -11,7 +11,6 @@ import UserAuth from './auth/user-auth';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Our Program' },
-  { href: '/program-syllabus', label: 'Program Syllabus' },
   { href: '/ai-coaching', label: 'AI Coaching' },
   { href: '/chatbot', label: 'EmpowerFly Assistant' },
   { href: '/community', label: 'Community' },
