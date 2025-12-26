@@ -9,3 +9,12 @@ export type ImagePlaceholder = {
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
     
+// Add the new type for team members
+export type TeamMember = {
+    id: string;
+    name: string;
+    role: string;
+    description: string;
+    image: ImagePlaceholder;
+    hiringSoon?: boolean;
+}

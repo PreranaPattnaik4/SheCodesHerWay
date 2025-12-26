@@ -9,7 +9,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake } from 'lucide-react';
+import { Award, Check, FileText, Github, Heart, Instagram, Linkedin, Star, Twitter, Users, Youtube, Zap, HeartHandshake, UserPlus } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -18,6 +20,49 @@ const coreValues = [
     { value: "Inclusivity", meaning: "Every woman is welcome, regardless of background" },
     { value: "Courage", meaning: "Encouraging women to dream, lead, and take flight" },
 ]
+
+const teamMembers = [
+    {
+        name: brand.founder.name,
+        role: "Head of Platform Development",
+        description: "Sole developer responsible for platform architecture, full-stack development, and AI integration.",
+        image: PlaceHolderImages.find((p) => p.id === 'founder-portrait'),
+        socials: [
+            { href: "https://www.linkedin.com/in/prerana-pattnaik/", icon: Linkedin },
+            { href: "https://medium.com/@preranakailashpattnaik", icon: FileText },
+            { href: "https://x.com/preranakailash4", icon: Twitter },
+        ]
+    },
+    {
+        name: "Hiring Soon",
+        role: "Operations & Program Coordinator",
+        description: "Will manage program logistics, coordinate cohorts, and ensure a seamless learning experience for all members.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-1'),
+        hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "Community & Engagement Lead",
+        description: "Will foster a vibrant, supportive community, manage forums, and organize engaging events for our members.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-3'),
+        hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "Growth & Marketing Strategist",
+        description: "Will drive our growth, manage marketing campaigns, and build strategic partnerships to expand our reach.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-4'),
+        hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "Social Media & Digital Presence Manager",
+        description: "Will craft our digital voice, manage social channels, and create compelling content to grow our online presence.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-5'),
+        hiringSoon: true,
+    }
+];
+
 
 export default function AboutPage() {
     const aboutHeroImage = PlaceHolderImages.find((p) => p.id === 'about-hero-team');
@@ -194,35 +239,43 @@ export default function AboutPage() {
                             <div className="text-center mb-12">
                                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Team</h2>
                             </div>
-                            <div className="max-w-2xl mx-auto">
-                                <Card>
-                                    <div className="grid md:grid-cols-3 items-center">
-                                        <div className="relative h-48 md:h-full rounded-t-lg md:rounded-t-none md:rounded-l-lg overflow-hidden">
-                                            {founderImage && (
-                                                <Image
-                                                    src={founderImage.imageUrl}
-                                                    alt={founderImage.description}
-                                                    fill
-                                                    className="object-cover object-center"
-                                                    data-ai-hint={founderImage.imageHint}
-                                                />
-                                            )}
-                                        </div>
-                                        <div className="md:col-span-2 p-6">
-                                            <h3 className="text-xl font-bold">{brand.founder.name}</h3>
-                                            <p className="text-primary font-semibold">Head of Platform Development</p>
-                                            <p className="mt-2 text-foreground/80">Sole developer responsible for platform architecture, full-stack development, and AI integration.</p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {teamMembers.map((member, index) => (
+                                    <Card key={index} className="flex flex-col items-center text-center p-6 shadow-lg">
+                                        {member.image && (
+                                            <Avatar className="w-24 h-24 border-4 border-primary/20">
+                                                <AvatarImage src={member.image.imageUrl} alt={member.name} />
+                                                <AvatarFallback>
+                                                    {member.hiringSoon ? <UserPlus/> : member.name.charAt(0)}
+                                                </AvatarFallback>
+                                            </Avatar>
+                                        )}
+                                        <h3 className="text-xl font-bold mt-4">{member.name}</h3>
+                                        <p className="text-primary font-semibold">{member.role}</p>
+                                        {member.hiringSoon ? (
+                                            <Badge variant="secondary" className="mt-2">Hiring Soon</Badge>
+                                        ) : (
+                                            <p className="mt-2 text-foreground/80 text-sm flex-grow">{member.description}</p>
+                                        )}
+                                        {member.socials && (
                                             <div className="mt-4 flex items-center gap-4">
-                                                <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></Link>
-                                                <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover:text-primary"><FileText size={20}/></Link>
-                                                <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></Link>
+                                                {member.socials.map((social, i) => (
+                                                    <Link key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.icon.displayName} className="text-muted-foreground hover:text-primary">
+                                                        <social.icon size={20}/>
+                                                    </Link>
+                                                ))}
                                             </div>
-                                        </div>
-                                    </div>
-                                </Card>
+                                        )}
+                                         {member.hiringSoon && (
+                                            <Button variant="outline" size="sm" className="mt-4" asChild>
+                                                <Link href="/careers">Learn More</Link>
+                                            </Button>
+                                        )}
+                                    </Card>
+                                ))}
                             </div>
                         </section>
-
+                        
                         <Separator />
                         
                         <section className="max-w-4xl mx-auto">
