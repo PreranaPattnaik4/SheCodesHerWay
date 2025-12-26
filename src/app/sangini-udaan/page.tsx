@@ -195,9 +195,14 @@ export default function SanginiUdaanPage() {
                                         <p className="text-lg text-foreground/80">
                                             Experience the entire empowerment journey — tech learning, business building, creativity, and emotional growth — all in one full program.  Best for women who want holistic growth, independence, and leadership.
                                         </p>
-                                        <Button asChild size="lg" className="mt-6">
-                                            <Link href="/apply">Enroll in {brand.programName} All-in-One</Link>
-                                        </Button>
+                                        <div className="flex flex-wrap gap-4 mt-6">
+                                            <Button asChild size="lg">
+                                                <Link href="/apply">Enroll in {brand.programName} All-in-One</Link>
+                                            </Button>
+                                            <Button asChild size="lg" variant="secondary">
+                                                <Link href="/program-syllabus">View Syllabus</Link>
+                                            </Button>
+                                        </div>
                                     </CardContent>
                                 </Card>
                             </div>
