@@ -38,6 +38,12 @@ const specializedPaths = [
         description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work.  Soft skills and emotional strength are included in every track as a core foundation for growth.",
         cta: "Grow Your Soft Skills",
         href: "/apply",
+    },
+    {
+        title: "For Non-Tech Users Empowerment",
+        description: "Digital Confidence & Career Readiness Track. Designed for non-technical learners seeking digital confidence, leadership skills, creativity, and independence—without learning coding.",
+        cta: "Start Your Digital Journey",
+        href: "/apply",
     }
 ]
 

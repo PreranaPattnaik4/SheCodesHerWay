@@ -22,6 +22,7 @@ const programPaths = [
   { id: 'startup', label: 'For Women Aspiring to Start Startups or Businesses', description: 'Startup building, business modeling, entrepreneurship bootcamps.' },
   { id: 'creative', label: 'For Creative & Content Entrepreneurs', description: 'Blogging, book publishing, Canva editing, art creation, WordPress.' },
   { id: 'soft-skills', label: 'For Emotional, Personal & Soft Skills Growth', description: 'Confidence, leadership, communication, emotional intelligence.' },
+  { id: 'non-tech', label: 'For Non-Tech Users Empowerment', description: 'Digital Confidence & Career Readiness Track. Designed for non-technical learners seeking digital confidence, leadership skills, creativity, and independence—without learning coding.' },
 ];
 
 const formSchema = z.object({
