@@ -52,7 +52,6 @@ const gains = [
 
 export default function SanginiUdaanPage() {
     const bannerImage = PlaceHolderImages.find(p => p.id === 'program-community');
-    const image1 = PlaceHolderImages.find((p) => p.id === 'about-program-1');
     const image2 = PlaceHolderImages.find((p) => p.id === 'about-program-2');
 
     return (
@@ -107,17 +106,17 @@ export default function SanginiUdaanPage() {
                         <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-[450px]">
-                                {image1 && (
+                                
                                     <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-lg overflow-hidden shadow-2xl">
                                     <Image
-                                        src={image1.imageUrl}
-                                        alt={image1.description}
+                                        src="https://i.postimg.cc/1tVR2cbZ/Sangini-Udaan-students-post.png"
+                                        alt="A group of Sangini Udaan students"
                                         fill
                                         className="object-cover"
-                                        data-ai-hint={image1.imageHint}
+                                        data-ai-hint="women students"
                                     />
                                     </div>
-                                )}
+                                
                                 {image2 && (
                                     <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-lg overflow-hidden border-4 border-background shadow-2xl">
                                     <Image
