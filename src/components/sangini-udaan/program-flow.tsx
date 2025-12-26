@@ -8,6 +8,7 @@ import {
   Briefcase,
   Users,
   Award,
+  GraduationCap,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { cn } from '@/lib/utils';
@@ -53,6 +54,13 @@ const timelinePhases = [
     title: 'Industry Guidance & Career Direction',
     description:
       'Mentorship, feedback, career path exploration, interview readiness, goal-setting, and next-step planning.',
+    icon: GraduationCap,
+  },
+  {
+    phase: 'Phase 7',
+    title: 'Certificates & Participation Recognition',
+    description:
+      'Receive a Participation Announcement Template at joining. Earn Professional Certificates (Diamond, Platinum) for your contributions and achievements.',
     icon: Award,
   },
 ];
@@ -88,7 +96,7 @@ export default function ProgramFlow() {
             aria-hidden="true"
           ></div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {timelinePhases.map((item, index) => (
               <div
                 key={index}
