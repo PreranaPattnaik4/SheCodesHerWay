@@ -34,6 +34,17 @@ const teamMembers = [
         ]
     },
     {
+        name: brand.founder.name,
+        role: "Program Head – Sangini Udaan (EmpowerFly)",
+        description: "Leads the vision, curriculum, and execution of the flagship Sangini Udaan program, ensuring it aligns with the mission to empower women.",
+        image: PlaceHolderImages.find((p) => p.id === 'founder-portrait'),
+        socials: [
+            { href: "https://www.linkedin.com/in/prerana-pattnaik/", icon: Linkedin },
+            { href: "https://medium.com/@preranakailashpattnaik", icon: FileText },
+            { href: "https://x.com/preranakailash4", icon: Twitter },
+        ]
+    },
+    {
         name: "Hiring Soon",
         role: "Operations & Program Coordinator",
         description: "Will manage program logistics, coordinate cohorts, and ensure a seamless learning experience for all members.",
@@ -387,5 +398,3 @@ export default function AboutPage() {
         </div>
     );
 }
-
-    
