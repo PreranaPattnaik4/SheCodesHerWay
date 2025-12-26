@@ -155,7 +155,7 @@ export default function ChatbotPage() {
     const newChatId = Date.now().toString();
     const newChat: ChatSession = {
       id: newChatId,
-      title: 'New Chat',
+      title: 'Chat',
       messages: [welcomeMessage],
     };
     setChatHistory(prev => [newChat, ...prev]);
@@ -511,5 +511,3 @@ export default function ChatbotPage() {
     </AlertDialog>
     </>
   );
-
-    
