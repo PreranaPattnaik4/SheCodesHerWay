@@ -2,7 +2,7 @@
 'use client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Book, CheckCircle, GraduationCap, ArrowRight, Home } from 'lucide-react';
+import { BookOpen, Book, CheckCircle, GraduationCap, ArrowRight } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -30,12 +30,6 @@ export default function DashboardPage() {
     <div className="w-full">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-3xl font-bold">Welcome, {user?.displayName?.split(' ')[0] || 'User'}!</h1>
-            <Button asChild>
-                <Link href="/">
-                    <Home className="mr-2 h-4 w-4"/>
-                    Home
-                </Link>
-            </Button>
         </div>
 
         <Card className="bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 border-primary/30 mb-8">
