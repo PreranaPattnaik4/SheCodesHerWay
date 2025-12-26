@@ -25,7 +25,7 @@ const blogPosts = [
     date: 'July 22, 2024',
     excerpt: 'Imposter syndrome is a silent career killer, especially for women in competitive fields. Learn practical strategies to overcome self-doubt and embrace your inner innovator.',
     image: PlaceHolderImages.find((p) => p.id === 'feature-community'),
-    href: '/blog/post/2'
+    href: '#'
   },
     {
     id: '3',
@@ -34,7 +34,7 @@ const blogPosts = [
     date: 'July 18, 2024',
     excerpt: 'Diving into web development can be daunting. This guide breaks down the essential steps to build your first web application, from choosing the right tools to deploying your project.',
     image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
-    href: '/blog/post/3'
+    href: '#'
   }
 ];
 
