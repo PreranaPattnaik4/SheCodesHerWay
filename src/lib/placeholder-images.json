@@ -55,6 +55,12 @@
       "imageHint": "man editor"
     },
     {
+      "id": "team-member-8",
+      "description": "Portrait of a smiling woman in a professional setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzYyMDB8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3MjQ0NDI5NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman professional"
+    },
+    {
       "id": "program-skill-dev",
       "description": "A woman focused on her laptop in a colorful, creative environment.",
       "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMGxlYXJuaW5nJTIwb24lMjBsYXB0b3B8ZW58MHx8fHwxNzIyNTEzODQzfDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
@@ -63,13 +69,13 @@
     {
       "id": "program-mentorship",
       "description": "Two women having a supportive conversation over coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG1lbnRvcnNoaXB8ZW58MHx8fHwxNzIyNTEzODc1fDA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "women mentorship"
     },
     {
       "id": "program-internship",
       "description": "A professional woman confidently leading a meeting.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib=rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGxlYWRpbmclMjBhJTIwbWVldGluZ3xlbnwwfHx8fDE3MjI1MTM5MDB8MA&ixlib-rb-4.1.0&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb",
       "imageHint": "woman leading meeting"
     },
     {
@@ -87,19 +93,19 @@
     {
       "id": "internship-hero",
       "description": "Welcoming banner showing diverse women collaborating online.",
-      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpbmd8ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1699570047113-16fdf623e83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaborating"
     },
     {
       "id": "internship-community",
       "description": "A diverse group of women engaged in a lively and supportive discussion in a modern, bright space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwc2lzdGVyaG9vZHxlbnwwfHx8fDE3MjM1OTAxODN8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "digital sisterhood"
     },
     {
       "id": "internship-certificate",
       "description": "A mock certificate with floral borders.",
-      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1748712576506-000c01890275?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjZXJ0aWZpY2F0ZSUyMGZsb3JhbHxlbnwwfHx8fDE3NjIyNDczNDF8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate floral"
     },
     {
@@ -111,7 +117,7 @@
     {
       "id": "about-program-2",
       "description": "Two women collaborating and smiling in a bright, modern office space.",
-      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21lbiUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzYyMjQwMTQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "women collaboration"
     },
     {

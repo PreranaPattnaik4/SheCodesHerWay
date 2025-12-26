@@ -85,6 +85,13 @@ const teamMembers = [
         description: "Edits promotional videos, reels, program explainers, and storytelling content for digital platforms.",
         image: PlaceHolderImages.find((p) => p.id === 'team-member-7'),
         hiringSoon: true,
+    },
+    {
+        name: "Hiring Soon",
+        role: "User Support & Community Care Lead",
+        description: "Will assist users, answer inquiries, and ensure a positive and supportive community experience for all members.",
+        image: PlaceHolderImages.find((p) => p.id === 'team-member-8'),
+        hiringSoon: true,
     }
 ];
 
