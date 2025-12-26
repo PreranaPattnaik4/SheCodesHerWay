@@ -6,14 +6,13 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useUser } from '@/firebase/hooks';
-import { Award, LayoutDashboard, User as UserIcon, BookOpen, MessageSquare, Heart, ShoppingCart, HelpCircle, Rocket, Annoyed, DollarSign, ClipboardCheck } from 'lucide-react';
+import { Award, LayoutDashboard, User as UserIcon, BookOpen, Heart, ShoppingCart, HelpCircle, Rocket, ClipboardCheck } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import Logo from '../logo';
 
 const mainNav = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
-    { name: 'My Learning Journey', href: '/dashboard/program', icon: Rocket },
+    { name: 'My Program', href: '/dashboard/program', icon: Rocket },
     { name: 'Enrolled Courses', href: '/courses', icon: BookOpen },
     { name: 'My Certificates', href: '/dashboard/certificates', icon: Award },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },

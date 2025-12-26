@@ -45,7 +45,7 @@ export default function DashboardLayout({
                 <Menu className="h-4 w-4" />
                 <span className="sr-only">Toggle Sidebar</span>
             </Button>
-            <h1 className="text-lg font-semibold">Dashboard</h1>
+            <h1 className="text-lg font-semibold">My Learning Journey</h1>
         </header>
         <main className="flex-1 p-6">
             {children}
