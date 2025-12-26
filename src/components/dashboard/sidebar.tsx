@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,7 +13,7 @@ import Logo from '../logo';
 const mainNav = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'My Profile', href: '/dashboard/profile', icon: UserIcon },
-    { name: 'My Program', href: '/dashboard/program', icon: Rocket },
+    { name: 'My Learning Journey', href: '/dashboard/program', icon: Rocket },
     { name: 'Enrolled Courses', href: '/courses', icon: BookOpen },
     { name: 'My Certificates', href: '/dashboard/certificates', icon: Award },
     { name: 'My Quiz Attempts', href: '/dashboard/quiz-attempts', icon: ClipboardCheck },
