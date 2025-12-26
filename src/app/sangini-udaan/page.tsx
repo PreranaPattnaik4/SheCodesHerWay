@@ -18,32 +18,32 @@ const specializedPaths = [
     {
         title: "For Women in Tech Journeys",
         description: "Learn coding, digital tools, and AI basics to build career confidence in technology. Includes mentorship, internships, and job-readiness sessions.",
-        cta: "Learn More",
-        href: "/apply",
+        cta: "View Syllabus",
+        href: "/program-syllabus",
     },
     {
         title: "For Women Aspiring to Start Startups or Businesses",
         description: "Build your dream startup or personal brand. Covers business modeling, entrepreneurship bootcamps, and funding preparation.",
-        cta: "Explore Startup Bootcamps",
-        href: "/apply",
+        cta: "View Syllabus",
+        href: "/program-syllabus",
     },
     {
         title: "For Creative & Content Entrepreneurs",
         description: "Express and earn through creativity — blogging, book publishing, Canva editing, art creation, and WordPress website design.",
-        cta: "Discover Creative Paths",
-        href: "/apply",
+        cta: "View Syllabus",
+        href: "/program-syllabus",
     },
     {
         title: "For Emotional, Personal & Soft Skills Growth",
         description: "Develop confidence, leadership, communication, and emotional intelligence for both life and work.  Soft skills and emotional strength are included in every track as a core foundation for growth.",
-        cta: "Grow Your Soft Skills",
-        href: "/apply",
+        cta: "View Syllabus",
+        href: "/program-syllabus",
     },
     {
         title: "For Non-Tech Users Empowerment",
         description: "Digital Confidence & Career Readiness Track. Designed for non-technical learners seeking digital confidence, leadership skills, creativity, and independence—without learning coding.",
-        cta: "Start Your Digital Journey",
-        href: "/apply",
+        cta: "View Syllabus",
+        href: "/program-syllabus",
     }
 ]
 
@@ -81,7 +81,7 @@ export default function SanginiUdaanPage() {
                             <h1 className="font-headline text-4xl font-extrabold tracking-tight drop-shadow-md sm:text-5xl md:text-6xl">
                                 Sangini Udaan : EmpowerFly
                             </h1>
-                            <p className="mt-2 text-2xl font-medium drop-shadow-sm md:text-3xl">Empower Her to Fly Beyond Limits.</p>
+                            <p className="mt-2 text-2xl font-medium drop-shadow-sm md:text-3xl">The Pathway From Learning to Leadership</p>
                             <p className="mt-6 max-w-3xl mx-auto text-lg font-medium drop-shadow-sm md:text-xl">
                                 Welcome, Sangini! Every woman’s journey is unique — choose how you want to grow, learn, and lead with SheCodesHerWay.
                             </p>
@@ -101,7 +101,7 @@ export default function SanginiUdaanPage() {
                              <p className="mt-6 text-foreground/80">
                                 Stay updated with our latest announcements and follow our journey on social media!
                             </p>
-                            <Button asChild className="mt-4">
+                            <Button asChild>
                                 <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer">
                                     <Linkedin className="mr-2 h-4 w-4" />
                                     Follow us on LinkedIn
@@ -229,7 +229,7 @@ export default function SanginiUdaanPage() {
                                 </p>
                             </div>
 
-                            <div className="mt-16">
+                             <div className="mt-16">
                                 <div className="text-center mb-12">
                                     <h2 className="font-headline text-3xl font-bold md:text-4xl">Core Program Foundations</h2>
                                     <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
@@ -300,5 +300,3 @@ export default function SanginiUdaanPage() {
         </div>
     );
 }
-
-    
