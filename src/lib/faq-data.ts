@@ -76,6 +76,14 @@ export const faqData: FaqCategory[] = [
                 question: "What is the 'Complete Sangini Udaan : EmpowerFly Journey' track?",
                 answer: "This is our all-in-one track that provides a holistic experience, bringing together technology, AI, entrepreneurship, creativity, leadership, and emotional growth into a single, unified program.",
             },
+             {
+                question: "Is prior experience required to enroll in a specific track?",
+                answer: "No, prior experience is not a prerequisite for any of our tracks. The Sangini Udaan : EmpowerFly program is designed to welcome learners at all stages, from complete beginners to those with some experience. Our curriculum is structured to build foundational knowledge from the ground up in each domain."
+            },
+            {
+                question: "Can someone with a non-technical background join a technical track like 'Women in Tech'?",
+                answer: "Absolutely. We encourage individuals from all backgrounds to explore any track that aligns with their interests. Our technical tracks are designed to be beginner-friendly, and our 'Vibe Coding' approach helps demystify complex topics, making it easier for anyone to start learning tech skills."
+            },
             {
                 question: "Do I need to know how to code to join?",
                 answer: "Not at all. We have a dedicated 'Non-Tech Users Empowerment' track for learners seeking digital confidence without coding. We also teach 'Vibe Coding', an approach that uses AI and natural language to help beginners build things without getting stuck on complex syntax.",
