@@ -47,13 +47,30 @@ const months = [
     },
     {
         title: "Month 3 — Live Projects, Innovation & Evaluation",
-        focus: "Real-world collaboration with SheCodesHerWay, Final course module, Independent thinking and problem-solving",
-        sessions: "Live project collaboration sessions, Mentorship & review meetings",
-        projects: "One live project per track. Participants also build: Their own project based on: Theme, Problem statement, Prototype design. Final submission & presentation.",
-        evaluation: "Project examination and review, Performance-based assessment",
-        recognition: "Top 100 performers announced, Top 10 participants from each track highlighted. Ranking based on: Learning progress, Project quality, Participation, Innovation and consistency",
-        outcome: "Skill confidence, Practical application experience, Preparation for live projects",
+        focus: "Real-world collaboration with SheCodesHerWay, final course module, independent thinking, and problem-solving.",
+        sessions: "Live project collaboration sessions, mentorship & review meetings.",
         icon: Star,
+        projectStructure: {
+            title: "Updated Project Structure for Month 3",
+            description: "In the third month, every participant completes two distinct projects as part of the learning, training, and evaluation process.",
+            project1: {
+                title: "Project 1 — Live Training Project with SheCodesHerWay",
+                duration: "15 days",
+                nature: "Live training-based project",
+                scope: "One live project is assigned per track. Participants work closely with the SheCodesHerWay team with guided execution, real-world exposure, and mentorship support.",
+                purpose: "Practical application of learned skills, understanding teamwork, workflows, and delivery standards, and preparing participants for real project environments. This project is conducted with SheCodesHerWay as part of structured training."
+            },
+            project2: {
+                title: "Project 2 — Independent Participant Project",
+                description: "After completing the live training project, participants build their own independent project based on a defined theme, a clear problem statement, and prototype design, culminating in a final submission and presentation. This project reflects individual understanding, creativity and ownership, and application of skills aligned with the chosen track or foundation."
+            },
+            clarification: "Both projects are completed within Month 3. The two projects serve different purposes: one for guided live training and one for independent capability demonstration. Participants are not required to complete more than these two projects. This structure applies across all tracks, including the All-in-One Track, with project themes aligned to the learner’s selected foundation (Tech or Non-Tech)."
+        },
+        evaluation: {
+            title: "Evaluation & Recognition",
+            description: "Performance in both projects is considered for project examination and review, final evaluation, and ranking for recognition (Top 100 performers, Top 10 participants per track). Evaluation focuses on learning application, problem-solving approach, consistency and participation, and innovation and clarity of execution."
+        },
+        extensionNote: "Prototype submission may be extended by one month if needed, depending on team requirements. We will do our best to support you throughout this journey. This extension is a one-time option."
     },
 ]
 
@@ -123,27 +140,64 @@ export default function ProgramStructurePage() {
                                             <h4 className="font-semibold flex items-center gap-2 mb-2"><Goal size={18}/>Focus</h4>
                                             <p className="text-foreground/80">{month.focus}</p>
                                         </div>
-                                        <div className="grid md:grid-cols-2 gap-6">
-                                            <div>
-                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><BookOpen size={18}/>Sessions</h4>
-                                                <p className="text-foreground/80">{month.sessions}</p>
-                                            </div>
-                                             <div>
-                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><Lightbulb size={18}/>Outcome</h4>
-                                                <p className="text-foreground/80">{month.outcome}</p>
-                                            </div>
-                                        </div>
-                                        {month.projects && (
-                                            <div>
-                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><Projector size={18}/>Projects</h4>
-                                                <p className="text-foreground/80">{month.projects}</p>
+                                        
+                                        {month.sessions && (
+                                            <div className="grid md:grid-cols-2 gap-6">
+                                                <div>
+                                                    <h4 className="font-semibold flex items-center gap-2 mb-2"><BookOpen size={18}/>Sessions</h4>
+                                                    <p className="text-foreground/80">{month.sessions}</p>
+                                                </div>
+                                                {month.outcome && (
+                                                    <div>
+                                                        <h4 className="font-semibold flex items-center gap-2 mb-2"><Lightbulb size={18}/>Outcome</h4>
+                                                        <p className="text-foreground/80">{month.outcome}</p>
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
-                                        {month.evaluation && (
+                                        
+                                        {month.projectStructure && (
                                             <div>
-                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><Award size={18}/>Evaluation & Recognition</h4>
-                                                <p><strong className="font-medium">Evaluation Process: </strong>{month.evaluation}</p>
-                                                <p><strong className="font-medium">Recognition: </strong>{month.recognition}</p>
+                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><Projector size={18}/>{month.projectStructure.title}</h4>
+                                                <p className="text-foreground/80 italic mb-4">{month.projectStructure.description}</p>
+                                                <div className="space-y-4">
+                                                    <Card className="bg-background">
+                                                        <CardHeader>
+                                                            <CardTitle className="text-lg">{month.projectStructure.project1.title}</CardTitle>
+                                                        </CardHeader>
+                                                        <CardContent className="text-sm space-y-2">
+                                                            <p><strong>Duration:</strong> {month.projectStructure.project1.duration}</p>
+                                                            <p><strong>Nature:</strong> {month.projectStructure.project1.nature}</p>
+                                                            <p><strong>Scope:</strong> {month.projectStructure.project1.scope}</p>
+                                                            <p><strong>Purpose:</strong> {month.projectStructure.project1.purpose}</p>
+                                                        </CardContent>
+                                                    </Card>
+                                                    <Card className="bg-background">
+                                                        <CardHeader>
+                                                            <CardTitle className="text-lg">{month.projectStructure.project2.title}</CardTitle>
+                                                        </CardHeader>
+                                                        <CardContent className="text-sm space-y-2">
+                                                            <p>{month.projectStructure.project2.description}</p>
+                                                        </CardContent>
+                                                    </Card>
+                                                    <div className="p-4 bg-blue-50 border-l-4 border-blue-400 text-blue-800 rounded-r-lg">
+                                                        <h5 className="font-semibold">Important Clarification</h5>
+                                                        <p className="text-sm">{month.projectStructure.clarification}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        )}
+                                        
+                                        {month.evaluation && month.evaluation.title && (
+                                            <div>
+                                                <h4 className="font-semibold flex items-center gap-2 mb-2"><Award size={18}/>{month.evaluation.title}</h4>
+                                                <p className="text-foreground/80">{month.evaluation.description}</p>
+                                            </div>
+                                        )}
+
+                                        {month.extensionNote && (
+                                            <div className="p-4 bg-amber-50 border-l-4 border-amber-400 text-amber-800 rounded-r-lg text-sm">
+                                                <p>{month.extensionNote}</p>
                                             </div>
                                         )}
                                     </CardContent>
