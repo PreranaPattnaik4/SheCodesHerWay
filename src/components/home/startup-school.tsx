@@ -89,19 +89,6 @@ export default function StartupSchool() {
           </div>
         </div>
 
-        <div className="text-center mt-16 max-w-3xl mx-auto">
-            <h3 className="font-headline text-3xl font-bold text-primary">The Impact</h3>
-            <p className="mt-4 text-xl">Women don’t just learn — they launch, lead, and grow with purpose.</p>
-             <div className="mt-8 flex items-center justify-center gap-4">
-                <Button asChild size="lg">
-                <Link href="/apply">Apply Now</Link>
-                </Button>
-                <Button asChild size="lg" variant="secondary">
-                <Link href="/sangini-udaan">Learn More</Link>
-                </Button>
-            </div>
-        </div>
-
       </div>
     </section>
   );
