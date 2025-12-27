@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const post = {
     id: '3',
@@ -55,48 +56,54 @@ export default function BlogPostPage3() {
                 </div>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                    <p>
-                        Diving into web development can be daunting. This guide breaks down the essential steps to build your first web application, from choosing the right tools to deploying your project. We'll cover the basics of HTML, CSS, and JavaScript, and introduce you to modern frameworks like React and Next.js, which power the SheCodesHerWay platform itself.
-                    </p>
-                    <h3>1. Setting Up Your Development Environment</h3>
-                    <p>
-                        Before you write a single line of code, you need a place to write it and a way to see it run. This is your development environment. At a minimum, you'll need a good code editor (like VS Code) and a modern web browser (like Chrome or Firefox). We'll also walk you through installing Node.js, which is essential for running modern web development tools.
-                    </p>
-                    <h3>2. The Building Blocks: HTML, CSS, & JavaScript</h3>
-                    <p>
-                        Every website is built on these three pillars.
-                    </p>
-                    <ul>
-                        <li><strong>HTML (HyperText Markup Language):</strong> Provides the structure and content of your page.</li>
-                        <li><strong>CSS (Cascading Style Sheets):</strong> Adds styling, layout, and visual appeal. We use Tailwind CSS at SheCodesHerWay for its utility-first approach.</li>
-                        <li><strong>JavaScript:</strong> Makes your page interactive and dynamic.</li>
-                    </ul>
-                    <h3>3. Choosing a Framework: Why We Use Next.js</h3>
-                     <p>
-                        While you can build websites with just HTML, CSS, and JS, frameworks make the process much faster and more organized. We use Next.js, a React framework that offers a great developer experience, server-side rendering for performance, and a robust ecosystem. We'll explain why it's a fantastic choice for beginners and pros alike.
-                    </p>
-                    <figure>
-                        {post.image && (
-                            <Image
-                                src={post.image.imageUrl}
-                                alt={post.image.description}
-                                width={800}
-                                height={450}
-                                className="rounded-lg shadow-md"
-                                data-ai-hint={post.image.imageHint}
-                            />
-                        )}
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">
-                            A workshop where beginners learn to code their first web app.
-                        </figcaption>
-                    </figure>
-                    <h3>4. Your First Deployment</h3>
-                    <p>
-                        Building an app is one thing; sharing it with the world is another. We'll guide you through deploying your first application using services like Vercel or Firebase Hosting, making your project live on the internet for anyone to see.
+                    <p className="lead">
+                        Diving into web development can be daunting. This guide breaks down the essential steps to build your first web application, from choosing the right tools to deploying your project.
                     </p>
                     <p>
-                        Ready to start building? Our 'Sangini Udaan : EmpowerFly' program includes detailed tracks on web development to guide you every step of the way.
+                        We'll cover the basics of HTML, CSS, and JavaScript, and introduce you to modern frameworks like React and Next.js, which power the SheCodesHerWay platform itself.
                     </p>
+
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>1. Setting Up Your Development Environment</h2>
+                        <p>
+                            Before you write a single line of code, you need a place to write it and a way to see it run. This is your development environment. At a minimum, you'll need a good code editor (like VS Code) and a modern web browser (like Chrome or Firefox). We'll also walk you through installing Node.js, which is essential for running modern web development tools.
+                        </p>
+                    </section>
+                    
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>2. The Building Blocks: HTML, CSS, & JavaScript</h2>
+                        <blockquote>Every website is built on these three pillars.</blockquote>
+                        <ul>
+                            <li><strong>HTML (HyperText Markup Language):</strong> Provides the structure and content of your page.</li>
+                            <li><strong>CSS (Cascading Style Sheets):</strong> Adds styling, layout, and visual appeal. We use Tailwind CSS at SheCodesHerWay for its utility-first approach.</li>
+                            <li><strong>JavaScript:</strong> Makes your page interactive and dynamic.</li>
+                        </ul>
+                    </section>
+
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>3. Choosing a Framework: Why We Use Next.js</h2>
+                        <p>
+                            While you can build websites with just HTML, CSS, and JS, frameworks make the process much faster and more organized. We use Next.js, a React framework that offers a great developer experience, server-side rendering for performance, and a robust ecosystem. We'll explain why it's a fantastic choice for beginners and pros alike.
+                        </p>
+                    </section>
+                    
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>4. Your First Deployment</h2>
+                        <p>
+                            Building an app is one thing; sharing it with the world is another. We'll guide you through deploying your first application using services like Vercel or Firebase Hosting, making your project live on the internet for anyone to see.
+                        </p>
+                        <p>
+                            Ready to start building? Our 'Sangini Udaan : EmpowerFly' program includes detailed tracks on web development to guide you every step of the way.
+                        </p>
+                    </section>
                 </div>
 
                 <div className="mt-12 pt-8 border-t">

@@ -61,116 +61,62 @@ export default function BlogPostPage6() {
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
                     
-                    <h2>Introduction</h2>
-                    <p>The digital content landscape is evolving faster than ever. AI no longer just writes text — it generates <strong>stunning visuals, infographics, and cinematic videos</strong>. From marketers to solo creators, AI tools now allow anyone to turn ideas into polished content in minutes. The latest stack of trending tools—<strong>DALL·E, Veo, Sora, Nano Banana, Imagen, ChatGPT, and Gemini</strong>—are leading the charge.</p>
+                    <p className="lead">The digital content landscape is evolving faster than ever. AI no longer just writes text — it generates <strong>stunning visuals, infographics, and cinematic videos</strong>.</p>
+                    <p>From marketers to solo creators, AI tools now allow anyone to turn ideas into polished content in minutes. The latest stack of trending tools—<strong>DALL·E, Veo, Sora, Nano Banana, Imagen, ChatGPT, and Gemini</strong>—are leading the charge.</p>
 
-                    <Separator className="my-8" />
+                    <Separator className="my-12" />
 
-                    <h2>1. DALL·E — The Creative Image Generator</h2>
-                    <p><strong>DALL·E</strong>, developed by OpenAI, is one of the most popular AI text-to-image models. It can transform <strong>any text prompt into unique, imaginative images</strong>.</p>
-                    <h3>Why it’s trending:</h3>
-                    <ul>
-                        <li>Generates highly creative and stylistic images from text prompts</li>
-                        <li>Perfect for digital art, social media visuals, and concept illustrations</li>
-                        <li>Supports variations, edits, and inpainting for refining details</li>
-                    </ul>
+                    <section className="space-y-6">
+                        <h2>1. DALL·E — The Creative Image Generator</h2>
+                        <p><strong>DALL·E</strong>, developed by OpenAI, is one of the most popular AI text-to-image models. It can transform <strong>any text prompt into unique, imaginative images</strong>.</p>
+                        <h3>Why it’s trending:</h3>
+                        <ul>
+                            <li>Generates highly creative and stylistic images from text prompts</li>
+                            <li>Perfect for digital art, social media visuals, and concept illustrations</li>
+                            <li>Supports variations, edits, and inpainting for refining details</li>
+                        </ul>
+                    </section>
 
-                    <Separator className="my-8" />
+                    <Separator className="my-12" />
 
-                    <h2>2. Nano Banana — The AI Image Powerhouse</h2>
-                    <p><strong>Nano Banana</strong> (Gemini 2.5) and <strong>Nano Banana Pro</strong> (Gemini 3 Pro) are Google’s state-of-the-art image-generation models.</p>
-                     <h3>Why it’s trending:</h3>
-                    <ul>
-                        <li>Photorealistic images with fine detail and style consistency</li>
-                        <li>Ideal for social media graphics, product visuals, and infographics</li>
-                        <li>Advanced text-to-image prompts with style and composition control</li>
-                    </ul>
-
-                    <Separator className="my-8" />
-
-                    <h2>3. Imagen — Google’s Text-to-Image Wonder</h2>
-                    <p><strong>Imagen</strong> turns textual descriptions into <strong>high-fidelity, photorealistic visuals</strong>.</p>
-                    <h3>Key highlights:</h3>
-                    <ul>
-                        <li>Highly detailed images suitable for marketing or presentations</li>
-                        <li>Flexible style options: realistic, digital art, or stylized illustrations</li>
-                        <li>Supports different resolutions and aspect ratios for multiple platforms</li>
-                    </ul>
-
-                    <Separator className="my-8" />
-
-                    <h2>4. Veo — AI-Driven Video from Text</h2>
-                    <p><strong>Veo</strong> transforms prompts or static images into <strong>short cinematic videos</strong>.</p>
-                    <h3>Highlights:</h3>
-                     <ul>
-                        <li>Animates static images or text into coherent video sequences</li>
-                        <li>Realistic motion, audio, and physics simulation</li>
-                        <li>Perfect for social media reels, short stories, or product showcases</li>
-                    </ul>
-
-                    <Separator className="my-8" />
-
-                    <h2>5. Sora — Storytelling Video AI</h2>
-                    <p><strong>Sora</strong>, developed by OpenAI, specializes in <strong>narrative-driven videos from text prompts</strong>.</p>
-                    <h3>Why it’s popular:</h3>
-                     <ul>
-                        <li>Generates natural motion sequences and storytelling visuals</li>
-                        <li>Ideal for brand content, explainer videos, and marketing campaigns</li>
-                        <li>Works well in combination with AI images from DALL·E, Nano Banana, or Imagen</li>
-                    </ul>
-
-                    <Separator className="my-8" />
-
-                    <h2>6. ChatGPT — AI Brain Behind Creative Concepts</h2>
-                    <p><strong>ChatGPT</strong> is no longer just a text generator; it’s the <strong>idea engine</strong> for AI content creation.</p>
-                     <h3>Uses in creative workflow:</h3>
-                    <ul>
-                        <li>Crafting prompts for image and video generation</li>
-                        <li>Generating scripts, captions, and storyboard text</li>
-                        <li>Ideation for infographics and social media campaigns</li>
-                    </ul>
-                    <p>Example: Ask ChatGPT:</p>
-                    <blockquote>"Create a storyboard for a 15-second video showing a futuristic city at sunset"</blockquote>
-                    <p>Then feed that prompt into <strong>Veo</strong> or <strong>Sora</strong> for automated visuals.</p>
-
-                    <Separator className="my-8" />
-
-                    <h2>7. Gemini — Google’s Unified AI Platform</h2>
-                    <p><strong>Gemini</strong> integrates multiple AI capabilities: text, image, and video generation.</p>
-                    <h3>Key benefits:</h3>
-                    <ul>
-                        <li>Combines <strong>Nano Banana</strong>, <strong>Imagen</strong>, and <strong>Veo</strong> under one platform</li>
-                        <li>Ensures cross-model consistency for style, color, and theme</li>
-                        <li>Provides <strong>AI-powered suggestions</strong> for prompt improvement</li>
-                    </ul>
-                    <p>Gemini acts as the central hub in the 2025 creative stack, connecting your ideas (ChatGPT) with visuals (DALL·E, Nano Banana, Imagen) and video outputs (Veo, Sora).</p>
-
-                    <Separator className="my-8" />
+                    <section className="space-y-6">
+                        <h2>2. Nano Banana — The AI Image Powerhouse</h2>
+                        <p><strong>Nano Banana</strong> (Gemini 2.5) and <strong>Nano Banana Pro</strong> (Gemini 3 Pro) are Google’s state-of-the-art image-generation models.</p>
+                        <h3>Why it’s trending:</h3>
+                        <ul>
+                            <li>Photorealistic images with fine detail and style consistency</li>
+                            <li>Ideal for social media graphics, product visuals, and infographics</li>
+                            <li>Advanced text-to-image prompts with style and composition control</li>
+                        </ul>
+                    </section>
                     
-                    <Card className="bg-secondary/50 border-primary/20">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3">
-                                <BrainCircuit className="h-6 w-6 text-primary"/>
-                                8. How to Use This Modern AI Stack
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                             <h3>Step-by-step workflow:</h3>
-                            <ol>
-                                <li><strong>Idea & Script:</strong> Use <strong>ChatGPT</strong> to brainstorm prompts, captions, or storyboard ideas.</li>
-                                <li><strong>Image Generation:</strong> Feed prompts into <strong>DALL·E, Nano Banana</strong>, or <strong>Imagen</strong> for polished visuals.</li>
-                                <li><strong>Infographics Creation:</strong> Add charts, icons, and design overlays for presentations or social content.</li>
-                                <li><strong>Video Production:</strong> Animate images or storyboards with <strong>Veo</strong> or <strong>Sora</strong>.</li>
-                                <li><strong>Polish & Integrate:</strong> Use Gemini’s suggestions to refine style and coherence, then finalize in tools like Photoshop or Premiere.</li>
-                            </ol>
-                        </CardContent>
-                    </Card>
+                    <Separator className="my-12" />
 
-                    <Separator className="my-8" />
+                    <section className="space-y-6">
+                        <h2>3. Veo & Sora — AI-Driven Video from Text</h2>
+                        <blockquote>Generates natural motion sequences and storytelling visuals</blockquote>
+                        <p><strong>Veo</strong> and <strong>Sora</strong> transform prompts or static images into <strong>short cinematic videos</strong>, complete with realistic motion and audio. They are perfect for social media reels, short stories, or product showcases.</p>
+                    </section>
+                    
+                    <Separator className="my-12" />
 
-                    <h2>Conclusion</h2>
-                    <p>The 2025 AI creative ecosystem is <strong>all about speed, realism, and cross-media integration</strong>. By combining <strong>DALL·E, ChatGPT, Gemini, Nano Banana, Imagen, Veo, and Sora</strong>, creators can go from concept to <strong>fully polished images, infographics, and videos in record time</strong>.</p>
-                    <p>The future of content creation isn’t just digital — it’s <strong>AI-powered, interactive, and infinitely scalable.</strong> 🚀</p>
+                    <section className="space-y-6">
+                        <h2>4. ChatGPT & Gemini — The Brains Behind the Operation</h2>
+                        <p><strong>ChatGPT and Gemini</strong> are the <strong>idea engines</strong> for AI content creation. Use them for:</p>
+                        <ul>
+                            <li>Crafting prompts for image and video generation</li>
+                            <li>Generating scripts, captions, and storyboard text</li>
+                            <li>Ideation for infographics and social media campaigns</li>
+                        </ul>
+                    </section>
+
+                    <Separator className="my-12" />
+                    
+                    <section className="space-y-6">
+                        <h2>Conclusion</h2>
+                        <blockquote>The future of content creation isn’t just digital — it’s <strong>AI-powered, interactive, and infinitely scalable.</strong> 🚀</blockquote>
+                        <p>The 2025 AI creative ecosystem is <strong>all about speed, realism, and cross-media integration</strong>. By combining these tools, creators can go from concept to <strong>fully polished images, infographics, and videos in record time</strong>.</p>
+                    </section>
 
                 </div>
 

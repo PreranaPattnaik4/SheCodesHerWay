@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 const post = {
     id: '2',
@@ -55,45 +56,45 @@ export default function BlogPostPage2() {
                 </div>
 
                 <div className="prose prose-lg dark:prose-invert max-w-none">
-                    <p>
-                        Imposter syndrome is a silent career killer, especially for women in competitive fields. It's that nagging feeling that you're not as competent as others perceive you to be, and that you'll eventually be exposed as a fraud. If you've ever felt this way, you're not alone. Many high-achieving women experience this self-doubt, but the key is to not let it define you.
-                    </p>
-                    <h3>Recognizing the Signs</h3>
-                    <p>
-                        Imposter syndrome can manifest in several ways: perfectionism, fear of failure, downplaying your accomplishments, and feeling like your success is just a matter of luck. Recognizing these patterns is the first step toward overcoming them. Start by acknowledging your feelings without judgment. Simply telling yourself, "I'm feeling like an imposter right now, and that's okay," can be incredibly powerful.
-                    </p>
-                    <h3>Practical Strategies to Reclaim Your Confidence</h3>
-                    <p>
-                        Here are a few strategies to help you move from feeling like an imposter to embracing your inner innovator:
-                    </p>
-                    <ul>
-                        <li><strong>Track Your Accomplishments:</strong> Keep a running list of your successes, no matter how small. When self-doubt creeps in, review this list to remind yourself of your capabilities.</li>
-                        <li><strong>Reframe Your Thoughts:</strong> Challenge negative self-talk. Instead of thinking, "I don't deserve this," try, "I worked hard for this, and I'm proud of what I've achieved."</li>
-                        <li><strong>Seek Out Support:</strong> Talk to mentors, peers, or a career coach. Sharing your experiences can help you realize that you're not alone and gain valuable perspective.</li>
-                        <li><strong>Embrace "Good Enough":</strong> Let go of perfectionism. It's okay if things aren't perfect. Done is often better than perfect. Focus on progress, not perfection.</li>
-                    </ul>
-                    <figure>
-                        {post.image && (
-                            <Image
-                                src={post.image.imageUrl}
-                                alt={post.image.description}
-                                width={800}
-                                height={450}
-                                className="rounded-lg shadow-md"
-                                data-ai-hint={post.image.imageHint}
-                            />
-                        )}
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2">
-                            A supportive community helps turn self-doubt into confidence.
-                        </figcaption>
-                    </figure>
-                    <h3>Your Journey at SheCodesHerWay</h3>
-                    <p>
-                        At SheCodesHerWay, we understand that overcoming imposter syndrome is a journey, not a destination. Our programs are designed to provide a supportive and encouraging environment where you can build not only your skills but also your confidence. Through mentorship and community, we help you see your own potential and step into your power as an innovator.
+                    <p className="lead">
+                        Imposter syndrome is a silent career killer, especially for women in competitive fields. It's that nagging feeling that you're not as competent as others perceive you to be. If you've ever felt this way, you're not alone.
                     </p>
                     <p>
-                        Ready to start your journey from imposter to innovator? Join us and find the community and support you need to thrive.
+                        Many high-achieving women experience this self-doubt, but the key is to not let it define you.
                     </p>
+
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>Recognizing the Signs</h2>
+                        <p>
+                            Imposter syndrome can manifest in several ways: perfectionism, fear of failure, downplaying your accomplishments, and feeling like your success is just a matter of luck. Recognizing these patterns is the first step toward overcoming them. Start by acknowledging your feelings without judgment. Simply telling yourself, "I'm feeling like an imposter right now, and that's okay," can be incredibly powerful.
+                        </p>
+                    </section>
+                    
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>Practical Strategies to Reclaim Your Confidence</h2>
+                        <blockquote>Let go of perfectionism. Done is often better than perfect. Focus on progress, not perfection.</blockquote>
+                        <ul>
+                            <li><strong>Track Your Accomplishments:</strong> Keep a running list of your successes, no matter how small. When self-doubt creeps in, review this list to remind yourself of your capabilities.</li>
+                            <li><strong>Reframe Your Thoughts:</strong> Challenge negative self-talk. Instead of thinking, "I don't deserve this," try, "I worked hard for this, and I'm proud of what I've achieved."</li>
+                            <li><strong>Seek Out Support:</strong> Talk to mentors, peers, or a career coach. Sharing your experiences can help you realize that you're not alone and gain valuable perspective.</li>
+                        </ul>
+                    </section>
+
+                    <Separator className="my-12" />
+
+                    <section className="space-y-6">
+                        <h2>Your Journey at SheCodesHerWay</h2>
+                        <p>
+                            At SheCodesHerWay, we understand that overcoming imposter syndrome is a journey, not a destination. Our programs are designed to provide a supportive and encouraging environment where you can build not only your skills but also your confidence. Through mentorship and community, we help you see your own potential and step into your power as an innovator.
+                        </p>
+                        <p>
+                            Ready to start your journey from imposter to innovator? Join us and find the community and support you need to thrive.
+                        </p>
+                    </section>
                 </div>
 
                 <div className="mt-12 pt-8 border-t">
