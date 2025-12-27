@@ -28,6 +28,10 @@ export const faqData: FaqCategory[] = [
                 answer: "SheCodesHerWay was founded by Prerana Kailash Pattnaik. As the founder and developer, she built more than just a platform—she created a community and a vision for women to discover their strength and skills. Her leadership blends compassion, courage, and a deep commitment to empowering women to pursue their dreams fearlessly.",
             },
             {
+                question: "What is the founder's role in platform development?",
+                answer: "As the Head of Platform Development, Prerana is the sole developer responsible for the platform's architecture, full-stack development, and AI integration, shaping its technical vision and execution."
+            },
+            {
                 question: "What are the core values of the organization?",
                 answer: "Our core values are Empowerment (helping women find their voice), Innovation (merging technology with purpose), Community (building sisterhood), Inclusivity (welcoming every woman), and Courage (encouraging women to dream and lead).",
             },
@@ -135,7 +139,7 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "What is the duration of the collaboration?",
-                answer: "Initial collaboration period: 3 months. A second phase of 3 months is possible, subject to reapplication and selection based on performance. Performance-based continuation may extend up to 1 year."
+                answer: "The initial collaboration period is 3 months. A second 3-month phase is possible, subject to reapplication and selection based on performance. High-performing contributors may continue for up to 1 year."
             },
             {
                 question: "How should I represent my role at SheCodesHerWay?",

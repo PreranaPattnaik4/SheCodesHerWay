@@ -253,7 +253,7 @@ export default function AboutPage() {
                                 <div>
                                     <h2 className="font-headline text-3xl font-bold">Our Founder</h2>
                                     <p className="mt-2 text-xl font-semibold text-primary">{brand.founder.name}</p>
-                                    <p className='italic text-muted-foreground'>Founder & Developer | SheCodesHerWay</p>
+                                    <p className='italic text-muted-foreground'>Founder & Head of Platform Development | SheCodesHerWay</p>
                                     <p className="mt-4 text-foreground/80">A visionary committed to building a world where women can rise with confidence. She believes in equal opportunities, creativity, innovation, emotional empowerment, and community-driven learning. Her leadership blends compassion, courage, and creativity—the true essence of SheCodesHerWay.</p>
                                     <div className="mt-4 flex items-center gap-4">
                                         <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></Link>
