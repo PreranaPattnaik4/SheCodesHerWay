@@ -32,6 +32,15 @@ const blogPosts = [
     href: '/blog/post/4'
   },
   {
+    id: '2',
+    title: 'From Imposter to Innovator: Overcoming Self-Doubt',
+    author: 'Community Voice',
+    date: 'July 28, 2024',
+    excerpt: 'Imposter syndrome is a silent career killer, especially for women in competitive fields. Learn practical strategies to overcome self-doubt and embrace your inner innovator.',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-community'),
+    href: '/blog/post/2'
+  },
+  {
     id: '6',
     title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
     author: 'Prerana K.',
@@ -52,15 +61,6 @@ const blogPosts = [
     excerpt: 'Mentorship can be a game-changer for women navigating the tech industry. In this post, we explore the profound impact of having a mentor and how it can accelerate your career growth and build confidence.',
     image: PlaceHolderImages.find((p) => p.id === 'program-mentorship'),
     href: '/blog/post/1'
-  },
-  {
-    id: '2',
-    title: 'From Imposter to Innovator: Overcoming Self-Doubt',
-    author: 'Community Voice',
-    date: 'July 28, 2024',
-    excerpt: 'Imposter syndrome is a silent career killer, especially for women in competitive fields. Learn practical strategies to overcome self-doubt and embrace your inner innovator.',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-community'),
-    href: '/blog/post/2'
   },
     {
     id: '3',
