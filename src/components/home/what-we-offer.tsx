@@ -59,7 +59,7 @@ export default function WhatWeOffer() {
                             <h3 className="font-headline text-3xl md:text-4xl font-bold mt-2">
                                 {brand.programName}
                             </h3>
-                            <Badge className="mt-3">Founding Cohort — Launching Soon</Badge>
+                            <Badge className="mt-3">Sangini Udaan : EmpowerFly — Cohort 1— Launching Soon</Badge>
                              <p className="mt-4 text-lg text-foreground/90 font-semibold italic">
                                 “{brand.programTagline}”
                             </p>
