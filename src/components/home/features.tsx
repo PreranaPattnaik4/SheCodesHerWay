@@ -61,7 +61,11 @@ const features = [
   {
     id: 'empowerfly-assistant',
     title: 'Chat with EmpowerFly Assistant',
-    image: PlaceHolderImages.find((p) => p.id === 'feature-palai'),
+    image: {
+        imageUrl: "https://i.postimg.cc/DzBLMHBS/man-using-laptop-with-chatbot-interface-(1).jpg",
+        description: "A person interacting with a chatbot on a laptop.",
+        imageHint: "human chatbot",
+    },
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1',
     href: '/chatbot',
@@ -115,7 +119,11 @@ const features = [
   {
     id: 'our-program',
     title: 'Our Program',
-    image: PlaceHolderImages.find((p) => p.id === 'program-community'),
+    image: {
+        imageUrl: "https://i.postimg.cc/1tVR2cbZ/Sangini_Udaan_students_post.png",
+        description: "A group of Sangini Udaan students.",
+        imageHint: "women students",
+    },
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1',
     href: '/sangini-udaan',
