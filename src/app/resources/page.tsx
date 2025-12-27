@@ -3,7 +3,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Download, ExternalLink, FileText, LayoutTemplate, Link as LinkIcon, Search, CheckCircle2, Rocket, Info } from 'lucide-react';
+import { Download, ExternalLink, FileText, LayoutTemplate, Link as LinkIcon, Search, CheckCircle2, Rocket, Info, BrainCircuit } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
@@ -31,12 +31,12 @@ const resources = [
     format: "Figma"
   },
   {
-    title: "Kaggle Datasets",
-    description: "A vast collection of datasets for data science, machine learning, and AI projects.",
+    title: "AI Prompts Library",
+    description: "A collection of effective prompts for generating text and images with AI.",
     type: "external",
-    href: "https://www.kaggle.com/datasets",
+    href: "#",
     category: "External References",
-    icon: LinkIcon,
+    icon: BrainCircuit,
     format: "Website"
   },
   {
@@ -170,7 +170,7 @@ export default function ResourcesPage() {
         </section>
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <Alert variant="destructive" className="mb-12 max-w-4xl mx-auto bg-amber-50 border-amber-200 text-amber-800 [&>svg]:text-amber-600">
+             <Alert variant="destructive" className="mb-12 max-w-4xl mx-auto bg-amber-50 border-amber-200 text-amber-800 [&>svg]:text-amber-600">
               <Info className="h-4 w-4" />
               <AlertTitle className="font-bold">Demonstration Content</AlertTitle>
               <AlertDescription>
