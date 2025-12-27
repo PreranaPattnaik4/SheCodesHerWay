@@ -1,4 +1,5 @@
 
+
 import {
   Accordion,
   AccordionContent,
@@ -10,13 +11,14 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { Separator } from "./ui/separator";
+import { homeFaqData } from "@/lib/home-faq-data";
 
 interface FaqProps {
   showAll?: boolean;
 }
 
 export default function Faq({ showAll = false }: FaqProps) {
-  const faqsToShow = showAll ? faqData : [faqData[0]]; // Show only the first category on homepage
+  const faqsToShow = showAll ? faqData : [];
 
   return (
     <section>
@@ -28,16 +30,27 @@ export default function Faq({ showAll = false }: FaqProps) {
       </div>
       
       <div className="max-w-3xl mx-auto space-y-12">
-        {faqsToShow.map((category, catIndex) => (
-          <div key={catIndex}>
-            {showAll && (
-              <>
-                <h3 className="text-2xl font-bold font-headline mb-6 text-center">{category.title}</h3>
-              </>
-            )}
-            <Accordion type="single" collapsible className="w-full">
-              {category.questions.map((faq, index) => (
-                <AccordionItem value={`item-${catIndex}-${index}`} key={index}>
+        {showAll ? (
+            faqsToShow.map((category, catIndex) => (
+                <div key={catIndex}>
+                    <h3 className="text-2xl font-bold font-headline mb-6 text-center">{category.title}</h3>
+                    <Accordion type="single" collapsible className="w-full">
+                    {category.questions.map((faq, index) => (
+                        <AccordionItem value={`item-${catIndex}-${index}`} key={index}>
+                        <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
+                        <AccordionContent className="text-base text-foreground/80">
+                            {faq.answer}
+                        </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                    </Accordion>
+                    {catIndex < faqsToShow.length - 1 && <Separator className="my-12" />}
+                </div>
+            ))
+        ) : (
+             <Accordion type="single" collapsible className="w-full">
+              {homeFaqData.map((faq, index) => (
+                <AccordionItem value={`item-${index}`} key={index}>
                   <AccordionTrigger className="text-left text-lg font-semibold">{faq.question}</AccordionTrigger>
                   <AccordionContent className="text-base text-foreground/80">
                     {faq.answer}
@@ -45,9 +58,7 @@ export default function Faq({ showAll = false }: FaqProps) {
                 </AccordionItem>
               ))}
             </Accordion>
-            {showAll && catIndex < faqsToShow.length - 1 && <Separator className="my-12" />}
-          </div>
-        ))}
+        )}
       </div>
 
       {!showAll && (
