@@ -265,12 +265,12 @@ export default function SanginiUdaanPage() {
                                         <CardTitle className="flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-primary"/>How the Complete Sangini Udaan : EmpowerFly Journey (All-in-One Track) Works</CardTitle>
                                     </CardHeader>
                                     <CardContent className="space-y-4">
-                                        <p>This comprehensive track is designed as a continuous 6-month journey, seamlessly integrating the initial and advanced phases.</p>
-                                        <ul className="list-disc list-inside space-y-2">
-                                            <li><strong>Months 1-3:</strong> You will build a strong foundation across all domains—Tech, Business, Creativity, and Personal Growth—while working on introductory projects.</li>
-                                            <li><strong>Months 4-6:</strong> You will dive deeper into your areas of interest, take on more complex projects, and develop leadership skills within the community.</li>
-                                        </ul>
-                                        <p>This track provides the most holistic experience, designed for those committed to a transformative, end-to-end growth journey.</p>
+                                        <p>This track uses a guided rotation model—not simultaneous learning. Participants build a strong foundation and explore multiple domains through structured phases, completing one demo, one live, and one final project.</p>
+                                        <Button asChild variant="link" className="p-0 h-auto mt-4">
+                                            <Link href="/sangini-udaan/all-in-one-track">
+                                                Learn How It Works <ArrowRight className="ml-2 h-4 w-4" />
+                                            </Link>
+                                        </Button>
                                     </CardContent>
                                 </Card>
                                 <Card className="shadow-lg lg:col-span-3">
