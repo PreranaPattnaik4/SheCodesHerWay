@@ -139,15 +139,15 @@ export const faqData: FaqCategory[] = [
             },
             {
                 question: "What is the duration of the collaboration?",
-                answer: "The initial collaboration period is 3 months. A second 3-month phase is possible, subject to reapplication and selection based on performance. High-performing contributors may continue for up to 1 year."
+                answer: "The initial collaboration period is 3 months. A second 3-month phase is possible, subject to reapplication and selection based on performance. High-performing contributors may continue for up to 1 year. Contributors may choose to conclude participation at any time.",
             },
             {
                 question: "How should I represent my role at SheCodesHerWay?",
-                answer: "You should identify yourself as a 'Contributor' or 'Intern.' This is an unpaid, learning-focused engagement, not a formal team role. You can tell others, 'I joined as a Contributor,' to accurately reflect your position."
+                answer: "You should identify yourself as a 'Contributor' or 'Intern.' This is an unpaid, learning-focused engagement, not a formal team role. You can tell others, 'I joined as a Contributor,' to accurately reflect your position.",
             },
             {
                 question: "Will collaboration lead to a paid job?",
-                answer: "While paid roles are not guaranteed, high-performing contributors may be considered for a paid part-time role after 1 year of collaboration, depending on company growth, funding, and a formal interview process. As one might say, 'If I work well, I may get a chance to become a permanent member.'"
+                answer: "While paid roles are not guaranteed, high-performing contributors may be considered for a paid part-time role after 1 year of collaboration, depending on company growth, funding, and a formal interview process. As one might say, 'If I work well, I may get a chance to become a permanent member.'",
             },
             {
                 question: "What is the legal status of a collaborator?",
@@ -250,3 +250,5 @@ export const faqData: FaqCategory[] = [
         ]
     }
 ];
+
+    
