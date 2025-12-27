@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale } from 'lucide-react';
+import { Linkedin, BrainCircuit, Code, Pilcrow, Lightbulb, Scale, Clock, RefreshCw, CalendarCheck2 } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { programFaqData } from '@/lib/program-faq-data';
@@ -232,7 +232,62 @@ export default function SanginiUdaanPage() {
                                 </Card>
                             </div>
                         </section>
+
+                        <Separator />
                         
+                        <section>
+                            <div className="text-center mb-12">
+                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Sangini Udaan : EmpowerFly — Program Duration & Structure</h2>
+                                <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                                    Understanding the time commitment and journey structure.
+                                </p>
+                            </div>
+                            <div className="grid lg:grid-cols-3 gap-8 items-start">
+                                <Card className="shadow-lg">
+                                    <CardHeader>
+                                        <CardTitle className="flex items-center gap-2"><Clock className="h-6 w-6 text-primary"/>Program Duration & Structure</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        <p>The program is structured into two main phases to ensure a deep and impactful learning experience.</p>
+                                        <ul className="list-disc list-inside space-y-2">
+                                            <li><strong>Initial Phase:</strong> A focused 3-month period covering core curriculum, foundational skills, and project work.</li>
+                                            <li><strong>Advanced Phase:</strong> An optional 3-month extension for deeper specialization, leadership roles, and advanced project contribution.</li>
+                                        </ul>
+                                    </CardContent>
+                                </Card>
+                                <Card className="shadow-lg lg:col-span-2">
+                                    <CardHeader>
+                                        <CardTitle className="flex items-center gap-2"><BrainCircuit className="h-6 w-6 text-primary"/>How the Complete Sangini Udaan : EmpowerFly Journey (All-in-One Track) Works</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        <p>This comprehensive track is designed as a continuous 6-month journey, seamlessly integrating the initial and advanced phases.</p>
+                                        <ul className="list-disc list-inside space-y-2">
+                                            <li><strong>Months 1-3:</strong> You will build a strong foundation across all domains—Tech, Business, Creativity, and Personal Growth—while working on introductory projects.</li>
+                                            <li><strong>Months 4-6:</strong> You will dive deeper into your areas of interest, take on more complex projects, and develop leadership skills within the community.</li>
+                                        </ul>
+                                        <p>This track provides the most holistic experience, designed for those committed to a transformative, end-to-end growth journey.</p>
+                                    </CardContent>
+                                </Card>
+                                <Card className="shadow-lg lg:col-span-3">
+                                    <CardHeader>
+                                        <CardTitle className="flex items-center gap-2"><RefreshCw className="h-6 w-6 text-primary"/>Program Duration Flexibility & Extension Policy</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        <div className="grid md:grid-cols-2 gap-8">
+                                            <div>
+                                                <h4 className="font-semibold flex items-center gap-2"><CalendarCheck2 /> For Specialized Tracks:</h4>
+                                                <p>Learners in specialized tracks (Tech, Business, etc.) complete the initial 3-month phase. After this, you may reapply to enter the advanced 3-month phase to deepen your expertise or explore another domain.</p>
+                                            </div>
+                                            <div>
+                                                <h4 className="font-semibold flex items-center gap-2"><Lightbulb /> Our Philosophy:</h4>
+                                                <p>This phased approach ensures that all learners receive a strong foundational experience, while also providing the flexibility to extend their journey based on their performance, commitment, and evolving goals. Selection for the second phase is based on a review of your participation and contributions.</p>
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </section>
+
                         <Separator />
 
                         <ProgramFlow />
@@ -285,3 +340,5 @@ export default function SanginiUdaanPage() {
         </div>
     );
 }
+
+    
