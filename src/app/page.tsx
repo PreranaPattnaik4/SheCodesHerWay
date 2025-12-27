@@ -73,7 +73,7 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="space-y-4 flex-grow flex flex-col p-6">
                             <div>
-                                <p className="font-semibold text-lg flex items-center gap-2"><Bot className="text-primary"/> Chat with {brand.appName}</p>
+                                <p className="font-semibold text-lg flex items-center gap-2"><LogoIcon className="h-6 w-6 text-primary"/> Chat with {brand.appName}</p>
                                 <p className="text-foreground/80 mt-2">
                                     Starting something new can feel overwhelming — and that’s okay. You don’t need to have everything figured out before you begin. {brand.appName} is here to help you take your first step.
                                 </p>
@@ -127,7 +127,7 @@ export default function Home() {
                                 <div className="flex flex-wrap items-center gap-4">
                                      <Button asChild>
                                         <Link href="/chatbot">
-                                            <LogoIcon className="mr-2 h-5 w-5"/> Start Chatting with EmpowerFly
+                                            <LogoIcon className="mr-2 h-5 w-5"/> Start Chatting with {brand.appName}
                                         </Link>
                                     </Button>
                                     <Button asChild variant="outline">

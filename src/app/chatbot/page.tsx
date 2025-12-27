@@ -155,7 +155,7 @@ export default function ChatbotPage() {
     const newChatId = Date.now().toString();
     const newChat: ChatSession = {
       id: newChatId,
-      title: 'Chat',
+      title: 'New Chat',
       messages: [welcomeMessage],
     };
     setChatHistory(prev => [newChat, ...prev]);
@@ -350,7 +350,10 @@ export default function ChatbotPage() {
                     <Menu className="h-5 w-5" />
                     <span className="sr-only">Toggle sidebar</span>
                 </Button>
-                <h2 className="text-lg font-semibold ml-2 truncate">EmpowerFly Assistant</h2>
+                <div className="flex items-center gap-2 ml-2">
+                    <LogoIcon className="h-6 w-6 text-primary" />
+                    <h2 className="text-lg font-semibold truncate">{brand.appName}</h2>
+                </div>
             </div>
             <ScrollArea className="flex-grow" ref={scrollAreaRef as any}>
                 <div className="max-w-3xl mx-auto w-full px-4 pt-8 pb-4">

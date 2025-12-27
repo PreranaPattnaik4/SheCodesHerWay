@@ -7,12 +7,13 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import React from 'react';
 import UserAuth from './auth/user-auth';
+import LogoIcon from './logo-icon';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/sangini-udaan', label: 'Our Program' },
   { href: '/ai-coaching', label: 'AI Coaching' },
-  { href: '/chatbot', label: 'EmpowerFly Assistant' },
+  { href: '/chatbot', label: 'EmpowerFly Assistant', icon: LogoIcon },
   { href: '/community', label: 'Community' },
   { href: '/blog', label: 'Our Blogs' },
   { href: '/resources', label: 'Resources' },
@@ -32,8 +33,9 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-lg text-foreground/80 transition-colors hover:text-primary"
+              className="flex items-center gap-2 text-lg text-foreground/80 transition-colors hover:text-primary"
             >
+              {link.icon && <link.icon className="h-5 w-5" />}
               {link.label}
             </Link>
           ))}
@@ -61,8 +63,9 @@ export default function Header() {
                       key={link.href}
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="text-2xl font-medium text-foreground/80 transition-colors hover:text-primary"
+                      className="flex items-center gap-2 text-2xl font-medium text-foreground/80 transition-colors hover:text-primary"
                     >
+                      {link.icon && <link.icon className="h-6 w-6" />}
                       {link.label}
                     </Link>
                   ))}

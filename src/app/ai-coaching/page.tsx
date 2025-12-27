@@ -11,6 +11,7 @@ import { Bot, MessageSquare, Image as ImageIcon, Code, FileText, ArrowRight, Shi
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import LogoIcon from '@/components/logo-icon';
 
 const aiCoachTool = {
     icon: BrainCircuit,
@@ -106,7 +107,7 @@ export default function AiCoachingPage() {
                     <div className="p-8 md:p-12">
                         <div className="flex items-center gap-4 mb-4">
                             <div className="bg-primary/10 text-primary p-3 rounded-full">
-                                <MessageSquare className="h-7 w-7" />
+                                <LogoIcon className="h-7 w-7" />
                             </div>
                              <h2 className="font-headline text-3xl font-bold">EmpowerFly Assistant</h2>
                         </div>
