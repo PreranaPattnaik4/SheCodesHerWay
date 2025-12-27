@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
 import Logo from './logo';
 import { brand } from '@/lib/brand';
 import Link from 'next/link';
@@ -43,13 +43,13 @@ export default function Footer() {
               {brand.email}
             </a>
             <div className="mt-4 flex space-x-4">
-              <Link href="#" aria-label="Twitter">
+              <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <Twitter className="h-6 w-6 text-secondary-foreground/80 transition-colors hover:text-primary" />
               </Link>
-              <Link href="#" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6 text-secondary-foreground/80 transition-colors hover:text-primary" />
               </Link>
-              <Link href="#" aria-label="GitHub">
+              <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-6 w-6 text-secondary-foreground/80 transition-colors hover:text-primary" />
               </Link>
             </div>

@@ -82,7 +82,7 @@ export default function Home() {
                                             <Bot className="mr-2"/> Chat with EmpowerFly
                                         </Link>
                                     </Button>
-                                    <Button asChild variant="outline" size="sm">
+                                    <Button asChild variant="outline">
                                         <Link href={`mailto:${brand.email}`}>
                                             <Mail className="mr-2"/> Contact Us
                                         </Link>
