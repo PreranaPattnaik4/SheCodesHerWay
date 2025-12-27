@@ -20,6 +20,9 @@ const categories = [
   { id: 'internships', name: 'Internships' },
   { id: 'hackathons', name: 'Hackathons' },
   { id: 'live-events', name: 'LIVE Events!' },
+  { id: 'our-program', name: 'Our Program' },
+  { id: 'our-blogs', name: 'Our Blogs' },
+  { id: 'resources', name: 'Resources' },
 ];
 
 const features = [
@@ -96,6 +99,40 @@ const features = [
     category: 'live-events',
     height: 'h-64',
     comingSoon: true,
+  },
+  {
+    id: 'our-program',
+    title: 'Our Program',
+    image: PlaceHolderImages.find((p) => p.id === 'program-community'),
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '/sangini-udaan',
+    category: 'our-program',
+    height: 'h-64',
+  },
+  {
+    id: 'our-blogs',
+    title: 'Our Blogs',
+    image: {
+        imageUrl: "https://i.postimg.cc/1RqPqqfF/Banners3.png",
+        description: "From Prompt to Prototype",
+        imageHint: "startup journey",
+    },
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '/blog',
+    category: 'our-blogs',
+    height: 'h-64',
+  },
+  {
+    id: 'resources',
+    title: 'Resources',
+    image: PlaceHolderImages.find((p) => p.id === 'feature-workshops'),
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1',
+    href: '/resources',
+    category: 'resources',
+    height: 'h-64',
   },
 ];
 
