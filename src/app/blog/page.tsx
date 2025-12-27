@@ -10,6 +10,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const blogPosts = [
   {
+    id: '5',
+    title: 'My 𝐆𝐨𝐨𝐠𝐥𝐞 𝐒𝐭𝐚𝐫𝐭𝐮𝐩 𝐒𝐜𝐡𝐨𝐨𝐥: 𝐏𝐫𝐨𝐦𝐩𝐭 𝐭𝐨 𝐏𝐫𝐨𝐭𝐨𝐭𝐲𝐩𝐞 𝐉𝐨𝐮𝐫𝐧𝐞𝐲!',
+    author: 'Prerana K.',
+    date: 'August 5, 2024',
+    excerpt: 'Every startup begins with an idea. Mine began with a prompt. This blog is a reflection of my startup-building journey — how I moved from thinking about ideas to actually prototyping and shipping them...',
+    image: {
+        imageUrl: "https://i.postimg.cc/1RqPqqfF/Banners3.png",
+        description: "From Prompt to Prototype",
+        imageHint: "startup journey",
+    },
+    href: '/blog/post/5'
+  },
+  {
     id: '6',
     title: 'Next-Gen Creativity: Trending AI Tools for Images, Infographics & Video in 2025',
     author: 'Prerana K.',
@@ -21,19 +34,6 @@ const blogPosts = [
         imageHint: "AI tools",
     },
     href: '/blog/post/6'
-  },
-  {
-    id: '5',
-    title: 'From Prompt to Prototype: My Startup Building Journey',
-    author: 'Prerana K.',
-    date: 'August 5, 2024',
-    excerpt: 'Every startup begins with an idea. Mine began with a prompt. This blog is a reflection of my startup-building journey — how I moved from thinking about ideas to actually prototyping and shipping them...',
-    image: {
-        imageUrl: "https://i.postimg.cc/1RqPqqfF/Banners3.png",
-        description: "From Prompt to Prototype",
-        imageHint: "startup journey",
-    },
-    href: '/blog/post/5'
   },
   {
     id: '4',

@@ -11,7 +11,7 @@ import { Separator } from '@/components/ui/separator';
 
 const post = {
     id: '5',
-    title: 'From Prompt to Prototype: My Startup Building Journey',
+    title: 'My 𝐆𝐨𝐨𝐠𝐥𝐞 𝐒𝐭𝐚𝐫𝐭𝐮𝐩 𝐒𝐜𝐡𝐨𝐨𝐥: 𝐏𝐫𝐨𝐦𝐩𝐭 𝐭𝐨 𝐏𝐫𝐨𝐭𝐨𝐭𝐲𝐩𝐞 𝐉𝐨𝐮𝐫𝐧𝐞𝐲!',
     author: 'Prerana K.',
     authorAvatar: 'https://i.postimg.cc/HkLGWcM4/1718292767884.jpg',
     date: 'August 5, 2024',
