@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/chatbot', label: 'EmpowerFly Assistant' },
   { href: '/community', label: 'Community' },
   { href: '/blog', label: 'Our Blogs' },
+  { href: '/resources', label: 'Resources' },
   { href: '/about', label: 'About' },
   { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
