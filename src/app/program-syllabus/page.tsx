@@ -239,7 +239,7 @@ export default function ProgramSyllabusPage() {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold mb-2 flex items-center gap-2"><BrainCircuit className="h-5 w-5 text-primary"/>Responsible AI Foundation</h4>
-                                    <p>Responsible AI is a mandatory foundation across all tracks. Key principles include: human-centered AI usage, transparency and explainability, bias awareness and fairness, data privacy and consent, understanding AI limitations and risks, accountability and human oversight. Ethical AI practices are applied through real projects and scenarios, not taught only in theory.</p>
+                                    <p>Responsible AI is a mandatory foundation across all tracks. Key principles include: human-centered AI usage, transparency and explainability, bias awareness and fairness, data privacy and consent, understanding AI limitations and risks, and accountability and human oversight. Ethical AI practices are applied through real projects and scenarios, not taught only in theory.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -261,5 +261,3 @@ export default function ProgramSyllabusPage() {
         </div>
     );
 }
-
-    
