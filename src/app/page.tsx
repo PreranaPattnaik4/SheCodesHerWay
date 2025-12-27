@@ -66,12 +66,12 @@ export default function Home() {
             </div>
             <Separator />
             <div className="rounded-xl py-12 relative overflow-hidden">
-                <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-8 items-stretch max-w-7xl mx-auto">
                     <Card className="shadow-xl border-primary/20 bg-gradient-to-br from-background to-accent/20 h-full flex flex-col">
                         <CardHeader>
                             <CardTitle className="font-headline text-3xl md:text-4xl">How to Start Your Journey</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 flex-grow flex flex-col p-6">
+                        <CardContent className="space-y-4 flex-grow flex flex-col p-6 py-4">
                             <div>
                                 <p className="font-semibold text-lg flex items-center gap-2"><LogoIcon className="h-6 w-6 text-primary"/> Chat with {brand.appName}</p>
                                 <p className="text-foreground/80 mt-2">
