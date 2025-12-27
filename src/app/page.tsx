@@ -64,22 +64,50 @@ export default function Home() {
                         <CardHeader>
                             <CardTitle className="font-headline text-3xl md:text-4xl">How to Start Your Journey</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4 flex-grow flex flex-col">
-                            <p className="font-semibold text-lg flex items-center gap-2"><Bot className="text-primary"/> Chat with {brand.appName}</p>
-                            <p className="text-foreground/80">
-                                Starting something new can feel overwhelming — and that’s okay. You don’t need to have everything figured out before you begin. {brand.appName} is here to help you take your first step.
-                            </p>
-                            <p className="text-foreground/80">
-                                Start by simply interacting with our AI guide. Ask anything related to this platform, programs, or next steps, and she will gently guide you forward.
-                            </p>
-                            <p className="font-semibold text-primary italic">
-                                Always remember: You remain your own boss. The choices, pace, and direction are always yours.
-                            </p>
+                        <CardContent className="space-y-6 flex-grow flex flex-col">
+                            <div>
+                                <p className="font-semibold text-lg flex items-center gap-2"><Bot className="text-primary"/> Chat with {brand.appName}</p>
+                                <p className="text-foreground/80 mt-2">
+                                    Starting something new can feel overwhelming — and that’s okay. You don’t need to have everything figured out before you begin. {brand.appName} is here to help you take your first step.
+                                </p>
+                                <p className="text-foreground/80 mt-2">
+                                    Start by simply interacting with our AI guide. You can ask anything related to this platform, programs, learning paths, or next steps — and she will gently guide you forward.
+                                </p>
+                                <p className="font-semibold text-primary italic mt-4">
+                                    Always remember: You remain your own boss. The choices, pace, and direction are always yours.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg">💬 How It Works</h4>
+                                <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2">
+                                    <li>Start a conversation with EmpowerFly Assistant</li>
+                                    <li>Ask what’s on your mind — no pressure, no judgment</li>
+                                    <li>Receive guided suggestions and helpful resources</li>
+                                    <li>Take time to read, reflect, and decide your next step</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-semibold text-lg">✨ You Can Ask Things Like:</h4>
+                                <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2 italic">
+                                    <li>“I’m returning to work after a break — where should I start?”</li>
+                                    <li>“I want to learn tech but feel overwhelmed.”</li>
+                                    <li>“Help me choose a learning path.”</li>
+                                </ul>
+                                <p className="text-foreground/80 mt-2">There are no right or wrong questions — only the ones that matter to you.</p>
+                            </div>
+
+                             <div className="bg-muted/80 p-4 rounded-lg mt-auto text-sm">
+                                 <h4 className="font-semibold">🧭 Important Note</h4>
+                                 <p className="text-muted-foreground mt-1">While EmpowerFly Assistant is designed to be supportive and informative, AI may sometimes make mistakes or offer incomplete information. We encourage you to take your time, read all information carefully, reflect on what feels right for you, and make decisions based on your own judgment. Your journey is yours — AI is here only to support, not decide for you.</p>
+                             </div>
+
                             <div className="pt-4 space-y-4 mt-auto">
                                 <div className="flex flex-wrap items-center gap-4">
                                      <Button asChild>
                                         <Link href="/chatbot">
-                                            <Bot className="mr-2"/> Chat with EmpowerFly
+                                            <Bot className="mr-2"/> Start Chatting with EmpowerFly
                                         </Link>
                                     </Button>
                                     <Button asChild variant="outline">
@@ -87,15 +115,6 @@ export default function Home() {
                                             <Mail className="mr-2"/> Contact Us
                                         </Link>
                                     </Button>
-                                </div>
-                                <div>
-                                    <p className='text-sm text-muted-foreground'>If you need human guidance, we're happy to help. You can also follow us on social media for the latest updates.</p>
-                                    <div className="flex items-center gap-2 mt-2">
-                                        <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-                                        <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
-                                        <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary"><Github /></Link>
-                                        <Link href={`mailto:${brand.secondaryEmail}`} aria-label="Email" className="text-muted-foreground hover:text-primary"><Mail /></Link>
-                                    </div>
                                 </div>
                             </div>
                         </CardContent>
