@@ -28,6 +28,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import LogoIcon from '@/components/logo-icon';
 
 export default function Home() {
   const chatbotImage = PlaceHolderImages.find((p) => p.id === 'feature-palai');
@@ -108,7 +109,7 @@ export default function Home() {
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="important-note">
-                                    <AccordionTrigger className="font-semibold text-lg">🧭 Important Note</AccordionTrigger>
+                                    <AccordionTrigger className="font-semibold text-lg">Important Note</AccordionTrigger>
                                     <AccordionContent>
                                         <p className="text-foreground/80 mt-2">While EmpowerFly Assistant is designed to be supportive and informative, AI may sometimes make mistakes or offer incomplete information. We encourage you to:</p>
                                         <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2">
@@ -126,7 +127,7 @@ export default function Home() {
                                 <div className="flex flex-wrap items-center gap-4">
                                      <Button asChild>
                                         <Link href="/chatbot">
-                                            <Bot className="mr-2"/> Start Chatting with EmpowerFly
+                                            <LogoIcon className="mr-2 h-5 w-5"/> Start Chatting with EmpowerFly
                                         </Link>
                                     </Button>
                                     <Button asChild variant="outline">
