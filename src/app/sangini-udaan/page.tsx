@@ -288,6 +288,11 @@ export default function SanginiUdaanPage() {
                                                 <p>This phased approach ensures that all learners receive a strong foundational experience, while also providing the flexibility to extend their journey based on their performance, commitment, and evolving goals. Selection for the second phase is based on a review of your participation and contributions.</p>
                                             </div>
                                         </div>
+                                         <Button asChild variant="link" className="p-0 h-auto mt-4">
+                                            <Link href="/program-policy">
+                                                Read Full Policy <ArrowRight className="ml-2 h-4 w-4" />
+                                            </Link>
+                                        </Button>
                                     </CardContent>
                                 </Card>
                             </div>
