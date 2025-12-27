@@ -86,7 +86,7 @@ export default function Home() {
 
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="how-it-works">
-                                    <AccordionTrigger className="font-semibold text-lg">💬 How It Works</AccordionTrigger>
+                                    <AccordionTrigger className="font-semibold text-lg">How It Works</AccordionTrigger>
                                     <AccordionContent>
                                         <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2">
                                             <li>Start a conversation with EmpowerFly Assistant</li>
@@ -97,7 +97,7 @@ export default function Home() {
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="what-to-ask">
-                                    <AccordionTrigger className="font-semibold text-lg">✨ You Can Ask Things Like:</AccordionTrigger>
+                                    <AccordionTrigger className="font-semibold text-lg">You Can Ask Things Like:</AccordionTrigger>
                                     <AccordionContent>
                                         <ul className="list-disc list-inside space-y-1 text-foreground/80 mt-2 italic">
                                             <li>“I’m returning to work after a break — where should I start?”</li>
