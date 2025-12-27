@@ -60,13 +60,13 @@ export const faqData: FaqCategory[] = [
     {
         title: "About Our Program (Sangini Udaan : EmpowerFly)",
         questions: [
-             {
+            {
                 question: "What is the 'Sangini Udaan : EmpowerFly' program?",
                 answer: "It is the flagship empowerment and mentorship program of SheCodesHerWay. It's a guided journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
             },
             {
-                question: "Who can apply for this program?",
-                answer: "The program is open to any woman who wants to grow. This includes students, freshers, homemakers, women restarting their careers after a break, educators, social leaders, and first-time digital learners. No prior experience is required.",
+                question: "Who is the 'Sangini Udaan : EmpowerFly' program for?",
+                answer: "Sangini Udaan : EmpowerFly is our flagship empowerment and mentorship program designed for any woman who wants to grow. Whether you're interested in tech, starting a business, exploring your creativity, or developing soft skills, there's a path for you.",
             },
             {
                 question: "What are the different learning tracks available?",
@@ -126,24 +126,24 @@ export const faqData: FaqCategory[] = [
                 answer: "We welcome professionals and students who are passionate about giving back. As a mentor, you would provide guidance, share your industry experience, and help mentees achieve their goals. You can apply on our 'Become a Mentor' page.",
             },
             {
-                question: "What benefits do contributors and interns receive?",
-                answer: "Contributors receive recognition, including tiered certificates (Diamond for 3 months, Platinum for 6 months) and a 'Top Contributor' spotlight for exceptional work. You also gain hands-on experience for your portfolio and LinkedIn profile.",
+                question: "What is the duration of the collaboration?",
+                answer: "The initial collaboration period is 3 months. A second phase of 3 months is possible, subject to reapplication and selection based on performance. High-performing individuals may be able to continue for up to 1 year.",
             },
             {
-                question: "What is the duration of the collaboration?",
-                answer: "The initial collaboration period is 3 months. After that, a second 3-month phase is possible, subject to reapplication and selection based on performance. This can be extended up to 1 year for high-performing individuals who wish to continue.",
-            },
-             {
                 question: "How should I represent my role at SheCodesHerWay?",
-                answer: "You should identify yourself as a 'Contributor' or 'Intern'. It is an unpaid internship/collaboration, not a formal team role. If you perform well, there may be an opportunity to be considered for a permanent position in the future, but it is not guaranteed."
+                answer: "You should identify yourself as a 'Contributor' or 'Intern'. This is an unpaid internship/collaboration, not a formal team role. Your contributions are highly valued as part of this learning and impact-driven engagement."
             },
             {
                 question: "Will collaboration lead to a paid job?",
-                answer: "While paid roles are not guaranteed, after 1 year of collaboration, high-performing contributors may be considered for a paid part-time role, depending on company growth, funding, and a formal interview process.",
+                answer: "While paid roles are not guaranteed, high-performing contributors may be considered for a paid part-time role after 1 year of collaboration, depending on company growth, funding, and a formal interview process. If I work well, I may get a chance to become a permanent member."
             },
             {
                 question: "What is the legal status of a collaborator?",
                 answer: "Collaboration is voluntary and does not create an employer-employee, contractor, or formal internship relationship. It is a non-binding engagement focused on learning and impact.",
+            },
+            {
+                question: "What benefits do contributors and interns receive?",
+                answer: "Contributors receive recognition, including tiered certificates (Diamond for 3 months, Platinum for 6 months) and a 'Top Contributor' spotlight for exceptional work. You also gain hands-on experience for your portfolio and LinkedIn profile.",
             },
         ]
     },
