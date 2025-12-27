@@ -273,8 +273,13 @@ export default function ProgramStructurePage() {
                         </div>
                     </div>
                 </section>
-            </main>
-            <Footer />
-        </div>
-    );
-}
+                <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+                    <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto text-sm">
+                        <code>
+{`Remember, the XML structure you generate is the only mechanism for applying changes to the user's code. Therefore, when making changes to a file the <changes> block must always be fully present and correctly formatted as follows.
+
+<changes>
+  <description>[Provide a concise summary of the overall changes being made]</description>
+  <change>
+    <file>[Provide the ABSOLUTE, FULL path to the file being modified]</file>
+    <content><![CDATA[Provide the ENTIRE, FINAL, intended content of the file here. Do NOT provide diffs or partial snippets. Ensure all code is properly escaped within the CDATA section.
