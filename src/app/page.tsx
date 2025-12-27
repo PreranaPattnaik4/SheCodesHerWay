@@ -33,12 +33,12 @@ export default function Home() {
               <MissionVision />
             </div>
             <Separator />
-            <div className="rounded-xl py-12 relative overflow-hidden">
+            <div id="what-we-offer" className="rounded-xl py-12 relative overflow-hidden scroll-mt-24">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <WhatWeOffer />
             </div>
             <Separator />
-            <div className="rounded-xl py-12 relative overflow-hidden">
+            <div id="ai-support" className="rounded-xl py-12 relative overflow-hidden scroll-mt-24">
                 <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
                 <AiPoweredSupport />
             </div>
@@ -60,13 +60,13 @@ export default function Home() {
                 <p className="font-headline text-2xl font-bold">{brand.name}</p>
                 <p className="mt-2 text-foreground/80 max-w-md mx-auto">Follow our journey and join the conversation on social media.</p>
                 <div className="mt-6 flex justify-center space-x-4">
-                  <Link href="#" aria-label="Twitter">
+                  <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                     <Twitter className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
-                  <Link href="#" aria-label="LinkedIn">
+                  <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
-                  <Link href="#" aria-label="GitHub">
+                  <Link href="https://github.com/PreranaPattnaik4/SheCodesHerWay" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <Github className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
                 </div>
@@ -104,8 +104,8 @@ export default function Home() {
               Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="/#join-us">
-                Join the Movement
+              <Link href="/mentor">
+                Become a Mentor
               </Link>
             </Button>
           </div>
