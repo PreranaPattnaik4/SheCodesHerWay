@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Scale, Clock, Award, Star, CheckCircle, GitBranch, Lightbulb, Users, Heart, Briefcase, GraduationCap } from 'lucide-react';
+import { ArrowLeft, Scale, Clock, Award, Star, CheckCircle, GitBranch, Lightbulb, Users, Heart, Briefcase, GraduationCap, RefreshCw } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 
@@ -109,6 +109,37 @@ export default function ProgramPolicyPage() {
                             </div>
                             
                             <p className="mt-6 font-semibold text-primary">Program Integrity Statement: The evaluation process exists to encourage growth, recognize effort, support leadership, and maintain program credibility. SheCodesHerWay commits to ensuring a respectful, motivating, and empowering evaluation experience.</p>
+                        </SectionCard>
+
+                        <Separator />
+
+                        <SectionCard icon={RefreshCw} title="Track Change Request Policy">
+                            <p>Participants enrolled in Sangini Udaan : EmpowerFly are expected to commit to their selected learning track. However, to support informed decision-making and learner comfort, a limited track change window is provided at the beginning of the program.</p>
+                            
+                            <h4 className="font-semibold mt-6">Track Change Eligibility Window</h4>
+                            <ul>
+                                <li>A participant may apply for a track change only within the <strong>first 15 days</strong> from the official program start date.</li>
+                                <li>This option is available only if the participant feels another track aligns better with her interests, strengths, or learning goals.</li>
+                                <li>Track change requests are not automatic and are subject to review.</li>
+                            </ul>
+
+                            <h4 className="font-semibold mt-6">Conditions for Track Change Approval</h4>
+                            <p>The request must be submitted through the official track change request process defined by SheCodesHerWay. Approval depends on:</p>
+                            <ul>
+                                <li>Program structure feasibility</li>
+                                <li>Learning progress during the first 15 days</li>
+                                <li>Availability within the requested track</li>
+                                <li>Team assessment and alignment</li>
+                            </ul>
+
+                             <h4 className="font-semibold mt-6">Strict Cut-Off After 15 Days</h4>
+                            <p>No track change requests will be accepted after the first 15 days, under any circumstances. Once the 15-day window closes, track selection becomes final and no further changes, switches, or transfers are permitted. This rule applies to all specialized tracks, the All-in-One Track, and both Tech and Non-Tech foundations.</p>
+
+                             <h4 className="font-semibold mt-6">Reason for This Policy</h4>
+                            <p>This policy exists to maintain learning continuity, protect project planning and evaluations, ensure fairness for all participants, and avoid disruption during demo and live project phases.</p>
+
+                             <h4 className="font-semibold mt-6">Final Authority</h4>
+                            <p>All track change decisions are made by the SheCodesHerWay team, and such decisions are final and non-negotiable.</p>
                         </SectionCard>
 
                     </div>
