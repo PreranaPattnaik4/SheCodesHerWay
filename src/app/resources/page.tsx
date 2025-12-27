@@ -3,12 +3,13 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Download, ExternalLink, FileText, LayoutTemplate, Link as LinkIcon, Search, CheckCircle2, Rocket } from 'lucide-react';
+import { Download, ExternalLink, FileText, LayoutTemplate, Link as LinkIcon, Search, CheckCircle2, Rocket, Info } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const resources = [
   {
@@ -153,8 +154,14 @@ export default function ResourcesPage() {
     <div className="flex min-h-dvh flex-col">
       <Header />
       <main className="flex-1">
-        <section className="bg-secondary py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
+        <section className="relative bg-secondary py-16 md:py-24">
+            <Image
+                src="https://picsum.photos/seed/project1/1200/400"
+                alt="Abstract background image for resources"
+                fill
+                className="object-cover opacity-20"
+            />
+            <div className="container relative mx-auto px-4 text-center">
                 <h1 className="font-headline text-4xl font-bold md:text-6xl">Resources</h1>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
                     Explore curated resources, guides, and references to support your learning and project work. Access downloadable content and important materials from trusted sources—all in one place.
@@ -163,6 +170,13 @@ export default function ResourcesPage() {
         </section>
 
         <section className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+            <Alert variant="destructive" className="mb-12 max-w-4xl mx-auto bg-amber-50 border-amber-200 text-amber-800 [&>svg]:text-amber-600">
+              <Info className="h-4 w-4" />
+              <AlertTitle className="font-bold">Demonstration Content</AlertTitle>
+              <AlertDescription>
+                All resources will be available soon. The content on this page is currently for prototype and demonstration purposes only.
+              </AlertDescription>
+            </Alert>
             <div className="mb-12">
                 <div className="relative max-w-lg mx-auto">
                     <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
