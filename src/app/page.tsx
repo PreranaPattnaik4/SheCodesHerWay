@@ -246,11 +246,6 @@ export default function Home() {
               </div>
             </div>
             <Separator />
-            <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
-               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
-              <ImpactGoals />
-            </div>
-            <Separator />
             <div id="impact-ecosystem" className="rounded-xl py-12 relative overflow-hidden">
               <div className="text-center mb-12">
                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Impact &amp; Ecosystem</h2>
@@ -285,6 +280,11 @@ export default function Home() {
                       </div>
                   </Card>
               </div>
+            </div>
+            <Separator />
+            <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
+               <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
+              <ImpactGoals />
             </div>
             <Separator />
             <div id="faq" className="rounded-xl py-12 relative overflow-hidden">
