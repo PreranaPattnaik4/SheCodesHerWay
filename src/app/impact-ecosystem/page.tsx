@@ -226,16 +226,11 @@ export default function ImpactEcosystemPage() {
 
                          <Separator/>
                         
-                        <Card className="shadow-lg">
-                            <CardHeader>
-                                <CardTitle className="text-2xl font-bold flex items-center gap-4"><Goal className="text-primary"/>9. Founder Statement (Official Use)</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-foreground/90">
-                                    “SheCodesHerWay is intentionally designed for sustainable impact. We run three structured program cohorts each year, supported by a stable core team, rotating contributors, and a diverse mentor ecosystem. This model allows us to empower nearly 1,000 women annually while maintaining clarity, quality, and long-term vision.”
-                                </blockquote>
-                            </CardContent>
-                        </Card>
+                        <SectionCard icon={Goal} title="9. Founder Statement (Official Use)">
+                            <blockquote className="border-l-4 border-primary pl-4 italic text-lg text-foreground/90">
+                                “SheCodesHerWay is intentionally designed for sustainable impact. We run three structured program cohorts each year, supported by a stable core team, rotating contributors, and a diverse mentor ecosystem. This model allows us to empower nearly 1,000 women annually while maintaining clarity, quality, and long-term vision.”
+                            </blockquote>
+                        </SectionCard>
                         
                         <Card className="bg-destructive/10 border-destructive/20 shadow-lg">
                             <CardHeader className="flex flex-row items-center gap-4">
