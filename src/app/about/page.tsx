@@ -132,7 +132,7 @@ export default function AboutPage() {
                                         About Us
                                         <span className="absolute -bottom-2 left-0 w-full h-0.5 bg-primary"></span>
                                     </Link>
-                                    <Link href="/contact" className="hover:text-primary">Contact</Link>
+                                    <Link href="/contact" className="hover_text-primary">Contact</Link>
                                 </div>
                                 <div className="w-16"></div>
                             </div>
@@ -166,10 +166,10 @@ export default function AboutPage() {
                                         SheCodesHerWay is officially stepping into a new chapter as a purpose-driven, women-led empowerment platform. Built to inspire, uplift, and guide women, the platform supports them in learning, leading, and rising—together.
                                     </p>
                                      <div className="mt-6 flex items-center gap-4">
-                                        <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={24}/></Link>
-                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube size={24}/></Link>
-                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram size={24}/></Link>
-                                        <Link href={`mailto:${brand.secondaryEmail}`} aria-label="Email" className="text-muted-foreground hover:text-primary"><Mail size={24}/></Link>
+                                        <Link href="https://www.linkedin.com/company/shecodesherway/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover_text-primary"><Linkedin size={24}/></Link>
+                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover_text-primary"><Youtube size={24}/></Link>
+                                        <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover_text-primary"><Instagram size={24}/></Link>
+                                        <Link href={`mailto:${brand.secondaryEmail}`} aria-label="Email" className="text-muted-foreground hover_text-primary"><Mail size={24}/></Link>
                                     </div>
                                 </div>
                             </div>
@@ -238,17 +238,17 @@ export default function AboutPage() {
                         <section>
                             <div className="grid md:grid-cols-2 gap-12 items-center">
                                 <div className="relative h-[450px]">
-                                {founderImage && (
+                                
                                     <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-lg overflow-hidden shadow-2xl">
                                     <Image
-                                        src={founderImage.imageUrl}
-                                        alt={founderImage.description}
+                                        src="https://i.postimg.cc/sXLGCQ8M/my-photo.png"
+                                        alt="Founder of SheCodesHerWay"
                                         fill
                                         className="object-cover"
-                                        data-ai-hint={founderImage.imageHint}
+                                        data-ai-hint="woman portrait"
                                     />
                                     </div>
-                                )}
+                                
                                 {image2 && (
                                     <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-lg overflow-hidden border-4 border-background shadow-2xl">
                                     <Image
@@ -267,9 +267,9 @@ export default function AboutPage() {
                                     <p className='italic text-muted-foreground'>Founder & Head of Platform Development | SheCodesHerWay</p>
                                     <p className="mt-4 text-foreground/80">A visionary committed to building a world where women can rise with confidence. She believes in equal opportunities, creativity, innovation, emotional empowerment, and community-driven learning. Her leadership blends compassion, courage, and creativity—the true essence of SheCodesHerWay.</p>
                                     <div className="mt-4 flex items-center gap-4">
-                                        <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin size={20}/></Link>
-                                        <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover:text-primary"><FileText size={20}/></Link>
-                                        <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter size={20}/></Link>
+                                        <Link href="https://www.linkedin.com/in/prerana-pattnaik/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover_text-primary"><Linkedin size={20}/></Link>
+                                        <Link href="https://medium.com/@preranakailashpattnaik" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-muted-foreground hover_text-primary"><FileText size={20}/></Link>
+                                        <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover_text-primary"><Twitter size={20}/></Link>
                                     </div>
                                     <p className="mt-4 text-foreground/80 font-semibold italic">Note of Gratitude: It takes a village to build a vision. This platform is a result of the efforts of our incredible early team members, mentors, and community voices who believed in this idea from day one. Their passion and dedication are the foundation of SheCodesHerWay.</p>
                                 </div>
@@ -336,7 +336,7 @@ export default function AboutPage() {
                                         {member.socials && (
                                             <div className="mt-4 flex items-center gap-4">
                                                 {member.socials.map((social, i) => (
-                                                    <Link key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.icon.displayName} className="text-muted-foreground hover:text-primary">
+                                                    <Link key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.icon.displayName} className="text-muted-foreground hover_text-primary">
                                                         <social.icon size={20}/>
                                                     </Link>
                                                 ))}
@@ -358,7 +358,7 @@ export default function AboutPage() {
                            <Card className="bg-accent/20 border-accent/50 shadow-lg">
                                 <CardHeader className="text-center">
                                     <CardTitle className="font-headline text-2xl md:text-3xl">
-                                        Join SheCodesHerWay – Core Team Collaboration!
+                                        Join SheCodesHerWay – Early Core Contributors!
                                     </CardTitle>
                                     <CardContent className="text-lg text-accent-foreground/90 pt-4">
                                         We’re inviting passionate, purpose-driven individuals to collaborate with us at SheCodesHerWay, a women-led, mission-driven startup (pre-seed stage).
