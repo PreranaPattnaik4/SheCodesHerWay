@@ -10,7 +10,7 @@ import Faq from '@/components/faq';
 import WhatWeOffer from '@/components/home/what-we-offer';
 import StartupSchool from '@/components/home/startup-school';
 import Features from '@/components/home/features';
-import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket, UserCheck } from 'lucide-react';
+import { Github, Linkedin, Twitter, Handshake, Bot, Mail, Users, User, Rocket, UserCheck, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { brand } from '@/lib/brand';
 import CommunityVision from '@/components/home/community-vision';
@@ -248,6 +248,42 @@ export default function Home() {
                     <Github className="h-7 w-7 text-foreground/80 transition-colors hover:text-primary" />
                   </Link>
                 </div>
+              </div>
+            </div>
+            <Separator />
+            <div id="impact-ecosystem" className="rounded-xl py-12 relative overflow-hidden">
+              <div className="text-center mb-12">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Impact &amp; Ecosystem</h2>
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                  Our model is designed for sustainable impact, balancing quality learning with long-term ecosystem growth.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+                  <Card className="shadow-lg h-full">
+                      <CardHeader>
+                          <CardTitle className="font-headline text-2xl">Our Sustainable Model</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                          <blockquote className="border-l-4 border-primary pl-4 italic text-foreground/80">
+                            “SheCodesHerWay is intentionally designed for sustainable impact. We run three structured program cohorts each year, supported by a stable core team, rotating contributors, and a diverse mentor ecosystem. This model allows us to empower nearly 1,000 women annually while maintaining clarity, quality, and long-term vision.”
+                          </blockquote>
+                           <Button asChild variant="link" className="p-0 h-auto mt-4">
+                                <Link href="/impact-ecosystem">
+                                    Learn more about our ecosystem <ArrowRight className="ml-2"/>
+                                </Link>
+                            </Button>
+                      </CardContent>
+                  </Card>
+                  <Card className="shadow-lg overflow-hidden h-full">
+                      <div className="relative h-80 w-full">
+                          <Image 
+                              src="https://i.postimg.cc/SNChpq4n/Brown_Neutral_Minimalist_Free_Download_Mockup_Banner.png" 
+                              alt="Impact and Ecosystem banner" 
+                              fill
+                              className="object-cover"
+                          />
+                      </div>
+                  </Card>
               </div>
             </div>
             <Separator />
