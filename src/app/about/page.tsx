@@ -139,7 +139,7 @@ export default function AboutPage() {
                             
                             {/* Card Content */}
                             <div className="p-8 md:p-12">
-                                <div className="grid md:grid-cols-2 gap-8 items-center">
+                                <div className="grid md:grid-cols-2 gap-0 items-center">
                                     <div className="relative">
                                         <h1 className="font-headline text-8xl md:text-9xl font-bold text-foreground">
                                             About
