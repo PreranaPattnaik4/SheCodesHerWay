@@ -295,25 +295,25 @@ export default function Home() {
         </div>
         <CommunityVision />
         
-        <section className="bg-muted py-20">
+        <section className="bg-foreground text-background py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to Make an Impact?</h2>
             <div className="mt-8 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="space-y-4">
-                    <p className="text-lg text-foreground/80">
+                    <p className="text-lg text-background/80">
                         Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
                     </p>
-                    <Button asChild size="lg">
+                    <Button asChild size="lg" variant="secondary">
                         <Link href="/mentor">
                         Become a Mentor
                         </Link>
                     </Button>
                 </div>
                 <div className="space-y-4">
-                    <p className="text-lg text-foreground/80">
+                    <p className="text-lg text-background/80">
                         Passionate about our mission? Join the founding circle as an Early Core Contributor and help build our platform from the ground up.
                     </p>
-                     <Button asChild size="lg" variant="secondary">
+                     <Button asChild size="lg" variant="outline">
                         <Link href="/careers">
                         Join as a Contributor
                         </Link>
@@ -328,4 +328,3 @@ export default function Home() {
     </div>
   );
 }
-
