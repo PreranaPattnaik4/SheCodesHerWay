@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Users, UserCheck, HeartHandshake, Rocket, TrendingUp, CheckCircle, Lock, Info, Goal, Bot, BrainCircuit } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import Image from 'next/image';
 
 const SectionCard = ({ icon, title, description, children, badgeText }: { icon: React.ElementType, title: string, description?: string, children: React.ReactNode, badgeText?: string }) => (
     <Card className="shadow-lg">
@@ -34,8 +35,14 @@ export default function ImpactEcosystemPage() {
         <div className="flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">
-                <section className="bg-secondary py-16 md:py-24">
-                    <div className="container mx-auto px-4 text-center">
+                <section className="relative bg-secondary py-16 md:py-24">
+                    <Image
+                        src="https://i.postimg.cc/SNChpq4n/Brown-Neutral-Minimalist-Free-Download-Mockup-Banner.png"
+                        alt="Impact and Ecosystem banner"
+                        fill
+                        className="object-cover opacity-20"
+                    />
+                    <div className="container relative mx-auto px-4 text-center">
                         <Rocket className="mx-auto h-12 w-12 text-primary" />
                         <h1 className="mt-4 font-headline text-4xl font-bold md:text-6xl">Impact & Ecosystem</h1>
                         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
