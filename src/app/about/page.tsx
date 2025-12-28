@@ -278,6 +278,21 @@ export default function AboutPage() {
 
                         <Separator />
 
+                        <section className="max-w-4xl mx-auto">
+                            <h2 className="text-center font-headline text-3xl font-bold md:text-4xl">Why We Started</h2>
+                            <div className="prose prose-lg dark:prose-invert max-w-none mx-auto mt-6 text-foreground/80 space-y-4">
+                                <p>SheCodesHerWay was born from a deeply personal journey of resilience, self-belief, and the courage to begin again.</p>
+                                <p>During my academic years and the early phase of my career, I was confident, hardworking, and deeply passionate about coding. Technology was never just a skill for me—it was a way of thinking, creating, and solving problems. However, after a long career gap, I faced the reality that traditional career paths were no longer welcoming or flexible.</p>
+                                <p className="font-semibold text-foreground/90 italic">At that moment, I made a clear decision: If the existing paths no longer worked, I would create my own. I would code my way.</p>
+                                <p>By choosing not to hold myself back, I found my path forward. That courage, consistency, and belief led to success—and with that success came a deeper responsibility. If I could rise by believing in myself, it became my turn to pass that empowerment and self-belief on to others.</p>
+                                <p>That belief became the foundation of SheCodesHerWay—a platform designed for women who want to restart, rebuild, or redefine their careers without pressure, comparison, or limitation. It is built on the idea that every woman deserves the freedom to grow at her own pace and design success on her own terms.</p>
+                                <p>While shaping the platform, it became evident that true transformation requires more than technical skills alone. Women need emotional support, confidence-building, mentorship, and a strong sense of community. This realization led to the creation of our flagship women empowerment program, Sangini Udaan : EmpowerFly—a journey of companionship, growth, and empowerment.</p>
+                                <p className="font-semibold text-foreground/90">SheCodesHerWay exists to remind women that career gaps do not define potential, and pauses do not erase talent. With the right guidance, skills, and support, every woman can rise—her way.</p>
+                            </div>
+                        </section>
+
+                        <Separator />
+
                         <section>
                             <div className="text-center mb-12">
                                 <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Team</h2>
