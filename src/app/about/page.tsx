@@ -20,6 +20,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import LogoIcon from '@/components/logo-icon';
+import Logo from '@/components/logo';
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -139,21 +141,16 @@ export default function AboutPage() {
                             <div className="p-8 md:p-12">
                                 <div className="grid md:grid-cols-2 gap-8 items-center">
                                     <div className="relative">
-                                        <h1 className="font-headline text-5xl md:text-7xl font-bold text-foreground">
+                                        <h1 className="font-headline text-8xl md:text-9xl font-bold text-foreground">
                                             About
                                             <br />
                                             Us
                                         </h1>
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
-                                    <div>
-                                        <div className="relative h-96 md:h-[480px] rounded-lg overflow-hidden">
-                                            <Image
-                                                src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
-                                                alt="About illustration"
-                                                fill
-                                                className="object-cover"
-                                            />
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-64 h-64">
+                                            <Logo />
                                         </div>
                                     </div>
                                 </div>
