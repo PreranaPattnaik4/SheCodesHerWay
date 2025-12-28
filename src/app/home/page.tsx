@@ -35,6 +35,7 @@ export default function Home() {
   const inclusiveImage1 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-1');
   const inclusiveImage2 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-2');
   const inclusiveImage3 = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-3');
+  const ecosystemImage = PlaceHolderImages.find((p) => p.id === 'inclusive-approach-1');
 
 
   return (
@@ -162,6 +163,45 @@ export default function Home() {
             <div id="impact" className="rounded-xl py-12 relative overflow-hidden">
                <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/10 via-white/0 to-white/0"></div>
               <ImpactGoals />
+            </div>
+            <Separator />
+            <div id="impact-ecosystem" className="rounded-xl py-12 relative overflow-hidden">
+              <div className="text-center mb-12">
+                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Impact &amp; Ecosystem</h2>
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+                  Our model is designed for sustainable impact, balancing quality learning with long-term ecosystem growth.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+                  <Card className="shadow-lg h-full">
+                      <CardHeader>
+                          <CardTitle className="font-headline text-2xl">Our Sustainable Model</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                          <blockquote className="border-l-4 border-primary pl-4 italic text-foreground/80">
+                            “SheCodesHerWay is intentionally designed for sustainable impact. We run three structured program cohorts each year, supported by a stable core team, rotating contributors, and a diverse mentor ecosystem. This model allows us to empower nearly 1,000 women annually while maintaining clarity, quality, and long-term vision.”
+                          </blockquote>
+                           <Button asChild variant="link" className="p-0 h-auto mt-4">
+                                <Link href="/impact-ecosystem">
+                                    Learn more about our ecosystem <ArrowRight className="ml-2"/>
+                                </Link>
+                            </Button>
+                      </CardContent>
+                  </Card>
+                  <Card className="shadow-lg overflow-hidden h-full">
+                      {ecosystemImage && (
+                          <div className="relative h-80 w-full">
+                              <Image 
+                                  src={ecosystemImage.imageUrl} 
+                                  alt={ecosystemImage.description} 
+                                  fill
+                                  className="object-cover"
+                                  data-ai-hint={ecosystemImage.imageHint}
+                              />
+                          </div>
+                      )}
+                  </Card>
+              </div>
             </div>
             <Separator />
             <div id="features" className="rounded-xl py-12 relative overflow-hidden">
