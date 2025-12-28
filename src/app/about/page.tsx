@@ -14,6 +14,12 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import CoreActivities from '@/components/home/core-activities';
 import Roadmap from '@/components/home/roadmap';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const coreValues = [
     { value: "Empowerment", meaning: "Helping women find their voice and independence" },
@@ -375,58 +381,63 @@ export default function AboutPage() {
 
                         <Separator />
                         
-                        <section className="bg-white py-20">
-                            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="text-center mb-12">
-                                    <h2 className="font-headline text-3xl font-bold">Our Inclusive Approach</h2>
-                                </div>
-                                <Card className="max-w-3xl mx-auto shadow-lg bg-accent/20">
-                                    <CardHeader>
-                                        <CardTitle>Inclusive Participation Policy</CardTitle>
-                                    </CardHeader>
-                                    <CardContent className="text-lg text-accent-foreground/90">
-                                        <p>SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
-                                        <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
-                                        <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
-                                    </CardContent>
-                                </Card>
-                            </div>
-                        </section>
+                        <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto space-y-4">
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger className="text-xl font-bold font-headline py-4">Our Inclusive Approach</AccordionTrigger>
+                                <AccordionContent>
+                                    <section className="bg-white py-10">
+                                        <Card className="max-w-3xl mx-auto shadow-lg bg-accent/20">
+                                            <CardHeader>
+                                                <CardTitle>Inclusive Participation Policy</CardTitle>
+                                            </CardHeader>
+                                            <CardContent className="text-lg text-accent-foreground/90">
+                                                <p>SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
+                                                <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
+                                                <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
+                                            </CardContent>
+                                        </Card>
+                                    </section>
+                                </AccordionContent>
+                            </AccordionItem>
 
-                        <Separator />
+                            <AccordionItem value="item-2">
+                                <AccordionTrigger className="text-xl font-bold font-headline py-4">Our Core Values</AccordionTrigger>
+                                <AccordionContent>
+                                     <section className="py-10">
+                                        <Card className="max-w-2xl mx-auto shadow-lg bg-white">
+                                            <CardContent className="pt-6">
+                                                <Table>
+                                                    <TableHeader>
+                                                        <TableRow>
+                                                        <TableHead className="w-1/3">Value</TableHead>
+                                                        <TableHead>Meaning</TableHead>
+                                                        </TableRow>
+                                                    </TableHeader>
+                                                    <TableBody>
+                                                        {coreValues.map((item) => (
+                                                        <TableRow key={item.value}>
+                                                            <TableCell className="font-medium">{item.value}</TableCell>
+                                                            <TableCell>{item.meaning}</TableCell>
+                                                        </TableRow>
+                                                        ))}
+                                                    </TableBody>
+                                                </Table>
+                                            </CardContent>
+                                        </Card>
+                                    </section>
+                                </AccordionContent>
+                            </AccordionItem>
 
-                        <section>
-                            <div className="text-center mb-10">
-                                <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Core Values</h2>
-                            </div>
-                            <Card className="max-w-2xl mx-auto shadow-lg bg-white">
-                                <CardContent className="pt-6">
-                                     <Table>
-                                        <TableHeader>
-                                            <TableRow>
-                                            <TableHead className="w-1/3">Value</TableHead>
-                                            <TableHead>Meaning</TableHead>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody>
-                                            {coreValues.map((item) => (
-                                            <TableRow key={item.value}>
-                                                <TableCell className="font-medium">{item.value}</TableCell>
-                                                <TableCell>{item.meaning}</TableCell>
-                                            </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
-                        </section>
-
-                        <Separator />
-                        
-                        <div className="grid gap-20 lg:grid-cols-2 lg:gap-12 items-start">
-                            <CoreActivities />
-                            <Roadmap />
-                        </div>
+                             <AccordionItem value="item-3">
+                                <AccordionTrigger className="text-xl font-bold font-headline py-4">Core Activities & Future Roadmap</AccordionTrigger>
+                                <AccordionContent>
+                                    <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start py-10">
+                                        <CoreActivities />
+                                        <Roadmap />
+                                    </div>
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
                     </div>
                 </div>
             </main>
@@ -434,5 +445,3 @@ export default function AboutPage() {
         </div>
     );
 }
-
-    
