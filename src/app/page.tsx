@@ -295,12 +295,12 @@ export default function Home() {
         </div>
         <CommunityVision />
         
-        <section className="bg-foreground text-background py-20">
+        <section className="bg-primary text-primary-foreground py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-3xl font-bold md:text-4xl">Ready to Make an Impact?</h2>
             <div className="mt-8 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="space-y-4">
-                    <p className="text-lg text-background/80">
+                    <p className="text-lg text-primary-foreground/80">
                         Your experience and passion can inspire the next generation of women leaders. Join us as a mentor and help shape the future.
                     </p>
                     <Button asChild size="lg" variant="secondary">
@@ -310,10 +310,10 @@ export default function Home() {
                     </Button>
                 </div>
                 <div className="space-y-4">
-                    <p className="text-lg text-background/80">
+                    <p className="text-lg text-primary-foreground/80">
                         Passionate about our mission? Join the founding circle as an Early Core Contributor and help build our platform from the ground up.
                     </p>
-                     <Button asChild size="lg" variant="outline">
+                     <Button asChild size="lg" variant="outline" className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
                         <Link href="/careers">
                         Join as a Contributor
                         </Link>
