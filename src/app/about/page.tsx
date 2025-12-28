@@ -149,7 +149,7 @@ export default function AboutPage() {
                                         <div className="absolute top-1/2 -right-4 w-2/3 h-1/2 bg-primary/10 -z-0 blur-3xl"></div>
                                     </div>
                                     <div className="flex items-center justify-center">
-                                        <div className="relative w-64 h-64">
+                                        <div className="relative w-[32rem] h-[32rem]">
                                             <Image
                                                 src="https://i.postimg.cc/VLnm9Pvt/Generated_Image_November_05_2025_8_01AM_Copy.png"
                                                 alt="SheCodesHerWay logo"
