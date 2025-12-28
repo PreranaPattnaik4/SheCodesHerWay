@@ -17,8 +17,6 @@ export const homeFaqData: FAQ[] = [
     faqData[3].questions[0], // What is the EmpowerFly Assistant?
     faqData[3].questions[1], // What is the Executive Summary Generator?
     faqData[3].questions[7], // Why are some AI tools marked as 'Coming Soon'?
-    faqData[4].questions[0], // What personal information do you collect?
-    faqData[4].questions[2], // Is my information shared with third parties?
+    faqData[5].questions[0], // What personal information do you collect?
+    faqData[5].questions[2], // Is my information shared with third parties?
 ];
-
-    
