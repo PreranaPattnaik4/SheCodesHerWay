@@ -196,26 +196,6 @@ export default function CareersPage() {
             </div>
         </section>
 
-        <Separator />
-
-        <section className="bg-white py-20">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12">
-                    <h2 className="font-headline text-3xl font-bold">Our Inclusive Approach</h2>
-                </div>
-                <Card className="max-w-3xl mx-auto shadow-lg bg-accent/20">
-                    <CardHeader>
-                        <CardTitle>Inclusive Participation Policy</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-lg text-accent-foreground/90">
-                        <p>SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
-                        <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
-                        <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
-                    </CardContent>
-                </Card>
-            </div>
-        </section>
-
         <section className="container mx-auto px-4 pb-20 sm:px-6 lg:px-8 text-center">
             <h2 className="font-headline text-3xl font-bold">Don't see a fit?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
@@ -230,3 +210,5 @@ export default function CareersPage() {
     </div>
   );
 }
+
+    

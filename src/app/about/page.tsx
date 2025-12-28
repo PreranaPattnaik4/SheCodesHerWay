@@ -360,6 +360,38 @@ export default function AboutPage() {
                                 </CardContent>
                             </Card>
                         </section>
+                        
+                        <Separator/>
+
+                        <section className="max-w-4xl mx-auto text-center">
+                            <h2 className="font-headline text-3xl font-bold md:text-4xl">Join the Movement</h2>
+                            <p className="mt-4 text-lg text-foreground/80">
+                                SheCodesHerWay isn’t just a startup — it’s a movement of women who dare to dream, build, and rise together. Whether you want to learn a new skill, start your career, or launch your own venture, we’re here to guide, mentor, and celebrate your journey.
+                            </p>
+                             <Button asChild size="lg" className="mt-8">
+                                <Link href="/apply">Join Us - Let's Build Your Path</Link>
+                            </Button>
+                        </section>
+
+                        <Separator />
+                        
+                        <section className="bg-white py-20">
+                            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="text-center mb-12">
+                                    <h2 className="font-headline text-3xl font-bold">Our Inclusive Approach</h2>
+                                </div>
+                                <Card className="max-w-3xl mx-auto shadow-lg bg-accent/20">
+                                    <CardHeader>
+                                        <CardTitle>Inclusive Participation Policy</CardTitle>
+                                    </CardHeader>
+                                    <CardContent className="text-lg text-accent-foreground/90">
+                                        <p>SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform.</p>
+                                        <p className="mt-4">However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program.</p>
+                                        <p className="mt-4">As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.</p>
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </section>
 
                         <Separator />
 
@@ -395,19 +427,6 @@ export default function AboutPage() {
                             <CoreActivities />
                             <Roadmap />
                         </div>
-                        
-                        <Separator/>
-
-                        <section className="max-w-4xl mx-auto text-center">
-                            <h2 className="font-headline text-3xl font-bold md:text-4xl">Join the Movement</h2>
-                            <p className="mt-4 text-lg text-foreground/80">
-                                SheCodesHerWay isn’t just a startup — it’s a movement of women who dare to dream, build, and rise together. Whether you want to learn a new skill, start your career, or launch your own venture, we’re here to guide, mentor, and celebrate your journey.
-                            </p>
-                             <Button asChild size="lg" className="mt-8">
-                                <Link href="/apply">Join Us - Let's Build Your Path</Link>
-                            </Button>
-                        </section>
-
                     </div>
                 </div>
             </main>
@@ -415,3 +434,5 @@ export default function AboutPage() {
         </div>
     );
 }
+
+    
