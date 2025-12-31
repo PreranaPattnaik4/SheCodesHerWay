@@ -34,7 +34,7 @@ export default function PromotionalPage() {
         <div className="mt-10 rounded-lg bg-background/80 p-6 shadow-2xl backdrop-blur-sm">
             <h2 className="text-xl font-bold text-primary">Stay Tuned for the Launch!</h2>
             <p className="mt-2 text-foreground/80">
-                We are working hard to bring you an empowering new experience. Follow our journey on social media for the latest updates.
+                We are working hard to bring you an empowering new experience. Until then, stay connected with us on social media for the latest updates.
             </p>
             <div className="mt-6 flex justify-center space-x-6">
                 <Link href="https://x.com/preranakailash4" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
