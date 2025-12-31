@@ -15,8 +15,8 @@ export const homeFaqData: FAQ[] = [
     faqData[3].questions[0], // What is the EmpowerFly Assistant?
     faqData[3].questions[1], // What is the Executive Summary Generator?
     faqData[3].questions[7], // Why are some AI tools marked as 'Coming Soon'?
+    faqData[0].questions.find(q => q.question === 'When will the full SheCodesHerWay platform be launched?'),
     faqData[5].questions[0], // What personal information do you collect?
     faqData[5].questions[2], // Is my information shared with third parties?
     faqData[6].questions[3], // Will completing courses on SheCodesHerWay help me earn a degree?
-    faq.find(c => c.title === 'Participation & Inclusivity')?.questions.find(q => q.question === 'Is this platform designed only for women, or are there opportunities and benefits available for men as well?'),
 ].filter(Boolean) as FAQ[];

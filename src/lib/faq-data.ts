@@ -59,6 +59,10 @@ export const faqData: FaqCategory[] = [
                 question: "The platform seems to be in an early stage. What does this mean?",
                 answer: "Yes, SheCodesHerWay is currently a pre-seed stage startup. This means we are in the foundational phase of building our platform and community. Joining now makes you part of our early journey, with opportunities to contribute, shape our direction, and grow with us.",
             },
+            {
+                question: "When will the full SheCodesHerWay platform be launched?",
+                answer: "Our platform is currently under intensive development. We are working hard to bring you an empowering new experience very soon. For the latest updates and the official launch announcement, please follow our journey on our social media channels. We appreciate your patience and excitement!",
+            },
         ]
     },
     {
@@ -210,10 +214,6 @@ export const faqData: FaqCategory[] = [
             {
                 question: "Is this platform designed only for women, or are there opportunities and benefits available for men as well?",
                 answer: "Our flagship program, Sangini Udaan : EmpowerFly, is exclusively for women. However, men are welcome to join as mentors, collaborators, or contributors. We are also planning to launch programs for all genders soon. Stay tuned!",
-            },
-             {
-                question: "Is this platform designed only for women, or are there opportunities and benefits available for men as well?",
-                answer: "Our flagship program, Sangini Udaan : EmpowerFly, is exclusively for women. However, men are welcome to join as mentors, collaborators, or contributors. We are also planning to launch programs for all genders soon. Stay tuned!"
             },
         ],
     },
