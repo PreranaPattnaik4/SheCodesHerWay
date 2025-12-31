@@ -16,8 +16,8 @@ export const faqData: FaqCategory[] = [
         title: "About SheCodesHerWay",
         questions: [
             {
-                question: "What is SheCodesHerWay?",
-                answer: "SheCodesHerWay is a women-led empowerment startup and platform founded by Prerana Kailash Pattnaik. Its mission is to help women build their path, lead their way, and leave their mark by providing resources for growth in technology, creativity, entrepreneurship, leadership, and emotional strength.",
+                question: "What this platform is all about?",
+                answer: "SheCodesHerWay is a women-led empowerment startup and platform with the mission to help women build their path, lead their way, and leave their mark. We provide resources for growth in technology, creativity, entrepreneurship, leadership, and emotional strength.",
             },
             {
                 question: "What is the mission and vision of SheCodesHerWay?",
@@ -65,8 +65,8 @@ export const faqData: FaqCategory[] = [
         title: "About Our Program (Sangini Udaan : EmpowerFly)",
         questions: [
             {
-                question: "What is the 'Sangini Udaan : EmpowerFly' program?",
-                answer: "It is the flagship empowerment and mentorship program of SheCodesHerWay. It's a guided journey created to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
+                question: "TELL ME ABOUT THE PROGRAM THAT THIS PLATFORM OFFER",
+                answer: "Our flagship program is 'Sangini Udaan : EmpowerFly'. It is a comprehensive empowerment and mentorship journey designed to help women build skills, confidence, and clarity across technology, creativity, business, and leadership.",
             },
             {
                 question: "Who is the 'Sangini Udaan : EmpowerFly' program for?",
@@ -105,8 +105,8 @@ export const faqData: FaqCategory[] = [
                 answer: "Outcomes vary by track but generally include a strong portfolio of real-world projects, enhanced digital confidence, improved leadership and communication skills, and career, startup, or independent work readiness.",
             },
             {
-                question: "Is there a fee to enroll in the Sangini Udaan : EmpowerFly program?",
-                answer: "No, the Sangini Udaan : EmpowerFly program is offered free of charge. We believe in investing in your growth and potential without financial barriers. Our focus is on providing skills, mentorship, and opportunities.",
+                question: "IS THIS FREE ?",
+                answer: "Yes, the Sangini Udaan : EmpowerFly program is offered free of charge. We believe in investing in your growth and potential without financial barriers. Our focus is on providing skills, mentorship, and opportunities.",
             },
             {
                 question: "What is the structure of the program journey?",
@@ -208,12 +208,12 @@ export const faqData: FaqCategory[] = [
         title: "Participation & Inclusivity",
         questions: [
             {
-                question: "What is the inclusive participation policy?",
-                answer: "SheCodesHerWay welcomes both women and men to join us as Core Team Members, Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem.",
+                question: "Is this platform designed only for women, or are there opportunities and benefits available for men as well?",
+                answer: "Our flagship program, Sangini Udaan : EmpowerFly, is exclusively for women. However, men are welcome to join as mentors, collaborators, or contributors. We are also planning to launch programs for all genders soon. Stay tuned!",
             },
              {
                 question: "Is this platform designed only for women, or are there opportunities and benefits available for men as well?",
-                answer: "Our Inclusive Approach: Building an ecosystem where everyone has a place to grow and contribute. Inclusive Participation Policy: SheCodesHerWay welcomes both women and men to join us as Early Core Contributors, and Mentors, contributing their skills, experience, and guidance to help build and grow the platform. However, our Women Empowerment Program — Sangini Udaan : EmpowerFly — is exclusively designed for women, and only women are eligible to enroll as participants in this program. As the platform evolves, we will be introducing Hackathons, Collaborative Projects, Community Events, and other platform activities that will be accessible to all genders, fostering an inclusive and collaborative learning ecosystem."
+                answer: "Our flagship program, Sangini Udaan : EmpowerFly, is exclusively for women. However, men are welcome to join as mentors, collaborators, or contributors. We are also planning to launch programs for all genders soon. Stay tuned!"
             },
         ],
     },

@@ -11,6 +11,7 @@
 import { z } from 'genkit';
 import { faqData } from '@/lib/faq-data';
 import React from 'react';
+import { brand } from '@/lib/brand';
 
 const ChatInputSchema = z.object({
   message: z.string().describe("The user's message to the chatbot."),
@@ -49,8 +50,8 @@ export async function chat(input: ChatInput): Promise<ChatOutput> {
   const userMessage = input.message.toLowerCase().trim();
   const searchTerms = userMessage.split(/\s+/).filter(term => term.length > 2);
 
-  if (userMessage === '') {
-      return { message: "Hello! How can I help you today? You can ask me about our programs, careers, or what SheCodesHerWay is all about." };
+  if (userMessage === '' || userMessage === 'hi' || userMessage === 'hello') {
+      return { message: `Hi, I’m ${brand.appName} — your friendly guide to learning, careers, and opportunities, at your own pace. How can I help you today?` };
   }
   
   let bestMatch = null;
